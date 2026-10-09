@@ -160,3 +160,157 @@ Through ShopLink, I aim to strengthen my understanding of:
 **Status:** Planning and initial development.
 
 Features listed in the roadmap are planned and may not yet be implemented.
+
+## Planned Project Structure
+
+The following tree shows the intended layout. We will create service files as each part is implemented; generated Maven `target/` folders are omitted.
+
+```text
+shoplink/
+├── README.md
+├── pom.xml
+├── .gitignore
+├── docs/
+│   ├── architecture.md
+│   └── decisions/
+│       └── 001-service-boundaries.md
+├── common/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── docker-compose.yml
+│   └── src/
+│       ├── main/java/za/co/shoplink/common/
+│       │   ├── events/
+│       │   │   ├── OrderCreatedEvent.java
+│       │   │   ├── PaymentProcessedEvent.java
+│       │   │   └── DeliveryRequestedEvent.java
+│       │   └── messaging/
+│       │       └── EventEnvelope.java
+│       └── test/java/za/co/shoplink/common/events/
+│           └── EventSerializationTest.java
+├── product-service/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── Dockerfile
+│   └── src/
+│       ├── main/
+│       │   ├── java/za/co/shoplink/product/
+│       │   │   ├── ProductApplication.java
+│       │   │   ├── controller/ProductController.java
+│       │   │   ├── service/ProductService.java
+│       │   │   ├── repository/ProductRepository.java
+│       │   │   ├── model/Product.java
+│       │   │   ├── dto/
+│       │   │   │   ├── ProductRequest.java
+│       │   │   │   └── ProductResponse.java
+│       │   │   └── exception/ProductNotFoundException.java
+│       │   └── resources/application.properties
+│       └── test/java/za/co/shoplink/product/
+│           ├── service/ProductServiceTest.java
+│           └── controller/ProductControllerTest.java
+├── inventory-service/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── Dockerfile
+│   └── src/
+│       ├── main/
+│       │   ├── java/za/co/shoplink/inventory/
+│       │   │   ├── InventoryApplication.java
+│       │   │   ├── controller/InventoryController.java
+│       │   │   ├── service/InventoryService.java
+│       │   │   ├── repository/InventoryRepository.java
+│       │   │   ├── model/StockItem.java
+│       │   │   ├── dto/
+│       │   │   │   ├── StockCheckResponse.java
+│       │   │   │   └── StockReservationRequest.java
+│       │   │   └── exception/InsufficientStockException.java
+│       │   └── resources/application.properties
+│       └── test/java/za/co/shoplink/inventory/
+│           ├── service/InventoryServiceTest.java
+│           └── controller/InventoryControllerTest.java
+├── order-service/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── Dockerfile
+│   └── src/
+│       ├── main/
+│       │   ├── java/za/co/shoplink/order/
+│       │   │   ├── OrderApplication.java
+│       │   │   ├── controller/OrderController.java
+│       │   │   ├── service/OrderService.java
+│       │   │   ├── repository/OrderRepository.java
+│       │   │   ├── model/
+│       │   │   │   ├── Order.java
+│       │   │   │   ├── OrderItem.java
+│       │   │   │   └── OrderStatus.java
+│       │   │   ├── dto/
+│       │   │   │   ├── CreateOrderRequest.java
+│       │   │   │   └── OrderResponse.java
+│       │   │   ├── client/
+│       │   │   │   ├── ProductServiceClient.java
+│       │   │   │   └── InventoryServiceClient.java
+│       │   │   └── messaging/PaymentProcessedListener.java
+│       │   └── resources/application.properties
+│       └── test/java/za/co/shoplink/order/
+│           ├── service/OrderServiceTest.java
+│           └── controller/OrderControllerTest.java
+├── payment-service/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── Dockerfile
+│   └── src/
+│       ├── main/
+│       │   ├── java/za/co/shoplink/payment/
+│       │   │   ├── PaymentApplication.java
+│       │   │   ├── service/PaymentService.java
+│       │   │   ├── repository/PaymentRepository.java
+│       │   │   ├── model/
+│       │   │   │   ├── Payment.java
+│       │   │   │   └── PaymentStatus.java
+│       │   │   ├── messaging/
+│       │   │   │   ├── OrderCreatedListener.java
+│       │   │   │   └── PaymentProcessedPublisher.java
+│       │   │   └── dto/PaymentResult.java
+│       │   └── resources/application.properties
+│       └── test/java/za/co/shoplink/payment/service/PaymentServiceTest.java
+├── delivery-service/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── Dockerfile
+│   └── src/
+│       ├── main/
+│       │   ├── java/za/co/shoplink/delivery/
+│       │   │   ├── DeliveryApplication.java
+│       │   │   ├── service/DeliveryService.java
+│       │   │   ├── repository/DeliveryRepository.java
+│       │   │   ├── model/
+│       │   │   │   ├── Delivery.java
+│       │   │   │   └── DeliveryStatus.java
+│       │   │   └── messaging/
+│       │   │       ├── DeliveryRequestedListener.java
+│       │   │       └── DeliveryCreatedPublisher.java
+│       │   └── resources/application.properties
+│       └── test/java/za/co/shoplink/delivery/service/DeliveryServiceTest.java
+├── notification-service/
+│   ├── README.md
+│   ├── pom.xml
+│   ├── Dockerfile
+│   └── src/
+│       ├── main/
+│       │   ├── java/za/co/shoplink/notification/
+│       │   │   ├── NotificationApplication.java
+│       │   │   ├── service/NotificationService.java
+│       │   │   └── messaging/
+│       │   │       ├── OrderStatusListener.java
+│       │   │       └── PaymentProcessedListener.java
+│       │   └── resources/application.properties
+│       └── test/java/za/co/shoplink/notification/service/NotificationServiceTest.java
+└── integration-tests/
+    ├── pom.xml
+    └── src/
+        ├── main/java/
+        └── test/java/za/co/shoplink/integration/
+            └── ShopLinkIntegrationTest.java
+```
+
+The root README is currently the only project file. The remaining entries above are planned and will be added incrementally.
