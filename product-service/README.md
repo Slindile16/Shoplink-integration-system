@@ -4,18 +4,34 @@ The Product Service will provide product information, including product names an
 
 ## Current setup
 
-This module inherits shared Java and Spring Boot settings from the root `pom.xml`. Its Spring Boot web dependency provides the foundation for REST endpoints and JSON request and response handling.
+This module inherits shared Java and Spring Boot settings from the root `pom.xml`. Spring Boot and Jackson handle the HTTP endpoints and JSON serialization.
 
-The service does not have an application class or REST endpoints yet. Those will be added incrementally as Phase 2 continues.
+The first version uses three sample products held in memory. Prices are numeric rand amounts and each response includes the currency code `ZAR` (South African rand). Data resets when the service restarts.
 
-## Planned API
+## API
 
-The initial API will provide endpoints to:
+| Method | Path | Behaviour |
+|---|---|---|
+| `GET` | `/products` | Returns all sample products as a JSON array. |
+| `GET` | `/products/{id}` | Returns the matching product as JSON, or `404 Not Found` if the ID does not exist. |
 
-- List available products.
-- Retrieve a product by its ID.
+## Run the service
 
-Request and response formats, endpoint paths, and error responses will be documented as each endpoint is implemented.
+From the repository root, run:
+
+```shell
+mvn -f product-service/pom.xml spring-boot:run
+```
+
+The service listens on `http://localhost:8080` by default.
+
+Example requests:
+
+```shell
+curl http://localhost:8080/products
+curl http://localhost:8080/products/P1001
+curl -i http://localhost:8080/products/unknown
+```
 
 ## Planned structure
 
