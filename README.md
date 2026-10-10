@@ -121,7 +121,7 @@ Additional technologies will be introduced when they are needed.
 
 The project will be developed incrementally, with regular commits documenting implementation decisions and progress.
 
-- [ ] **Phase 1:** Create the project structure and document the architecture.
+- [x] **Phase 1:** Create the project structure and document the architecture.
 - [ ] **Phase 2:** Implement basic REST endpoints and JSON communication.
 - [ ] **Phase 3:** Build the Product, Inventory, and Order services.
 - [ ] **Phase 4:** Add the Payment Service and order-processing workflow.
@@ -157,13 +157,13 @@ Through ShopLink, I aim to strengthen my understanding of:
 
 ##  Project Status
 
-**Status:** Planning and initial development.
+**Status:** Phase 1 is complete. Phase 2 setup has started; REST endpoints have not been implemented yet.
 
-Features listed in the roadmap are planned and may not yet be implemented.
+The root Maven POM and `.gitignore` are in place. The service implementations and remaining features listed in the roadmap are planned and will be added incrementally.
 
 ## Planned Project Structure
 
-The following tree shows the intended layout. We will create service files as each part is implemented; generated Maven `target/` folders are omitted.
+The following tree shows the intended layout. Currently, the root `README.md`, `pom.xml`, and `.gitignore` are present; the other files are planned and will be added incrementally. Generated Maven `target/` folders are omitted.
 
 ```text
 shoplink/
@@ -313,4 +313,4 @@ shoplink/
             └── ShopLinkIntegrationTest.java
 ```
 
-The root README is currently the only project file. The remaining entries above are planned and will be added incrementally.
+The tree is a guide to the planned structure, not a list of files already implemented.
