@@ -122,8 +122,8 @@ Additional technologies will be introduced when they are needed.
 The project will be developed incrementally, with regular commits documenting implementation decisions and progress.
 
 - [X] **Phase 1:** Create the project structure and document the architecture.
-- [ ] **Phase 2:** Implement basic REST endpoints and JSON communication.
-- [ ] **Phase 3:** Build the Product, Inventory, and Order services.
+- [X] **Phase 2:** Implement basic REST endpoints and JSON communication.
+- [ ] **Phase 3:** Implement inventory management and expand Product and Order business logic.
 - [ ] **Phase 4:** Add the Payment Service and order-processing workflow.
 - [ ] **Phase 5:** Integrate ActiveMQ/JMS messaging.
 - [ ] **Phase 6:** Add Delivery and Notification consumers.
@@ -157,7 +157,7 @@ Through ShopLink, I aim to strengthen my understanding of:
 
 ##  Project Status
 
-**Status:** Planning and initial development.
+**Status:** Phase 2 REST endpoints and JSON communication between Product Service and Order Service are implemented.
 
 Features listed in the roadmap are planned and may not yet be implemented.
 
@@ -165,7 +165,7 @@ Features listed in the roadmap are planned and may not yet be implemented.
 
 The following tree shows the intended layout. We will create service files as each part is implemented; generated Maven `target/` folders are omitted.
 
-```text
+```
 shoplink/
 ├── README.md
 ├── pom.xml
@@ -313,4 +313,5 @@ shoplink/
             └── ShopLinkIntegrationTest.java
 ```
 
-The root README is currently the only project file. The remaining entries above are planned and will be added incrementally.
+
+Product Service and Order Service now provide the initial Phase 2 REST and JSON flow. The root integration-tests module runs both services for a cross-service test. Inventory, Payment, Delivery, Notification, persistence, and messaging remain planned.
