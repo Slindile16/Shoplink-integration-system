@@ -123,7 +123,7 @@ The project will be developed incrementally, with regular commits documenting im
 
 - [X] **Phase 1:** Create the project structure and document the architecture.
 - [X] **Phase 2:** Implement basic REST endpoints and JSON communication.
-- [ ] **Phase 3:** Implement inventory management and expand Product and Order business logic.
+- [X] **Phase 3:** Implement in-memory inventory reservations and connect the Order flow.
 - [ ] **Phase 4:** Add the Payment Service and order-processing workflow.
 - [ ] **Phase 5:** Integrate ActiveMQ/JMS messaging.
 - [ ] **Phase 6:** Add Delivery and Notification consumers.
@@ -157,7 +157,7 @@ Through ShopLink, I aim to strengthen my understanding of:
 
 ##  Project Status
 
-**Status:** Phase 2 REST endpoints and JSON communication between Product Service and Order Service are implemented.
+**Status:** Phase 3 is implemented. Product Service provides product details, Inventory Service tracks and atomically reserves sample stock in memory, and Order Service checks products and reserves inventory before saving an order.
 
 Features listed in the roadmap are planned and may not yet be implemented.
 
@@ -314,4 +314,4 @@ shoplink/
 ```
 
 
-Product Service and Order Service now provide the initial Phase 2 REST and JSON flow. The root integration-tests module runs both services for a cross-service test. Inventory, Payment, Delivery, Notification, persistence, and messaging remain planned.
+Product, Inventory, and Order services provide the Phase 3 REST flow. Inventory exposes `GET /inventory/{productId}` and `POST /inventory/reservations`; Order Service calls the reservation endpoint before saving a valid order. Start Product Service (`mvn -f product-service/pom.xml spring-boot:run`), Inventory Service (`mvn -f inventory-service/pom.xml spring-boot:run`), and Order Service (`mvn -f order-service/pom.xml spring-boot:run`) in separate terminals from the repository root. The root integration-tests module starts all three services and checks that an order deducts stock. Payment, Delivery, Notification, persistence, and messaging remain planned.

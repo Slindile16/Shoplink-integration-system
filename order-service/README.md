@@ -1,6 +1,6 @@
 # ShopLink Order Service
 
-The Order Service accepts orders, checks each item against Product Service over HTTP/JSON, and keeps created orders in memory. Order data is cleared whenever this service restarts. A successful order starts in `CREATED` status.
+The Order Service accepts orders, checks each item against Product Service over HTTP/JSON, reserves all requested stock through Inventory Service, then keeps created orders in memory. Order data is cleared whenever this service restarts. A successful order starts in `CREATED` status.
 
 ## API
 
@@ -17,7 +17,7 @@ Request:
 }
 ```
 
-Each product ID is fetched from `GET /products/{id}` before the order is stored. The response is `201 Created` with a generated ID and the product details used to price each line:
+Each product ID is fetched from `GET /products/{id}`, then all quantities are reserved in one Inventory Service request before the order is stored. Insufficient stock returns `409 Conflict`; Inventory Service failures return `502 Bad Gateway`. The response is `201 Created` with a generated ID and the product details used to price each line:
 
 ```json
 {
@@ -52,10 +52,14 @@ mvn -f product-service/pom.xml spring-boot:run
 ```
 
 ```shell
+mvn -f inventory-service/pom.xml spring-boot:run
+```
+
+```shell
 mvn -f order-service/pom.xml spring-boot:run
 ```
 
-Product Service listens on `http://localhost:8080`; Order Service listens on `http://localhost:8081`. Set `PRODUCT_SERVICE_URL` when Product Service is hosted elsewhere.
+Product Service listens on `http://localhost:8080`, Order Service on `http://localhost:8081`, and Inventory Service on `http://localhost:8082`. Set `PRODUCT_SERVICE_URL` or `INVENTORY_SERVICE_URL` when a dependency is hosted elsewhere.
 
 Example requests:
 
@@ -66,7 +70,7 @@ curl -i -X POST http://localhost:8081/orders \
 curl http://localhost:8081/orders/{id}
 ```
 
-Run the service endpoint tests and root cross-service integration test with:
+Run the service endpoint tests and root cross-service integration test (including stock deduction) with:
 
 ```shell
 mvn -pl integration-tests -am test
