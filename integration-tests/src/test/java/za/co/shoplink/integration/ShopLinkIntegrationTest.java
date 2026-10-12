@@ -9,6 +9,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import za.co.shoplink.order.OrderApplication;
+import za.co.shoplink.inventory.InventoryApplication;
 import za.co.shoplink.product.ProductApplication;
 
 import java.net.URI;
@@ -26,6 +27,7 @@ class ShopLinkIntegrationTest {
 
     private ConfigurableApplicationContext productContext;
     private ConfigurableApplicationContext orderContext;
+    private ConfigurableApplicationContext inventoryContext;
     private int orderPort;
 
     @BeforeEach
@@ -34,10 +36,14 @@ class ShopLinkIntegrationTest {
                 .run("--server.port=0", "--spring.main.banner-mode=off");
 
         int productPort = ((WebServerApplicationContext) productContext).getWebServer().getPort();
+        inventoryContext = new SpringApplicationBuilder(InventoryApplication.class)
+                .run("--server.port=0", "--spring.main.banner-mode=off");
+        int inventoryPort = ((WebServerApplicationContext) inventoryContext).getWebServer().getPort();
         orderContext = new SpringApplicationBuilder(OrderApplication.class)
                 .run("--server.port=0",
                         "--spring.main.banner-mode=off",
-                        "--product.service.base-url=http://127.0.0.1:" + productPort);
+                        "--product.service.base-url=http://127.0.0.1:" + productPort,
+                        "--inventory.service.base-url=http://127.0.0.1:" + inventoryPort);
 
         orderPort = ((WebServerApplicationContext) orderContext).getWebServer().getPort();
     }
@@ -49,6 +55,9 @@ class ShopLinkIntegrationTest {
         }
         if (productContext != null) {
             productContext.close();
+        }
+        if (inventoryContext != null) {
+            inventoryContext.close();
         }
     }
 
@@ -87,5 +96,14 @@ class ShopLinkIntegrationTest {
         JsonNode retrievedOrder = OBJECT_MAPPER.readTree(getResponse.body());
         assertEquals(orderId, retrievedOrder.path("id").asText());
         assertEquals("Canvas Tote Bag", retrievedOrder.path("items").get(0).path("productName").asText());
+
+        HttpRequest stockRequest = HttpRequest.newBuilder()
+                .uri(URI.create("http://127.0.0.1:" + ((WebServerApplicationContext) inventoryContext)
+                        .getWebServer().getPort() + "/inventory/P1002"))
+                .GET().build();
+        HttpResponse<String> stockResponse = HTTP_CLIENT.send(
+                stockRequest, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
+        assertEquals(200, stockResponse.statusCode());
+        assertEquals(47, OBJECT_MAPPER.readTree(stockResponse.body()).path("availableQuantity").asInt());
     }
 }

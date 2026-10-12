@@ -9,12 +9,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.client.HttpClientErrorException;
 import za.co.shoplink.order.client.ProductServiceClient;
+import za.co.shoplink.order.client.InventoryServiceClient;
 import za.co.shoplink.order.dto.ProductDetails;
 
 import java.math.BigDecimal;
 import java.util.Currency;
 
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -29,6 +31,9 @@ class OrderControllerTest {
 
     @MockBean
     private ProductServiceClient productServiceClient;
+
+    @MockBean
+    private InventoryServiceClient inventoryServiceClient;
 
     @Test
     void createsAndRetrievesOrderAsJson() throws Exception {
@@ -48,6 +53,9 @@ class OrderControllerTest {
                 .andExpect(jsonPath("$.items[0].productName").value("ShopLink Starter Mug"))
                 .andExpect(jsonPath("$.items[0].unitPrice").value(89.99))
                 .andReturn().getResponse().getContentAsString();
+        verify(inventoryServiceClient).reserve(org.mockito.ArgumentMatchers.anyString(),
+                org.mockito.ArgumentMatchers.argThat(items -> items.size() == 1
+                        && items.get(0).productId().equals("P1001") && items.get(0).quantity() == 2));
 
         String id = com.fasterxml.jackson.databind.json.JsonMapper.builder().build()
                 .readTree(response).get("id").asText();
