@@ -124,7 +124,7 @@ The project will be developed incrementally, with regular commits documenting im
 - [X] **Phase 1:** Create the project structure and document the architecture.
 - [X] **Phase 2:** Implement basic REST endpoints and JSON communication.
 - [X] **Phase 3:** Implement in-memory inventory reservations and connect the Order flow.
-- [ ] **Phase 4:** Add the Payment Service and order-processing workflow.
+- [X] **Phase 4:** Add the Payment Service and order-processing workflow.
 - [ ] **Phase 5:** Integrate ActiveMQ/JMS messaging.
 - [ ] **Phase 6:** Add Delivery and Notification consumers.
 - [ ] **Phase 7:** Handle concurrent orders and protect stock consistency.
@@ -157,7 +157,7 @@ Through ShopLink, I aim to strengthen my understanding of:
 
 ##  Project Status
 
-**Status:** Phase 3 is implemented. Product Service provides product details, Inventory Service tracks and atomically reserves sample stock in memory, and Order Service checks products and reserves inventory before saving an order.
+**Status:** Phase 4 is implemented. Order Service validates products, reserves inventory, and calls the simulated Payment Service. Approved payments produce PAID orders; declined payments release stock and produce PAYMENT_FAILED orders. Uncertain payment outcomes remain PAYMENT_PENDING with stock held. Failed stock release is recorded as STOCK_RELEASE_PENDING.
 
 Features listed in the roadmap are planned and may not yet be implemented.
 
@@ -314,4 +314,4 @@ shoplink/
 ```
 
 
-Product, Inventory, and Order services provide the Phase 3 REST flow. Inventory exposes `GET /inventory/{productId}` and `POST /inventory/reservations`; Order Service calls the reservation endpoint before saving a valid order. Start Product Service (`mvn -f product-service/pom.xml spring-boot:run`), Inventory Service (`mvn -f inventory-service/pom.xml spring-boot:run`), and Order Service (`mvn -f order-service/pom.xml spring-boot:run`) in separate terminals from the repository root. The root integration-tests module starts all three services and checks that an order deducts stock. Payment, Delivery, Notification, persistence, and messaging remain planned.
+Product, Inventory, Order, and Payment services provide the Phase 4 REST flow. Inventory exposes `GET /inventory/{productId}` and `POST /inventory/reservations`; Order Service calls the reservation endpoint before saving a valid order. Start Product Service (`mvn -f product-service/pom.xml spring-boot:run`), Inventory Service (`mvn -f inventory-service/pom.xml spring-boot:run`), and Order Service (`mvn -f order-service/pom.xml spring-boot:run`) in separate terminals from the repository root. Start Payment Service with `mvn -f payment-service/pom.xml spring-boot:run` (port 8083). The root integration-tests module starts all four services and checks approval, decline with stock release, and payment outages. Delivery, Notification, persistence, and messaging remain planned. See [Payment Service](payment-service/README.md) for simulation settings and reconciliation limitations.

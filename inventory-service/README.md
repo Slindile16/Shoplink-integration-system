@@ -33,3 +33,7 @@ mvn -f inventory-service/pom.xml spring-boot:run
 ```
 
 The service listens on `http://localhost:8082`.
+
+### `POST /inventory/reservations/{orderId}/release`
+
+Restores the quantities stored for the order and returns `RELEASED`. Repeating a release does not restore stock twice. Unknown reservations return `404`. Repeating the same reservation is also safe; different items for an existing order or reserving a released order returns `409`.

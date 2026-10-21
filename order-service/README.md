@@ -1,6 +1,6 @@
 # ShopLink Order Service
 
-The Order Service accepts orders, checks each item against Product Service over HTTP/JSON, reserves all requested stock through Inventory Service, then keeps created orders in memory. Order data is cleared whenever this service restarts. A successful order starts in `CREATED` status.
+The Order Service accepts orders, checks each item against Product Service over HTTP/JSON, reserves all requested stock through Inventory Service, then keeps created orders in memory. Order data is cleared whenever this service restarts. The order is saved as `PAYMENT_PENDING` before payment processing and becomes `PAID` after approval.
 
 ## API
 
@@ -23,7 +23,7 @@ Each product ID is fetched from `GET /products/{id}`, then all quantities are re
 {
   "id": "b1df9343-7f1e-41e9-814f-395ef22979c9",
   "customerId": "C001",
-  "status": "CREATED",
+  "status": "PAID",
   "items": [
     {
       "productId": "P1001",
@@ -43,7 +43,13 @@ Returns the saved order, including its current status. Unknown IDs return `404 N
 
 Invalid or empty order data returns `400 Bad Request`. An unknown product returns `422 Unprocessable Entity` with a message such as `Unknown product: P9999`. If Product Service cannot be reached, the Order Service returns `502 Bad Gateway`.
 
-## Run both services
+## Payment outcomes
+
+The total is calculated from trusted product prices and quantities; mixed currencies are rejected before reservation. Confirmed declines release reserved stock and return an order in `PAYMENT_FAILED`. A failed release leaves `STOCK_RELEASE_PENDING`. Payment connection failures, timeouts, or ambiguous responses leave `PAYMENT_PENDING` and retain stock. These orders remain retrievable through `GET /orders/{id}`; creation returns `201` for all saved outcomes.
+
+Pending outcomes require manual reconciliation; automatic retries and recovery are future work. Do not submit a new order to retry a pending payment. All state is in memory and resets on restart.
+
+## Run services
 
 From the repository root, start each command in its own terminal:
 
@@ -58,6 +64,8 @@ mvn -f inventory-service/pom.xml spring-boot:run
 ```shell
 mvn -f order-service/pom.xml spring-boot:run
 ```
+
+Start Payment Service using `mvn -f payment-service/pom.xml spring-boot:run`. It listens on port 8083; set `PAYMENT_SERVICE_URL` for another address.
 
 Product Service listens on `http://localhost:8080`, Order Service on `http://localhost:8081`, and Inventory Service on `http://localhost:8082`. Set `PRODUCT_SERVICE_URL` or `INVENTORY_SERVICE_URL` when a dependency is hosted elsewhere.
 
