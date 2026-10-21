@@ -1,15 +1,14 @@
 # ShopLink Payment Service
 
-Simulates payments in memory; no real money or payment credentials are involved. Data resets on restart.
+Simulates payments in memory; no real money or payment credentials are involved. Runs on port 8083. In Phase 5 it consumes JSON `ORDER_CREATED` events from ActiveMQ and returns `PAYMENT_PROCESSED` events to Order Service. Consumption and reply use the same JMS transaction.
 
-Run `mvn -f payment-service/pom.xml spring-boot:run` from the root. Default port: 8083.
+Payments approve by default. Set `PAYMENT_SIMULATION_DECLINE=true` before starting to simulate declines. Repeated order IDs reuse their existing payment; conflicting amounts/currencies are rejected.
 
-`POST /payments` accepts `{"orderId":"O1","amount":179.98,"currency":"ZAR"}` and returns a payment ID, order ID, amount, currency, status (`APPROVED` or `DECLINED`), and creation time. Amount must be positive and at least 0.01. Invalid requests return 400.
+The REST API remains available for simulation and inspection:
 
-`GET /payments/orders/{orderId}` returns the recorded result, or 404. Repeating a payment for the same order and amount/currency returns the original result; conflicting details return 409.
+- `POST /payments`: accepts `{"orderId":"O1","amount":179.98,"currency":"ZAR"}`. Returns the payment ID, order ID, amount, currency, status, and creation time. Invalid requests return `400`, conflicting duplicates `409`.
+- `GET /payments/orders/{orderId}`: returns the payment, or `404`.
 
-Payments approve by default. Set `PAYMENT_SIMULATION_DECLINE=true` before starting this service to simulate declines for every payment. This is a server simulation setting, not customer input.
+Order Service uses messaging instead of the payment REST endpoint. Data and duplicate protection reset when this service restarts.
 
-Order flow: product validation -> inventory reservation -> PAYMENT_PENDING -> payment -> PAID, or stock release -> PAYMENT_FAILED. Failed release leaves STOCK_RELEASE_PENDING. Payment timeouts or unavailable responses leave PAYMENT_PENDING and keep stock held because approval may already have occurred. Use the payment lookup endpoint to inspect the outcome. Automatic reconciliation and durable recovery are not implemented; state is lost on restart. Keep services running together while inspecting pending outcomes.
-
-Run all tests with `mvn test` at the repository root. Messaging is planned for Phase 5.
+See [Phase 5 setup and verification](../docs/messaging.md). Install shared modules first, start ActiveMQ, then run `mvn -f payment-service/pom.xml spring-boot:run`. Configure `ACTIVEMQ_BROKER_URL`, `ACTIVEMQ_USER`, and `ACTIVEMQ_PASSWORD` for a different broker.
