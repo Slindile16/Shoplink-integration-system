@@ -7,7 +7,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.http.MediaType;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-@SpringBootTest
+@SpringBootTest(properties = "spring.jms.listener.auto-startup=false")
 @AutoConfigureMockMvc
 class PaymentControllerTest {
     @Autowired MockMvc mvc;

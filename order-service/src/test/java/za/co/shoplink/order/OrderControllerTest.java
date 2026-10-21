@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest
+@SpringBootTest(properties = "spring.jms.listener.auto-startup=false")
 @AutoConfigureMockMvc
 class OrderControllerTest {
     @Autowired
@@ -36,15 +36,7 @@ class OrderControllerTest {
     private InventoryServiceClient inventoryServiceClient;
 
     @MockBean
-    private za.co.shoplink.order.client.PaymentServiceClient paymentServiceClient;
-
-    @org.junit.jupiter.api.BeforeEach
-    void approvePayments() {
-        org.mockito.Mockito.when(paymentServiceClient.pay(org.mockito.ArgumentMatchers.anyString(),
-                org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any()))
-                .thenAnswer(call -> new za.co.shoplink.order.client.PaymentServiceClient.Result(
-                        "PAY1", call.getArgument(0), call.getArgument(1), call.getArgument(2), "APPROVED"));
-    }
+    private za.co.shoplink.order.messaging.OrderCreatedPublisher publisher;
 
     @Test
     void createsAndRetrievesOrderAsJson() throws Exception {
@@ -60,7 +52,7 @@ class OrderControllerTest {
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").isNotEmpty())
                 .andExpect(jsonPath("$.customerId").value("C001"))
-                .andExpect(jsonPath("$.status").value("PAID"))
+                .andExpect(jsonPath("$.status").value("PAYMENT_PENDING"))
                 .andExpect(jsonPath("$.items[0].productName").value("ShopLink Starter Mug"))
                 .andExpect(jsonPath("$.items[0].unitPrice").value(89.99))
                 .andReturn().getResponse().getContentAsString();
@@ -70,26 +62,58 @@ class OrderControllerTest {
 
         String id = com.fasterxml.jackson.databind.json.JsonMapper.builder().build()
                 .readTree(response).get("id").asText();
+        var captured = org.mockito.ArgumentCaptor.forClass(za.co.shoplink.common.events.OrderCreatedEvent.class);
+        verify(publisher).publish(captured.capture());
+        org.junit.jupiter.api.Assertions.assertEquals(id, captured.getValue().orderId());
+        org.junit.jupiter.api.Assertions.assertEquals(0, new BigDecimal("179.98").compareTo(captured.getValue().amount()));
         mockMvc.perform(get("/orders/{id}", id))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(id))
-                .andExpect(jsonPath("$.status").value("PAID"));
+                .andExpect(jsonPath("$.status").value("PAYMENT_PENDING"));
     }
 
     @Test
     void failedCompensationLeavesVisibleRecoveryState() throws Exception {
         when(productServiceClient.findById("P1001")).thenReturn(new ProductDetails(
                 "P1001", "Mug", new BigDecimal("89.99"), Currency.getInstance("ZAR")));
-        when(paymentServiceClient.pay(org.mockito.ArgumentMatchers.anyString(),
-                org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any()))
-                .thenAnswer(call -> new za.co.shoplink.order.client.PaymentServiceClient.Result(
-                        "PAY1", call.getArgument(0), call.getArgument(1), call.getArgument(2), "DECLINED"));
         org.mockito.Mockito.doThrow(new org.springframework.web.client.ResourceAccessException("offline"))
                 .when(inventoryServiceClient).release(org.mockito.ArgumentMatchers.anyString());
-        mockMvc.perform(post("/orders").contentType(MediaType.APPLICATION_JSON)
+        String body = mockMvc.perform(post("/orders").contentType(MediaType.APPLICATION_JSON)
                 .content("{\"customerId\":\"C1\",\"items\":[{\"productId\":\"P1001\",\"quantity\":1}]}"))
-                .andExpect(status().isCreated())
+                .andExpect(status().isCreated()).andReturn().getResponse().getContentAsString();
+        String id = new com.fasterxml.jackson.databind.ObjectMapper().readTree(body).path("id").asText();
+        var result = new za.co.shoplink.common.events.PaymentProcessedEvent("PAY1", id,
+                new BigDecimal("89.99"), Currency.getInstance("ZAR"),
+                za.co.shoplink.common.events.PaymentProcessedEvent.Status.DECLINED);
+        org.junit.jupiter.api.Assertions.assertThrows(org.springframework.web.client.RestClientException.class,
+                () -> service.applyPayment(result));
+        mockMvc.perform(get("/orders/{id}", id)).andExpect(status().isOk())
                 .andExpect(jsonPath("$.status").value("STOCK_RELEASE_PENDING"));
+        org.mockito.Mockito.doNothing().when(inventoryServiceClient).release(id);
+        service.applyPayment(result);
+        service.applyPayment(result);
+        mockMvc.perform(get("/orders/{id}", id)).andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PAYMENT_FAILED"));
+        verify(inventoryServiceClient, org.mockito.Mockito.times(2)).release(id);
+    }
+
+    @Autowired private za.co.shoplink.order.service.OrderService service;
+
+    @Test
+    void mismatchedPaymentCannotChangeOrderStatus() throws Exception {
+        when(productServiceClient.findById("P1001")).thenReturn(new ProductDetails(
+                "P1001", "Mug", new BigDecimal("89.99"), Currency.getInstance("ZAR")));
+        String body = mockMvc.perform(post("/orders").contentType(MediaType.APPLICATION_JSON)
+                .content("{\"customerId\":\"C1\",\"items\":[{\"productId\":\"P1001\",\"quantity\":1}]}"))
+                .andExpect(status().isCreated()).andReturn().getResponse().getContentAsString();
+        String id = new com.fasterxml.jackson.databind.ObjectMapper().readTree(body).path("id").asText();
+        var wrong = new za.co.shoplink.common.events.PaymentProcessedEvent("PAY1", id, BigDecimal.ONE,
+                Currency.getInstance("ZAR"), za.co.shoplink.common.events.PaymentProcessedEvent.Status.APPROVED);
+        org.junit.jupiter.api.Assertions.assertThrows(IllegalArgumentException.class, () -> service.applyPayment(wrong));
+        mockMvc.perform(get("/orders/{id}", id)).andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("PAYMENT_PENDING"));
+        org.mockito.Mockito.verify(inventoryServiceClient, org.mockito.Mockito.never())
+                .release(org.mockito.ArgumentMatchers.anyString());
     }
 
     @Test

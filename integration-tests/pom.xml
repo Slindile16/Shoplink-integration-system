@@ -16,6 +16,7 @@
     <description>Cross-service HTTP and JSON integration tests</description>
 
     <dependencies>
+        <dependency><groupId>org.apache.activemq</groupId><artifactId>activemq-broker</artifactId><scope>test</scope></dependency>
         <dependency>
             <groupId>za.co.shoplink</groupId><artifactId>payment-service</artifactId>
             <version>${project.version}</version><scope>test</scope>

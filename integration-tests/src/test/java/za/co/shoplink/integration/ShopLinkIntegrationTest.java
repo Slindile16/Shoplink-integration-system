@@ -2,151 +2,146 @@ package za.co.shoplink.integration;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.apache.activemq.broker.BrokerService;
+import org.junit.jupiter.api.*;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import za.co.shoplink.order.OrderApplication;
+import org.springframework.jms.core.JmsTemplate;
+import za.co.shoplink.common.events.OrderCreatedEvent;
+import za.co.shoplink.common.messaging.MessagingConfiguration;
 import za.co.shoplink.inventory.InventoryApplication;
+import za.co.shoplink.inventory.service.InventoryService;
+import za.co.shoplink.order.OrderApplication;
+import za.co.shoplink.payment.PaymentApplication;
+import za.co.shoplink.payment.PaymentService;
 import za.co.shoplink.product.ProductApplication;
 
+import java.math.BigDecimal;
 import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.net.http.*;
+import java.time.Duration;
+import java.util.Currency;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ShopLinkIntegrationTest {
-    private static final HttpClient HTTP_CLIENT = HttpClient.newHttpClient();
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-
-    private ConfigurableApplicationContext productContext;
-    private ConfigurableApplicationContext orderContext;
-    private ConfigurableApplicationContext inventoryContext;
+    private final HttpClient http = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(2)).build();
+    private final ObjectMapper mapper = new ObjectMapper();
+    private BrokerService broker;
+    private ConfigurableApplicationContext products, inventory, payments, orders;
+    private String brokerUrl;
     private int orderPort;
-    private ConfigurableApplicationContext paymentContext;
 
-    @BeforeEach
-    void startServices() {
-        productContext = new SpringApplicationBuilder(ProductApplication.class)
-                .run("--server.port=0", "--spring.main.banner-mode=off");
-
-        int productPort = ((WebServerApplicationContext) productContext).getWebServer().getPort();
-        inventoryContext = new SpringApplicationBuilder(InventoryApplication.class)
-                .run("--server.port=0", "--spring.main.banner-mode=off");
-        int inventoryPort = ((WebServerApplicationContext) inventoryContext).getWebServer().getPort();
-        paymentContext = new SpringApplicationBuilder(za.co.shoplink.payment.PaymentApplication.class)
-                .run("--server.port=0", "--spring.main.banner-mode=off");
-        int paymentPort = ((WebServerApplicationContext) paymentContext).getWebServer().getPort();
-        orderContext = new SpringApplicationBuilder(OrderApplication.class)
-                .run("--server.port=0",
-                        "--spring.main.banner-mode=off",
-                        "--product.service.base-url=http://127.0.0.1:" + productPort,
-                        "--inventory.service.base-url=http://127.0.0.1:" + inventoryPort,
-                        "--payment.service.base-url=http://127.0.0.1:" + paymentPort);
-
-        orderPort = ((WebServerApplicationContext) orderContext).getWebServer().getPort();
+    @BeforeEach void startServices() throws Exception {
+        broker = new BrokerService();
+        broker.setPersistent(false);
+        broker.setUseJmx(false);
+        broker.setBrokerName("test-" + java.util.UUID.randomUUID());
+        var connector = broker.addConnector("tcp://127.0.0.1:0");
+        broker.start();
+        broker.waitUntilStarted();
+        brokerUrl = connector.getPublishableConnectString() + "?connectionTimeout=1000&soTimeout=2000";
+        products = start(ProductApplication.class);
+        inventory = start(InventoryApplication.class);
+        startPayments(false);
+        orders = start(OrderApplication.class,
+                "--product.service.base-url=http://127.0.0.1:" + port(products),
+                "--inventory.service.base-url=http://127.0.0.1:" + port(inventory));
+        orderPort = port(orders);
     }
 
-    @AfterEach
-    void stopServices() {
-        if (paymentContext != null) paymentContext.close();
-        if (orderContext != null) {
-            orderContext.close();
+    private ConfigurableApplicationContext start(Class<?> app, String... args) {
+        var options = new java.util.ArrayList<String>(java.util.List.of(
+                "--server.port=0", "--spring.main.banner-mode=off", "--spring.activemq.broker-url=" + brokerUrl,
+                "--spring.activemq.user=", "--spring.activemq.password=", "--logging.level.root=WARN"));
+        options.addAll(java.util.List.of(args));
+        return new SpringApplicationBuilder(app).run(options.toArray(String[]::new));
+    }
+    private void startPayments(boolean decline) {
+        payments = start(PaymentApplication.class, "--payment.simulation.decline=" + decline);
+    }
+    private int port(ConfigurableApplicationContext context) {
+        return ((WebServerApplicationContext) context).getWebServer().getPort();
+    }
+    @AfterEach void stopServices() throws Exception {
+        for (var context : new ConfigurableApplicationContext[]{orders, payments, inventory, products}) {
+            if (context != null) context.close();
         }
-        if (productContext != null) {
-            productContext.close();
-        }
-        if (inventoryContext != null) {
-            inventoryContext.close();
-        }
+        if (broker != null) { broker.stop(); broker.waitUntilStopped(); }
     }
-
-    @Test
-    void declineReleasesStock() throws Exception {
-        int port = ((WebServerApplicationContext) paymentContext).getWebServer().getPort();
-        paymentContext.close();
-        paymentContext = new SpringApplicationBuilder(za.co.shoplink.payment.PaymentApplication.class)
-                .run("--server.port=" + port, "--payment.simulation.decline=true");
-        assertOrderOutcome("PAYMENT_FAILED", 50);
-    }
-
-    @Test
-    void unavailablePaymentKeepsOrderPendingAndStockHeld() throws Exception {
-        paymentContext.close();
-        assertOrderOutcome("PAYMENT_PENDING", 49);
-    }
-
-    private void assertOrderOutcome(String status, int stock) throws Exception {
-        HttpResponse<String> response = HTTP_CLIENT.send(HttpRequest.newBuilder()
-                .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders"))
-                .header("Content-Type", "application/json")
+    private JsonNode create() throws Exception {
+        var response = http.send(HttpRequest.newBuilder(URI.create("http://127.0.0.1:" + orderPort + "/orders"))
+                .timeout(Duration.ofSeconds(10)).header("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(
-                        "{\"customerId\":\"C1\",\"items\":[{\"productId\":\"P1002\",\"quantity\":1}]}"))
+                        "{\"customerId\":\"C1\",\"items\":[{\"productId\":\"P1002\",\"quantity\":3}]}"))
                 .build(), HttpResponse.BodyHandlers.ofString());
-        assertEquals(201, response.statusCode());
-        JsonNode order = OBJECT_MAPPER.readTree(response.body());
-        assertEquals(status, order.path("status").asText());
-        HttpResponse<String> retrieved = HTTP_CLIENT.send(HttpRequest.newBuilder()
-                .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders/" + order.path("id").asText()))
-                .GET().build(), HttpResponse.BodyHandlers.ofString());
-        assertEquals(status, OBJECT_MAPPER.readTree(retrieved.body()).path("status").asText());
-        assertEquals(stock, inventoryContext.getBean(za.co.shoplink.inventory.service.InventoryService.class)
-                .available("P1002"));
+        assertEquals(201, response.statusCode(), response.body());
+        JsonNode result = mapper.readTree(response.body());
+        assertEquals("PAYMENT_PENDING", result.path("status").asText());
+        return result;
     }
+    private JsonNode get(String id) throws Exception {
+        var response = http.send(HttpRequest.newBuilder(URI.create("http://127.0.0.1:" + orderPort + "/orders/" + id))
+                .timeout(Duration.ofSeconds(3)).GET().build(), HttpResponse.BodyHandlers.ofString());
+        assertEquals(200, response.statusCode());
+        return mapper.readTree(response.body());
+    }
+    private JsonNode await(String id, String status) throws Exception {
+        long deadline = System.nanoTime() + Duration.ofSeconds(15).toNanos();
+        JsonNode result;
+        do {
+            result = get(id);
+            if (status.equals(result.path("status").asText())) return result;
+            Thread.sleep(50);
+        } while (System.nanoTime() < deadline);
+        fail("Expected " + status + " but got " + result);
+        return result;
+    }
+    private int stock() { return inventory.getBean(InventoryService.class).available("P1002"); }
 
-    @Test
-    void createsAndRetrievesAnOrderUsingTheRunningProductService() throws Exception {
-        HttpRequest createRequest = HttpRequest.newBuilder()
-                .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders"))
-                .header("Content-Type", "application/json")
-                .POST(HttpRequest.BodyPublishers.ofString(
-                        "{\"customerId\":\"C002\",\"items\":[{\"productId\":\"P1002\",\"quantity\":3}]}",
-                        StandardCharsets.UTF_8))
-                .build();
-
-        HttpResponse<String> createResponse = HTTP_CLIENT.send(
-                createRequest, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
-
-        assertEquals(201, createResponse.statusCode());
-        JsonNode createdOrder = OBJECT_MAPPER.readTree(createResponse.body());
-        assertEquals("C002", createdOrder.path("customerId").asText());
-        assertEquals("PAID", createdOrder.path("status").asText());
-        assertEquals("Canvas Tote Bag", createdOrder.path("items").get(0).path("productName").asText());
-        assertEquals(149.99, createdOrder.path("items").get(0).path("unitPrice").asDouble());
-        assertEquals("ZAR", createdOrder.path("items").get(0).path("currency").asText());
-
-        String orderId = createdOrder.path("id").asText();
-        assertNotNull(orderId);
-        za.co.shoplink.payment.Payment payment = paymentContext.getBean(za.co.shoplink.payment.PaymentService.class)
-                .find(orderId);
-        assertEquals(0, new java.math.BigDecimal("449.97").compareTo(payment.amount()));
+    @Test void approvesPaymentThroughRealBrokerAndPreservesPricing() throws Exception {
+        JsonNode created = create();
+        String id = created.path("id").asText();
+        JsonNode paid = await(id, "PAID");
+        assertEquals("Canvas Tote Bag", paid.path("items").get(0).path("productName").asText());
+        var payment = payments.getBean(PaymentService.class).find(id);
+        assertEquals(0, new BigDecimal("449.97").compareTo(payment.amount()));
         assertEquals("ZAR", payment.currency().getCurrencyCode());
-        HttpRequest getRequest = HttpRequest.newBuilder()
-                .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders/" + orderId))
-                .GET()
-                .build();
-
-        HttpResponse<String> getResponse = HTTP_CLIENT.send(
-                getRequest, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
-
-        assertEquals(200, getResponse.statusCode());
-        JsonNode retrievedOrder = OBJECT_MAPPER.readTree(getResponse.body());
-        assertEquals(orderId, retrievedOrder.path("id").asText());
-        assertEquals("Canvas Tote Bag", retrievedOrder.path("items").get(0).path("productName").asText());
-
-        HttpRequest stockRequest = HttpRequest.newBuilder()
-                .uri(URI.create("http://127.0.0.1:" + ((WebServerApplicationContext) inventoryContext)
-                        .getWebServer().getPort() + "/inventory/P1002"))
-                .GET().build();
-        HttpResponse<String> stockResponse = HTTP_CLIENT.send(
-                stockRequest, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
-        assertEquals(200, stockResponse.statusCode());
-        assertEquals(47, OBJECT_MAPPER.readTree(stockResponse.body()).path("availableQuantity").asInt());
+        assertEquals(47, stock());
+    }
+    @Test void declinedPaymentReleasesStock() throws Exception {
+        payments.close(); startPayments(true);
+        String id = create().path("id").asText();
+        await(id, "PAYMENT_FAILED");
+        assertEquals(50, stock());
+    }
+    @Test void queuesOrderWhilePaymentServiceIsOffline() throws Exception {
+        payments.close();
+        String id = create().path("id").asText();
+        assertEquals("PAYMENT_PENDING", get(id).path("status").asText());
+        assertEquals(47, stock());
+        startPayments(false);
+        await(id, "PAID");
+    }
+    @Test void duplicateMessagesDoNotRepeatPaymentOrRelease() throws Exception {
+        payments.close(); startPayments(true);
+        String id = create().path("id").asText();
+        await(id, "PAYMENT_FAILED");
+        var payment = payments.getBean(PaymentService.class).find(id);
+        var template = orders.getBean(JmsTemplate.class);
+        var event = new OrderCreatedEvent(id, new BigDecimal("449.97"), Currency.getInstance("ZAR"));
+        template.convertAndSend(MessagingConfiguration.ORDER_CREATED, event);
+        // A second real order establishes that the preceding duplicate and reply were consumed.
+        String marker = create().path("id").asText();
+        await(marker, "PAYMENT_FAILED");
+        assertEquals(payment, payments.getBean(PaymentService.class).find(id));
+        assertEquals(50, stock());
+        assertEquals("PAYMENT_FAILED", get(id).path("status").asText());
+    }
+    @Test void brokerOutageLeavesRetrievablePendingOrder() throws Exception {
+        broker.stop(); broker.waitUntilStopped();
+        String id = create().path("id").asText();
+        assertEquals("PAYMENT_PENDING", get(id).path("status").asText());
+        assertEquals(47, stock());
     }
 }
