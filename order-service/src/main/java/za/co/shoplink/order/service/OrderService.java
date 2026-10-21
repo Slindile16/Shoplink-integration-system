@@ -1,22 +1,27 @@
 package za.co.shoplink.order.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.jms.JmsException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.server.ResponseStatusException;
-import za.co.shoplink.order.client.ProductServiceClient;
+import za.co.shoplink.common.events.OrderCreatedEvent;
+import za.co.shoplink.common.events.PaymentProcessedEvent;
 import za.co.shoplink.order.client.InventoryServiceClient;
+import za.co.shoplink.order.client.ProductServiceClient;
 import za.co.shoplink.order.dto.CreateOrderRequest;
 import za.co.shoplink.order.dto.ProductDetails;
+import za.co.shoplink.order.messaging.OrderCreatedPublisher;
 import za.co.shoplink.order.model.Order;
 import za.co.shoplink.order.model.OrderItem;
 import za.co.shoplink.order.model.OrderStatus;
 import za.co.shoplink.order.repository.OrderRepository;
 
-import java.time.Instant;
 import java.math.BigDecimal;
-import za.co.shoplink.order.client.PaymentServiceClient;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -27,12 +32,13 @@ public class OrderService {
     private final ProductServiceClient productServiceClient;
     private final InventoryServiceClient inventoryServiceClient;
 
-    private final PaymentServiceClient paymentServiceClient;
+    private final OrderCreatedPublisher publisher;
+    private static final Logger LOG = LoggerFactory.getLogger(OrderService.class);
 
     public OrderService(OrderRepository repository, ProductServiceClient productServiceClient,
-                        InventoryServiceClient inventoryServiceClient, PaymentServiceClient paymentServiceClient) {
+                        InventoryServiceClient inventoryServiceClient, OrderCreatedPublisher publisher) {
         this.repository = repository;
-        this.paymentServiceClient = paymentServiceClient;
+        this.publisher = publisher;
         this.productServiceClient = productServiceClient;
         this.inventoryServiceClient = inventoryServiceClient;
     }
@@ -73,34 +79,42 @@ public class OrderService {
                     "Inventory Service could not reserve stock", ex);
         }
         Instant createdAt = Instant.now();
-        repository.save(new Order(orderId, request.customerId(), OrderStatus.PAYMENT_PENDING, items, createdAt));
-        BigDecimal total = items.stream().map(item -> item.unitPrice().multiply(BigDecimal.valueOf(item.quantity())))
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
-        PaymentServiceClient.Result payment;
+        Order pending = repository.save(new Order(orderId, request.customerId(), OrderStatus.PAYMENT_PENDING, items, createdAt));
         try {
-            payment = paymentServiceClient.pay(orderId, total, items.get(0).currency());
-        } catch (RestClientException ex) {
-            return findById(orderId);
+            publisher.publish(new OrderCreatedEvent(orderId, total(items), items.get(0).currency()));
+        } catch (JmsException ex) {
+            // Publication may be ambiguous. Keep the saved order and stock for reconciliation.
+            LOG.error("Order {} is pending: could not confirm message publication", orderId, ex);
         }
-        // An ambiguous response must keep stock held until payment can be reconciled.
-        if (payment == null || !orderId.equals(payment.orderId()) || payment.amount() == null
-                || total.compareTo(payment.amount()) != 0 || !items.get(0).currency().equals(payment.currency())) {
-            return findById(orderId);
+        return pending;
+    }
+
+    private BigDecimal total(List<OrderItem> items) {
+        return items.stream().map(item -> item.unitPrice().multiply(BigDecimal.valueOf(item.quantity())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public synchronized void applyPayment(PaymentProcessedEvent payment) {
+        Order order = findById(payment.orderId());
+        if (total(order.items()).compareTo(payment.amount()) != 0
+                || !order.items().get(0).currency().equals(payment.currency())) {
+            throw new IllegalArgumentException("Payment does not match order " + order.id());
         }
-        OrderStatus status = OrderStatus.PAYMENT_PENDING;
-        if ("APPROVED".equals(payment.status())) {
+        // Ignore duplicate or conflicting terminal results; allow a declined release to retry.
+        if (order.status() != OrderStatus.PAYMENT_PENDING
+                && !(order.status() == OrderStatus.STOCK_RELEASE_PENDING
+                    && payment.status() == PaymentProcessedEvent.Status.DECLINED)) return;
+        OrderStatus status;
+        if (payment.status() == PaymentProcessedEvent.Status.APPROVED) {
             status = OrderStatus.PAID;
-        } else if ("DECLINED".equals(payment.status())) {
-            status = OrderStatus.STOCK_RELEASE_PENDING;
-            repository.save(new Order(orderId, request.customerId(), status, items, createdAt));
-            try {
-                inventoryServiceClient.release(orderId);
-                status = OrderStatus.PAYMENT_FAILED;
-            } catch (RestClientException ex) {
-                // Preserve a visible state for manual reconciliation if compensation fails.
-            }
+        } else {
+            repository.save(new Order(order.id(), order.customerId(), OrderStatus.STOCK_RELEASE_PENDING,
+                    order.items(), order.createdAt()));
+            // Propagate failure so the transacted listener rolls back and the broker redelivers.
+            inventoryServiceClient.release(order.id());
+            status = OrderStatus.PAYMENT_FAILED;
         }
-        return repository.save(new Order(orderId, request.customerId(), status, items, createdAt));
+        repository.save(new Order(order.id(), order.customerId(), status, order.items(), order.createdAt()));
     }
 
     public Order findById(String id) {
