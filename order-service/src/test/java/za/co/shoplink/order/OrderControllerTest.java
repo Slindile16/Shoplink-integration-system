@@ -35,6 +35,17 @@ class OrderControllerTest {
     @MockBean
     private InventoryServiceClient inventoryServiceClient;
 
+    @MockBean
+    private za.co.shoplink.order.client.PaymentServiceClient paymentServiceClient;
+
+    @org.junit.jupiter.api.BeforeEach
+    void approvePayments() {
+        org.mockito.Mockito.when(paymentServiceClient.pay(org.mockito.ArgumentMatchers.anyString(),
+                org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any()))
+                .thenAnswer(call -> new za.co.shoplink.order.client.PaymentServiceClient.Result(
+                        "PAY1", call.getArgument(0), call.getArgument(1), call.getArgument(2), "APPROVED"));
+    }
+
     @Test
     void createsAndRetrievesOrderAsJson() throws Exception {
         when(productServiceClient.findById("P1001")).thenReturn(
@@ -49,7 +60,7 @@ class OrderControllerTest {
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.id").isNotEmpty())
                 .andExpect(jsonPath("$.customerId").value("C001"))
-                .andExpect(jsonPath("$.status").value("CREATED"))
+                .andExpect(jsonPath("$.status").value("PAID"))
                 .andExpect(jsonPath("$.items[0].productName").value("ShopLink Starter Mug"))
                 .andExpect(jsonPath("$.items[0].unitPrice").value(89.99))
                 .andReturn().getResponse().getContentAsString();
@@ -62,7 +73,23 @@ class OrderControllerTest {
         mockMvc.perform(get("/orders/{id}", id))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(id))
-                .andExpect(jsonPath("$.status").value("CREATED"));
+                .andExpect(jsonPath("$.status").value("PAID"));
+    }
+
+    @Test
+    void failedCompensationLeavesVisibleRecoveryState() throws Exception {
+        when(productServiceClient.findById("P1001")).thenReturn(new ProductDetails(
+                "P1001", "Mug", new BigDecimal("89.99"), Currency.getInstance("ZAR")));
+        when(paymentServiceClient.pay(org.mockito.ArgumentMatchers.anyString(),
+                org.mockito.ArgumentMatchers.any(), org.mockito.ArgumentMatchers.any()))
+                .thenAnswer(call -> new za.co.shoplink.order.client.PaymentServiceClient.Result(
+                        "PAY1", call.getArgument(0), call.getArgument(1), call.getArgument(2), "DECLINED"));
+        org.mockito.Mockito.doThrow(new org.springframework.web.client.ResourceAccessException("offline"))
+                .when(inventoryServiceClient).release(org.mockito.ArgumentMatchers.anyString());
+        mockMvc.perform(post("/orders").contentType(MediaType.APPLICATION_JSON)
+                .content("{\"customerId\":\"C1\",\"items\":[{\"productId\":\"P1001\",\"quantity\":1}]}"))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.status").value("STOCK_RELEASE_PENDING"));
     }
 
     @Test

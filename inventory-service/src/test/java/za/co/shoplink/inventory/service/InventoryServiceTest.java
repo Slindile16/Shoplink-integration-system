@@ -10,6 +10,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class InventoryServiceTest {
+    @Test void releaseAndRepeatedReservationsDoNotChangeStockTwice() {
+        InventoryService service = new InventoryService();
+        StockReservationRequest request = new StockReservationRequest("O1", List.of(
+                new StockReservationRequest.Item("P1001", 4)));
+        service.reserve(request);
+        service.reserve(request);
+        assertEquals(96, service.available("P1001"));
+        service.release("O1");
+        service.release("O1");
+        assertEquals(100, service.available("P1001"));
+        assertThrows(ResponseStatusException.class, () -> service.reserve(request));
+    }
+
     @Test
     void reservesStockAndReportsTheUpdatedQuantity() {
         InventoryService service = new InventoryService();

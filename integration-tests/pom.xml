@@ -17,6 +17,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>za.co.shoplink</groupId><artifactId>payment-service</artifactId>
+            <version>${project.version}</version><scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>za.co.shoplink</groupId>
             <artifactId>product-service</artifactId>
             <version>${project.version}</version>

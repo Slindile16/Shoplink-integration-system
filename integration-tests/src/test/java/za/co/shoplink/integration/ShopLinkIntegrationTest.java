@@ -29,6 +29,7 @@ class ShopLinkIntegrationTest {
     private ConfigurableApplicationContext orderContext;
     private ConfigurableApplicationContext inventoryContext;
     private int orderPort;
+    private ConfigurableApplicationContext paymentContext;
 
     @BeforeEach
     void startServices() {
@@ -39,17 +40,22 @@ class ShopLinkIntegrationTest {
         inventoryContext = new SpringApplicationBuilder(InventoryApplication.class)
                 .run("--server.port=0", "--spring.main.banner-mode=off");
         int inventoryPort = ((WebServerApplicationContext) inventoryContext).getWebServer().getPort();
+        paymentContext = new SpringApplicationBuilder(za.co.shoplink.payment.PaymentApplication.class)
+                .run("--server.port=0", "--spring.main.banner-mode=off");
+        int paymentPort = ((WebServerApplicationContext) paymentContext).getWebServer().getPort();
         orderContext = new SpringApplicationBuilder(OrderApplication.class)
                 .run("--server.port=0",
                         "--spring.main.banner-mode=off",
                         "--product.service.base-url=http://127.0.0.1:" + productPort,
-                        "--inventory.service.base-url=http://127.0.0.1:" + inventoryPort);
+                        "--inventory.service.base-url=http://127.0.0.1:" + inventoryPort,
+                        "--payment.service.base-url=http://127.0.0.1:" + paymentPort);
 
         orderPort = ((WebServerApplicationContext) orderContext).getWebServer().getPort();
     }
 
     @AfterEach
     void stopServices() {
+        if (paymentContext != null) paymentContext.close();
         if (orderContext != null) {
             orderContext.close();
         }
@@ -59,6 +65,39 @@ class ShopLinkIntegrationTest {
         if (inventoryContext != null) {
             inventoryContext.close();
         }
+    }
+
+    @Test
+    void declineReleasesStock() throws Exception {
+        int port = ((WebServerApplicationContext) paymentContext).getWebServer().getPort();
+        paymentContext.close();
+        paymentContext = new SpringApplicationBuilder(za.co.shoplink.payment.PaymentApplication.class)
+                .run("--server.port=" + port, "--payment.simulation.decline=true");
+        assertOrderOutcome("PAYMENT_FAILED", 50);
+    }
+
+    @Test
+    void unavailablePaymentKeepsOrderPendingAndStockHeld() throws Exception {
+        paymentContext.close();
+        assertOrderOutcome("PAYMENT_PENDING", 49);
+    }
+
+    private void assertOrderOutcome(String status, int stock) throws Exception {
+        HttpResponse<String> response = HTTP_CLIENT.send(HttpRequest.newBuilder()
+                .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders"))
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(
+                        "{\"customerId\":\"C1\",\"items\":[{\"productId\":\"P1002\",\"quantity\":1}]}"))
+                .build(), HttpResponse.BodyHandlers.ofString());
+        assertEquals(201, response.statusCode());
+        JsonNode order = OBJECT_MAPPER.readTree(response.body());
+        assertEquals(status, order.path("status").asText());
+        HttpResponse<String> retrieved = HTTP_CLIENT.send(HttpRequest.newBuilder()
+                .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders/" + order.path("id").asText()))
+                .GET().build(), HttpResponse.BodyHandlers.ofString());
+        assertEquals(status, OBJECT_MAPPER.readTree(retrieved.body()).path("status").asText());
+        assertEquals(stock, inventoryContext.getBean(za.co.shoplink.inventory.service.InventoryService.class)
+                .available("P1002"));
     }
 
     @Test
@@ -77,13 +116,17 @@ class ShopLinkIntegrationTest {
         assertEquals(201, createResponse.statusCode());
         JsonNode createdOrder = OBJECT_MAPPER.readTree(createResponse.body());
         assertEquals("C002", createdOrder.path("customerId").asText());
-        assertEquals("CREATED", createdOrder.path("status").asText());
+        assertEquals("PAID", createdOrder.path("status").asText());
         assertEquals("Canvas Tote Bag", createdOrder.path("items").get(0).path("productName").asText());
         assertEquals(149.99, createdOrder.path("items").get(0).path("unitPrice").asDouble());
         assertEquals("ZAR", createdOrder.path("items").get(0).path("currency").asText());
 
         String orderId = createdOrder.path("id").asText();
         assertNotNull(orderId);
+        za.co.shoplink.payment.Payment payment = paymentContext.getBean(za.co.shoplink.payment.PaymentService.class)
+                .find(orderId);
+        assertEquals(0, new java.math.BigDecimal("449.97").compareTo(payment.amount()));
+        assertEquals("ZAR", payment.currency().getCurrencyCode());
         HttpRequest getRequest = HttpRequest.newBuilder()
                 .uri(URI.create("http://127.0.0.1:" + orderPort + "/orders/" + orderId))
                 .GET()
