@@ -28,6 +28,12 @@ public class InventoryController {
         return new StockCheckResponse(productId, inventoryService.available(productId));
     }
 
+    @PostMapping("/reservations/{orderId}/release")
+    public ReservationResponse release(@PathVariable("orderId") String orderId) {
+        inventoryService.release(orderId);
+        return new ReservationResponse(orderId, "RELEASED");
+    }
+
     @PostMapping("/reservations")
     @ResponseStatus(HttpStatus.CREATED)
     public ReservationResponse reserve(@Valid @RequestBody StockReservationRequest request) {
