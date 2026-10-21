@@ -1,0 +1,10 @@
+services:
+  activemq:
+    image: apache/activemq-classic:6.2.0
+    ports:
+      - "127.0.0.1:61616:61616"
+      - "127.0.0.1:8161:8161"
+    volumes:
+      - activemq-data:/opt/apache-activemq/data
+volumes:
+  activemq-data:
