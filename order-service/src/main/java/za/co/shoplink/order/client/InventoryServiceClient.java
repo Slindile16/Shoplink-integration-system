@@ -16,6 +16,11 @@ public class InventoryServiceClient {
         this.restClient = builder.baseUrl(baseUrl).build();
     }
 
+    public void release(String orderId) {
+        restClient.post().uri("/inventory/reservations/{orderId}/release", orderId)
+                .retrieve().toBodilessEntity();
+    }
+
     public void reserve(String orderId, List<StockReservationRequest.Item> items) {
         restClient.post().uri("/inventory/reservations")
                 .body(new StockReservationRequest(orderId, items))

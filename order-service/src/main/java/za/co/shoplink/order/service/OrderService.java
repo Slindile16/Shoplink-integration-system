@@ -15,6 +15,8 @@ import za.co.shoplink.order.model.OrderStatus;
 import za.co.shoplink.order.repository.OrderRepository;
 
 import java.time.Instant;
+import java.math.BigDecimal;
+import za.co.shoplink.order.client.PaymentServiceClient;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -25,9 +27,12 @@ public class OrderService {
     private final ProductServiceClient productServiceClient;
     private final InventoryServiceClient inventoryServiceClient;
 
+    private final PaymentServiceClient paymentServiceClient;
+
     public OrderService(OrderRepository repository, ProductServiceClient productServiceClient,
-                        InventoryServiceClient inventoryServiceClient) {
+                        InventoryServiceClient inventoryServiceClient, PaymentServiceClient paymentServiceClient) {
         this.repository = repository;
+        this.paymentServiceClient = paymentServiceClient;
         this.productServiceClient = productServiceClient;
         this.inventoryServiceClient = inventoryServiceClient;
     }
@@ -51,6 +56,9 @@ public class OrderService {
             return new OrderItem(product.id(), product.name(), item.quantity(), product.price(), product.currency());
         }).toList();
 
+        if (items.stream().map(OrderItem::currency).distinct().count() != 1) {
+            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "Order items must use one currency");
+        }
         String orderId = UUID.randomUUID().toString();
         try {
             inventoryServiceClient.reserve(orderId, items.stream()
@@ -64,8 +72,35 @@ public class OrderService {
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY,
                     "Inventory Service could not reserve stock", ex);
         }
-        Order order = new Order(orderId, request.customerId(), OrderStatus.CREATED, items, Instant.now());
-        return repository.save(order);
+        Instant createdAt = Instant.now();
+        repository.save(new Order(orderId, request.customerId(), OrderStatus.PAYMENT_PENDING, items, createdAt));
+        BigDecimal total = items.stream().map(item -> item.unitPrice().multiply(BigDecimal.valueOf(item.quantity())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        PaymentServiceClient.Result payment;
+        try {
+            payment = paymentServiceClient.pay(orderId, total, items.get(0).currency());
+        } catch (RestClientException ex) {
+            return findById(orderId);
+        }
+        // An ambiguous response must keep stock held until payment can be reconciled.
+        if (payment == null || !orderId.equals(payment.orderId()) || payment.amount() == null
+                || total.compareTo(payment.amount()) != 0 || !items.get(0).currency().equals(payment.currency())) {
+            return findById(orderId);
+        }
+        OrderStatus status = OrderStatus.PAYMENT_PENDING;
+        if ("APPROVED".equals(payment.status())) {
+            status = OrderStatus.PAID;
+        } else if ("DECLINED".equals(payment.status())) {
+            status = OrderStatus.STOCK_RELEASE_PENDING;
+            repository.save(new Order(orderId, request.customerId(), status, items, createdAt));
+            try {
+                inventoryServiceClient.release(orderId);
+                status = OrderStatus.PAYMENT_FAILED;
+            } catch (RestClientException ex) {
+                // Preserve a visible state for manual reconciliation if compensation fails.
+            }
+        }
+        return repository.save(new Order(orderId, request.customerId(), status, items, createdAt));
     }
 
     public Order findById(String id) {
