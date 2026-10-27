@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>za.co.shoplink</groupId>
@@ -10,7 +12,10 @@
     <packaging>pom</packaging>
 
     <name>ShopLink</name>
-    <description>Parent build configuration for the ShopLink services</description>
+
+    <description>
+        Parent build configuration for the ShopLink services
+    </description>
 
     <properties>
         <java.version>17</java.version>
@@ -21,6 +26,7 @@
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -28,6 +34,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -36,6 +43,8 @@
         <module>product-service</module>
         <module>inventory-service</module>
         <module>payment-service</module>
+        <module>delivery-service</module>
+        <module>notification-service</module>
         <module>order-service</module>
         <module>integration-tests</module>
     </modules>
@@ -43,20 +52,25 @@
     <build>
         <pluginManagement>
             <plugins>
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
                 </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.14.0</version>
+
                     <configuration>
                         <release>${maven.compiler.release}</release>
                     </configuration>
                 </plugin>
+
             </plugins>
         </pluginManagement>
     </build>
+
 </project>
