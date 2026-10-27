@@ -126,8 +126,8 @@ The project will be developed incrementally, with regular commits documenting im
 - [X] **Phase 3:** Implement in-memory inventory reservations and connect the Order flow.
 - [X] **Phase 4:** Add the Payment Service and order-processing workflow.
 - [X] **Phase 5:** Integrate ActiveMQ/JMS messaging.
-- [ ] **Phase 6:** Add Delivery and Notification consumers.
-- [ ] **Phase 7:** Handle concurrent orders and protect stock consistency.
+- [X] **Phase 6:** Add Delivery and Notification consumers.
+- [X] **Phase 7:** Handle concurrent orders and protect stock consistency.
 - [ ] **Phase 8:** Add tests, retries, error handling, and message-processing safeguards.
 - [ ] **Phase 9:** Add Docker support and complete the documentation.
 - [ ] **Phase 10:** Record a 5–10 minute demonstration of the completed system.
