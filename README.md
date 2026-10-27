@@ -315,3 +315,5 @@ shoplink/
 
 
 Product, Inventory, Order, and Payment services provide the Phase 5 flow. Start ActiveMQ and install shared modules before starting the services individually. See [Phase 5 messaging guide](docs/messaging.md) for commands, event contracts, verification, and failure limitations. Delivery, Notification, and durable application persistence remain planned.
+
+WTC-T8AR98NB
