@@ -3069,5 +3069,739 @@
       "Family"
     ],
     "price": 11800
+  },
+  {
+    "id": "round-light-solitaire",
+    "name": "The Round Light Solitaire",
+    "style": "Solitaire pendants",
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Round brilliant-cut solitaire",
+    "price": 15900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A brilliant round-cut diamond rests in a restrained white-gold setting, suspended from a fine chain.",
+    "story": "For light in its simplest form.",
+    "sku": "HV102",
+    "category": "Necklaces",
+    "image": "memoir-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Solitaire pendants",
+      "Round brilliant-cut solitaire"
+    ]
+  },
+  {
+    "id": "oval-grace-solitaire",
+    "name": "The Oval Grace Solitaire",
+    "style": "Solitaire pendants",
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Oval-cut solitaire",
+    "price": 17200,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "An elongated oval diamond glows on a slender gold chain. Intimate, effortless and beautifully balanced.",
+    "story": "An elegant chapter, entirely yours.",
+    "sku": "HV103",
+    "category": "Necklaces",
+    "image": "necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Solitaire pendants",
+      "Oval-cut solitaire"
+    ]
+  },
+  {
+    "id": "sovereign-cuban-links",
+    "name": "The Sovereign Cuban Links",
+    "style": "Chains",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Chunky Cuban-link chain",
+    "price": 31800,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "Broad polished Cuban links create a confident silhouette with a rich, sculptural weight.",
+    "story": "Wear your strength with ease.",
+    "sku": "HV104",
+    "category": "Necklaces",
+    "image": "sovereign-curb-chain",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Chains",
+      "Chunky Cuban-link chain"
+    ]
+  },
+  {
+    "id": "quiet-spark-tennis",
+    "name": "The Quiet Spark Tennis Necklace",
+    "style": "Tennis necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Petite continuous diamond line",
+    "price": 26800,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A delicate row of petite stones follows the neckline with a quiet, continuous brilliance.",
+    "story": "A little sparkle goes a long way.",
+    "sku": "HV105",
+    "category": "Necklaces",
+    "image": "starlight-tennis-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Tennis necklaces",
+      "Petite continuous diamond line"
+    ]
+  },
+  {
+    "id": "golden-petal-pendant",
+    "name": "The Golden Petal",
+    "style": "Nature-inspired",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Sculpted five-petal flower",
+    "price": 10900,
+    "audience": [
+      "Women"
+    ],
+    "description": "A softly sculpted flower rests against a fine gold chain, bringing a gentle moment of bloom.",
+    "story": "Forever in bloom.",
+    "sku": "HV106",
+    "category": "Necklaces",
+    "image": "fleur-station-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Sculpted five-petal flower"
+    ]
+  },
+  {
+    "id": "enchanted-vine-necklace",
+    "name": "The Enchanted Vine",
+    "style": "Nature-inspired",
+    "metal": "18ct rose gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Curving leaf and vine pendant",
+    "price": 16900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A winding rose-gold vine curls into fine leaf details, creating an organic, graceful silhouette.",
+    "story": "Let every season become a story.",
+    "sku": "HV107",
+    "category": "Necklaces",
+    "image": "ivy-leaf-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Curving leaf and vine pendant"
+    ]
+  },
+  {
+    "id": "butterfly-kiss-necklace",
+    "name": "The Butterfly Kiss",
+    "style": "Nature-inspired",
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Open-wing butterfly pendant",
+    "price": 14500,
+    "audience": [
+      "Women"
+    ],
+    "description": "A delicate butterfly with airy wings and sparkling accents rests on a golden chain.",
+    "story": "For the beautiful things that change.",
+    "sku": "HV108",
+    "category": "Necklaces",
+    "image": "ivy-leaf-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Open-wing butterfly pendant"
+    ]
+  },
+  {
+    "id": "rose-dream-pendant",
+    "name": "The Rose Dream Pendant",
+    "style": "Gemstone pendants",
+    "metal": "18ct rose gold",
+    "gemstone": "Rose quartz",
+    "stone": "Soft-pink oval rose quartz",
+    "price": 12500,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A blush-pink gemstone glows within a warm rose-gold frame, balancing colour with delicate restraint.",
+    "story": "Keep a little tenderness close.",
+    "sku": "HV109",
+    "category": "Necklaces",
+    "image": "rose-medallion",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Gemstone pendants",
+      "Soft-pink oval rose quartz"
+    ]
+  },
+  {
+    "id": "initial-verse-necklace",
+    "name": "The Initial Verse",
+    "style": "Personal pieces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Custom A–Z initial pendant",
+    "price": 6900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A polished letter pendant in radiant gold, made personal with the initial you choose.",
+    "story": "One letter, a thousand stories.",
+    "sku": "HV110",
+    "category": "Necklaces",
+    "image": "keepsake-initial-m",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Personal pieces",
+      "Custom A–Z initial pendant"
+    ],
+    "personalization": "initial"
+  },
+  {
+    "id": "birthstone-story-necklace",
+    "name": "The Birthstone Story",
+    "style": "Personal pieces",
+    "metal": "18ct yellow gold",
+    "gemstone": "Birthstone",
+    "stone": "Choice of twelve birth-month stones",
+    "price": 11900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A meaningful gemstone pendant chosen for your birth month, set against a timeless gold chain.",
+    "story": "Every month holds a story.",
+    "sku": "HV111",
+    "category": "Necklaces",
+    "image": "emerald-reverie-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Personal pieces",
+      "Choice of twelve birth-month stones"
+    ],
+    "personalization": "birthstone"
+  },
+  {
+    "id": "written-promise-bar",
+    "name": "The Written Promise Bar",
+    "style": "Personal pieces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Custom engraved bar pendant",
+    "price": 7800,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "A sleek silver bar ready for the name, date or short message that matters to you.",
+    "story": "Some words deserve to be worn.",
+    "sku": "HV112",
+    "category": "Necklaces",
+    "image": "voyager-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Personal pieces",
+      "Custom engraved bar pendant"
+    ],
+    "personalization": "engraving"
+  },
+  {
+    "id": "forever-disc-necklace",
+    "name": "The Forever Disc",
+    "style": "Personal pieces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Custom engraved disc pendant",
+    "price": 9800,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A beautifully simple gold disc designed to carry your chosen initials, name or meaningful date.",
+    "story": "A small reminder of forever.",
+    "sku": "HV113",
+    "category": "Necklaces",
+    "image": "rose-medallion",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Personal pieces",
+      "Custom engraved disc pendant"
+    ],
+    "personalization": "engraving"
+  },
+  {
+    "id": "golden-layers-necklace",
+    "name": "The Golden Layers",
+    "style": "Layered necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Two connected gold chains and solitaire",
+    "price": 18800,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Two delicate chains share one clasp, with a tiny solitaire on the longer layer. The outer chain falls 5cm below the inner.",
+    "story": "Two moments, one beautiful story.",
+    "sku": "HV114",
+    "category": "Necklaces",
+    "image": "duet-layered-necklace",
+    "optionLabel": "Inner chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "keywords": [
+      "Layered necklaces",
+      "Two connected gold chains and solitaire"
+    ]
+  },
+  {
+    "id": "moonlit-layers-necklace",
+    "name": "The Moonlit Layers",
+    "style": "Layered necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Three connected chains with moon and star",
+    "price": 11900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Three silver layers combine a crescent, a star and a fine cable texture, connected at one clasp with 5cm intervals.",
+    "story": "Every night holds a little wonder.",
+    "sku": "HV115",
+    "category": "Necklaces",
+    "image": "threefold-layered-necklace",
+    "optionLabel": "Inner chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "keywords": [
+      "Layered necklaces",
+      "Three connected chains with moon and star"
+    ]
+  },
+  {
+    "id": "geometry-pendant",
+    "name": "The Geometry Pendant",
+    "style": "Statement pieces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Angular geometric pendant",
+    "price": 15100,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "Architectural silver lines meet in a striking open form, balancing sharp edges with modern restraint.",
+    "story": "A shape all your own.",
+    "sku": "HV116",
+    "category": "Necklaces",
+    "image": "orbit-sculpture-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Statement pieces",
+      "Angular geometric pendant"
+    ]
+  },
+  {
+    "id": "obsidian-edge-necklace",
+    "name": "The Obsidian Edge",
+    "style": "Statement pieces",
+    "metal": "Sterling silver",
+    "gemstone": "Black onyx",
+    "stone": "Angular onyx statement pendant",
+    "price": 19800,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "A bold black onyx pendant framed by sculptural silver creates a confident geometric statement.",
+    "story": "For a presence that needs no introduction.",
+    "sku": "HV117",
+    "category": "Necklaces",
+    "image": "voyager-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Statement pieces",
+      "Angular onyx statement pendant"
+    ]
+  },
+  {
+    "id": "silver-fleur-stations",
+    "name": "The Silver Fleur Stations",
+    "style": "Nature-inspired",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Four white enamel flowers connected by silver chain",
+    "price": 9900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Four white enamel blooms sit apart along a fine silver chain, with delicate links visible between every flower.",
+    "story": "Four little moments of bloom.",
+    "sku": "HV118",
+    "category": "Necklaces",
+    "image": "fleur-station-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Four white enamel flowers connected by silver chain"
+    ]
+  },
+  {
+    "id": "noir-fleur-stations",
+    "name": "The Noir Fleur Stations",
+    "style": "Nature-inspired",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Four black enamel flowers connected by silver chain",
+    "price": 10200,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Four miniature black enamel flowers are evenly spaced across a fine silver chain, echoing the Fleur bracelets.",
+    "story": "A bloom with a little mystery.",
+    "sku": "HV119",
+    "category": "Necklaces",
+    "image": "fleur-station-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Four black enamel flowers connected by silver chain"
+    ]
+  },
+  {
+    "id": "shared-heart-a",
+    "name": "The Shared Heart — First Half",
+    "style": "Matching necklaces",
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "First half of a split-heart pendant",
+    "price": 8600,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "One polished half of a rose-gold heart, designed to be treasured alone or completed by its matching piece.",
+    "story": "Two halves. One beautiful bond.",
+    "sku": "HV120",
+    "category": "Necklaces",
+    "image": "heart-of-light-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "First half of a split-heart pendant"
+    ]
+  },
+  {
+    "id": "shared-heart-b",
+    "name": "The Shared Heart — Second Half",
+    "style": "Matching necklaces",
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Second half of a split-heart pendant",
+    "price": 8600,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A complementary rose-gold heart half, a keepsake for somebody who shares your story.",
+    "story": "A place in someone's heart.",
+    "sku": "HV121",
+    "category": "Necklaces",
+    "image": "heart-of-light-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Second half of a split-heart pendant"
+    ]
+  },
+  {
+    "id": "twin-star-a",
+    "name": "The Twin Star — Golden",
+    "style": "Matching necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Five-point gold star pendant",
+    "price": 6900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A polished golden star on a fine chain, celebrating the people who brighten ordinary days.",
+    "story": "For the light you bring.",
+    "sku": "HV122",
+    "category": "Necklaces",
+    "image": "solstice-sun-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Five-point gold star pendant"
+    ]
+  },
+  {
+    "id": "twin-star-b",
+    "name": "The Twin Star — Silver",
+    "style": "Matching necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Five-point silver star pendant",
+    "price": 5900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A gleaming silver star on a fine chain, designed to shine beside its golden counterpart.",
+    "story": "Different stars. One constellation.",
+    "sku": "HV123",
+    "category": "Necklaces",
+    "image": "solstice-moon-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Five-point silver star pendant"
+    ]
+  },
+  {
+    "id": "shared-heart-necklace-pair",
+    "name": "The Shared Heart Pair",
+    "style": "Matching necklaces",
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Complementary split-heart pendants",
+    "price": 17200,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "Two rose-gold heart halves on separate chains. A complementary pair for the stories you share, with a length chosen for each person.",
+    "story": "Two halves. One story.",
+    "sku": "HV124",
+    "category": "Necklaces",
+    "image": "solstice-sun-moon-pair",
+    "optionLabel": "Individual chain lengths",
+    "options": [],
+    "components": [
+      {
+        "productId": "shared-heart-a",
+        "label": "First heart half"
+      },
+      {
+        "productId": "shared-heart-b",
+        "label": "Second heart half"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Shared Heart"
+    ]
+  },
+  {
+    "id": "twin-stars-necklace-pair",
+    "name": "The Twin Stars Pair",
+    "style": "Matching necklaces",
+    "metal": "18ct yellow gold & sterling silver",
+    "gemstone": "None",
+    "stone": "Gold and silver star pendants",
+    "price": 12800,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "One golden star and one silver star, each on a separate chain. Choose an individual length for each meaningful connection.",
+    "story": "Under the same sky.",
+    "sku": "HV125",
+    "category": "Necklaces",
+    "image": "unity-black-white-necklace-pair",
+    "optionLabel": "Individual chain lengths",
+    "options": [],
+    "components": [
+      {
+        "productId": "twin-star-a",
+        "label": "Golden star"
+      },
+      {
+        "productId": "twin-star-b",
+        "label": "Silver star"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Stars"
+    ]
   }
 ]
