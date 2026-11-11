@@ -3116,7 +3116,7 @@
     "story": "An elegant chapter, entirely yours.",
     "sku": "HV103",
     "category": "Necklaces",
-    "image": "oval-grace-solitaire",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3146,7 +3146,7 @@
     "story": "Wear your strength with ease.",
     "sku": "HV104",
     "category": "Necklaces",
-    "image": "sovereign-cuban-links",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3176,7 +3176,7 @@
     "story": "A little sparkle goes a long way.",
     "sku": "HV105",
     "category": "Necklaces",
-    "image": "quiet-spark-tennis",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3205,7 +3205,7 @@
     "story": "Forever in bloom.",
     "sku": "HV106",
     "category": "Necklaces",
-    "image": "golden-petal-pendant",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3264,7 +3264,7 @@
     "story": "For the beautiful things that change.",
     "sku": "HV108",
     "category": "Necklaces",
-    "image": "butterfly-kiss-necklace",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3294,7 +3294,7 @@
     "story": "Keep a little tenderness close.",
     "sku": "HV109",
     "category": "Necklaces",
-    "image": "rose-dream-pendant",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3324,7 +3324,7 @@
     "story": "One letter, a thousand stories.",
     "sku": "HV110",
     "category": "Necklaces",
-    "image": "initial-verse-necklace",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3355,7 +3355,7 @@
     "story": "Every month holds a story.",
     "sku": "HV111",
     "category": "Necklaces",
-    "image": "birthstone-story-necklace",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3417,7 +3417,7 @@
     "story": "A small reminder of forever.",
     "sku": "HV113",
     "category": "Necklaces",
-    "image": "forever-disc-necklace",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3476,7 +3476,7 @@
     "story": "Every night holds a little wonder.",
     "sku": "HV115",
     "category": "Necklaces",
-    "image": "moonlit-layers-necklace",
+    "image": null,
     "optionLabel": "Inner chain length",
     "options": [
       "40cm",
@@ -3564,7 +3564,7 @@
     "story": "Four little moments of bloom.",
     "sku": "HV118",
     "category": "Necklaces",
-    "image": "silver-fleur-stations",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3681,7 +3681,7 @@
     "story": "For the light you bring.",
     "sku": "HV122",
     "category": "Necklaces",
-    "image": "twin-star-a",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3710,7 +3710,7 @@
     "story": "Different stars. One constellation.",
     "sku": "HV123",
     "category": "Necklaces",
-    "image": "twin-star-b",
+    "image": null,
     "optionLabel": "Chain length",
     "options": [
       "40cm",
@@ -3779,7 +3779,7 @@
     "story": "Under the same sky.",
     "sku": "HV125",
     "category": "Necklaces",
-    "image": "twin-stars-necklace-pair",
+    "image": null,
     "optionLabel": "Individual chain lengths",
     "options": [],
     "components": [
