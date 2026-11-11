@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @org.springframework.context.annotation.Import(za.co.shoplink.common.messaging.MessagingConfiguration.class)
 @SpringBootApplication
+@org.springframework.scheduling.annotation.EnableScheduling
 public class OrderApplication {
     public static void main(String[] args) {
         SpringApplication.run(OrderApplication.class, args);

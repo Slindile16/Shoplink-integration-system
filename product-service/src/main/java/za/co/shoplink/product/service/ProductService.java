@@ -2,21 +2,24 @@ package za.co.shoplink.product.service;
 
 import org.springframework.stereotype.Service;
 import za.co.shoplink.product.model.Product;
+import za.co.shoplink.common.catalogue.JewelleryCatalogue;
 
 import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 @Service
 public class ProductService {
     private static final Currency CURRENCY = Currency.getInstance("ZAR");
 
-    private final List<Product> products = List.of(
+    private final List<Product> products = Stream.concat(List.of(
             new Product("P1001", "ShopLink Starter Mug", new BigDecimal("89.99"), CURRENCY),
             new Product("P1002", "Canvas Tote Bag", new BigDecimal("149.99"), CURRENCY),
             new Product("P1003", "Insulated Water Bottle", new BigDecimal("219.50"), CURRENCY)
-    );
+    ).stream(), JewelleryCatalogue.variants().stream().map(variant ->
+            new Product(variant.id(), variant.name(), variant.price(), CURRENCY))).toList();
 
     public List<Product> findAll() {
         return products;

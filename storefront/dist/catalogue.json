@@ -1,0 +1,3073 @@
+[
+  {
+    "id": "promise-solitaire",
+    "sku": "HV01",
+    "name": "The Promise Solitaire",
+    "category": "Rings",
+    "price": 24500,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.50ct oval diamond",
+    "description": "A quiet expression of forever. An oval-cut diamond held in a delicate gold setting, with a slender band that lets the light do the talking.",
+    "story": "For the beginning of your favourite chapter.",
+    "image": "ring",
+    "tag": "Signature piece",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "featured": true,
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire"
+  },
+  {
+    "id": "evermore-band",
+    "sku": "HV02",
+    "name": "The Evermore Band",
+    "category": "Rings",
+    "price": 12800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished gold",
+    "description": "A softly rounded band with an enduring silhouette. Wear it alone as a small statement, or alongside the pieces that tell your story.",
+    "story": "A simple promise, beautifully kept.",
+    "image": "evermore-band",
+    "tag": "The essentials",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Wedding band"
+  },
+  {
+    "id": "sonnet-ring",
+    "sku": "HV03",
+    "name": "The Sonnet Ring",
+    "category": "Rings",
+    "price": 18600,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.30ct round diamond",
+    "description": "A round brilliant diamond and a refined gold band, imagined for the moments you want to hold onto.",
+    "story": "A little poetry for the everyday.",
+    "image": "sonnet-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire"
+  },
+  {
+    "id": "sovereign-signet",
+    "sku": "HV13",
+    "name": "The Sovereign Signet",
+    "category": "Rings",
+    "price": 16900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Oval signet face",
+    "description": "An oval-faced signet with a broad shoulder and a mirror-polished finish. A confident, contemporary heirloom.",
+    "story": "Leave your own mark.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Signet",
+    "image": "sovereign-signet",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size"
+  },
+  {
+    "id": "legacy-band",
+    "sku": "HV14",
+    "name": "The Legacy Band",
+    "category": "Rings",
+    "price": 14900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "6mm brushed gold band",
+    "description": "A substantial six-millimetre wedding band with a brushed centre and polished edges. Quiet strength in a timeless form.",
+    "story": "A promise with presence.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Wedding band",
+    "image": "legacy-band",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size"
+  },
+  {
+    "id": "contour-band",
+    "sku": "HV15",
+    "name": "The Contour Band",
+    "category": "Rings",
+    "price": 10900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Curved nesting band",
+    "description": "A slender chevron-shaped gold band, designed to frame a solitaire or bring a gentle curve to a ring stack.",
+    "story": "The perfect companion.",
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "style": "Stacking",
+    "image": "contour-band",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size"
+  },
+  {
+    "id": "promise-bridal-duo",
+    "sku": "HV16",
+    "name": "The Promise Bridal Duo",
+    "category": "Rings",
+    "price": 35400,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "2 matching rings",
+    "description": "An oval diamond solitaire and a curved gold band, designed to nest together. Both rings are included.",
+    "story": "Two pieces. One beautiful promise.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Bridal set",
+    "image": "promise-bridal-duo",
+    "options": [],
+    "optionLabel": "Individual ring sizes",
+    "components": [
+      {
+        "productId": "promise-solitaire",
+        "label": "Engagement ring"
+      },
+      {
+        "productId": "contour-band",
+        "label": "Wedding band"
+      }
+    ],
+    "tag": "2-ring set"
+  },
+  {
+    "id": "together-couple-duo",
+    "sku": "HV17",
+    "name": "The Together Couple Duo",
+    "category": "Rings",
+    "price": 27700,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "2 matching rings",
+    "description": "Two coordinating gold wedding bands: one softly rounded, one wider with a brushed finish. Choose each partner’s size independently.",
+    "story": "Different stories. A shared chapter.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Couples’ set",
+    "image": "together-couple-duo",
+    "options": [],
+    "optionLabel": "Individual ring sizes",
+    "components": [
+      {
+        "productId": "evermore-band",
+        "label": "First partner’s band"
+      },
+      {
+        "productId": "legacy-band",
+        "label": "Second partner’s band"
+      }
+    ],
+    "tag": "2-ring set"
+  },
+  {
+    "id": "forever-wedding-trio",
+    "sku": "HV18",
+    "name": "The Forever Wedding Trio",
+    "category": "Rings",
+    "price": 50300,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "3 matching rings",
+    "description": "An oval diamond engagement ring, a curved nesting wedding band and a wider partner’s band. All three rings are included in the total set price.",
+    "story": "Three rings. One shared forever.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Wedding trio",
+    "image": "forever-wedding-trio",
+    "options": [],
+    "optionLabel": "Individual ring sizes",
+    "components": [
+      {
+        "productId": "promise-solitaire",
+        "label": "Engagement ring"
+      },
+      {
+        "productId": "contour-band",
+        "label": "First wedding band"
+      },
+      {
+        "productId": "legacy-band",
+        "label": "Partner’s wedding band"
+      }
+    ],
+    "tag": "3-ring set"
+  },
+  {
+    "id": "poetry-stacking-trio",
+    "sku": "HV19",
+    "name": "The Poetry Stacking Trio",
+    "category": "Rings",
+    "price": 42300,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "3 matching rings",
+    "description": "A polished band, a sculptural contour band and a round diamond solitaire. Wear them together or let each piece have its moment.",
+    "story": "Three verses, entirely your own.",
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "style": "Stacking set",
+    "image": "poetry-stacking-trio",
+    "options": [],
+    "optionLabel": "Individual ring sizes",
+    "components": [
+      {
+        "productId": "evermore-band",
+        "label": "Rounded band"
+      },
+      {
+        "productId": "contour-band",
+        "label": "Contour band"
+      },
+      {
+        "productId": "sonnet-ring",
+        "label": "Diamond ring"
+      }
+    ],
+    "tag": "3-ring set"
+  },
+  {
+    "id": "first-light-pendant",
+    "sku": "HV04",
+    "name": "The First Light Pendant",
+    "category": "Necklaces",
+    "price": 14200,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.25ct pear diamond",
+    "description": "A pear-cut diamond suspended from a fine gold chain. A luminous piece that sits close to the heart.",
+    "story": "For new beginnings and brighter days.",
+    "image": "necklace",
+    "tag": "A personal favourite",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "optionLabel": "Chain length",
+    "featured": true,
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire pendants"
+  },
+  {
+    "id": "golden-thread",
+    "sku": "HV05",
+    "name": "The Golden Thread",
+    "category": "Necklaces",
+    "price": 8900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Fine gold chain",
+    "description": "An understated gold chain with a fluid, light-catching finish. An elegant foundation for your own collection of memories.",
+    "story": "The thread that ties it all together.",
+    "image": "golden-thread",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "optionLabel": "Chain length",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Chains"
+  },
+  {
+    "id": "memoir-pendant",
+    "sku": "HV06",
+    "name": "The Memoir Pendant",
+    "category": "Necklaces",
+    "price": 16900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.35ct pear diamond",
+    "description": "A softly gleaming diamond pendant with a fine gold chain. A thoughtful gift for someone whose story is woven into yours.",
+    "story": "Keep your favourite memory close.",
+    "image": "memoir-pendant",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "optionLabel": "Chain length",
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire pendants"
+  },
+  {
+    "id": "sovereign-curb-chain",
+    "sku": "HV20",
+    "name": "The Sovereign Curb Chain",
+    "category": "Necklaces",
+    "price": 28500,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "5mm curb links",
+    "description": "A substantial flat curb chain with smooth interlocking links. A confident gold signature, worn alone or layered.",
+    "story": "Strength in every link.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Chains",
+    "image": "sovereign-curb-chain",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "heritage-figaro-chain",
+    "sku": "HV21",
+    "name": "The Heritage Figaro Chain",
+    "category": "Necklaces",
+    "price": 22800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "4mm Figaro links",
+    "description": "A rhythmic sequence of elongated and short gold links. A classic Figaro chain with a distinctly personal character.",
+    "story": "A classic, reimagined for you.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Chains",
+    "image": "heritage-figaro-chain",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "voyager-pendant",
+    "sku": "HV22",
+    "name": "The Voyager Pendant",
+    "category": "Necklaces",
+    "price": 17400,
+    "metal": "Sterling silver",
+    "gemstone": "Onyx",
+    "stone": "Black onyx dog-tag pendant",
+    "description": "A slim rectangular black onyx pendant framed in sterling silver, suspended from a silver chain. A grounded everyday statement.",
+    "story": "For the path you choose.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Gemstone pendants",
+    "image": "voyager-pendant",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "celestial-pearl-necklace",
+    "sku": "HV23",
+    "name": "The Celestial Pearl Necklace",
+    "category": "Necklaces",
+    "price": 13200,
+    "metal": "18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Single freshwater pearl",
+    "description": "A luminous cultured pearl on a delicate gold chain. Softly organic beauty with a modern, restrained silhouette.",
+    "story": "A little light, close to the heart.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Pearls",
+    "image": "celestial-pearl-necklace",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "emerald-reverie-necklace",
+    "sku": "HV24",
+    "name": "The Emerald Reverie",
+    "category": "Necklaces",
+    "price": 26500,
+    "metal": "18ct yellow gold",
+    "gemstone": "Emerald",
+    "stone": "Emerald-cut green emerald",
+    "description": "An emerald-cut green stone in a clean gold setting. A vivid pendant for the moments that deserve a little colour.",
+    "story": "Let your story bloom.",
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "style": "Gemstone pendants",
+    "image": "emerald-reverie-necklace",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "midnight-box-chain",
+    "sku": "HV25",
+    "name": "The Midnight Box Chain",
+    "category": "Necklaces",
+    "price": 9400,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "3mm box chain",
+    "description": "Precisely formed square silver links create an architectural chain with a cool, understated finish.",
+    "story": "Your everyday signature.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Chains",
+    "image": "midnight-box-chain",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "rose-medallion",
+    "sku": "HV26",
+    "name": "The Rose Medallion",
+    "category": "Necklaces",
+    "price": 15800,
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Round rose-gold medallion",
+    "description": "A round rose-gold medallion on a fine chain. A warm-toned piece that brings a little softness to everyday dressing.",
+    "story": "Carry your own meaning.",
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "rose-medallion",
+    "options": [
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length"
+  },
+  {
+    "id": "whisper-hoops",
+    "sku": "HV07",
+    "name": "The Whisper Hoops",
+    "category": "Earrings",
+    "price": 9800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.20ct total diamond weight",
+    "description": "Petite gold hoops set with a line of delicate diamonds. A considered finishing touch, from quiet mornings to evenings worth remembering.",
+    "story": "Small details. Lasting impressions.",
+    "image": "earrings",
+    "tag": "Everyday heirloom",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as",
+    "featured": true,
+    "audience": [
+      "Women"
+    ],
+    "style": "Hoops"
+  },
+  {
+    "id": "lumiere-huggies",
+    "sku": "HV08",
+    "name": "The Lumière Huggies",
+    "category": "Earrings",
+    "price": 11500,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.30ct total diamond weight",
+    "description": "Close-fitting diamond huggies with a warm gold finish. Refined proportions and an easy silhouette for every occasion.",
+    "story": "Bring a little light with you.",
+    "image": "lumiere-huggies",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as",
+    "audience": [
+      "Women"
+    ],
+    "style": "Hoops"
+  },
+  {
+    "id": "verse-hoops",
+    "sku": "HV09",
+    "name": "The Verse Hoops",
+    "category": "Earrings",
+    "price": 7600,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished gold hoops",
+    "description": "Sculptural gold hoops with a simple, graceful curve. An everyday signature with a quiet presence.",
+    "story": "Your signature, in gold.",
+    "image": "verse-hoops",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Hoops"
+  },
+  {
+    "id": "brilliant-diamond-studs",
+    "sku": "HV27",
+    "name": "The Brilliant Diamond Studs",
+    "category": "Earrings",
+    "price": 14800,
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.40ct total diamond weight",
+    "description": "Two round brilliant diamonds held in neat white-gold settings. A versatile pair for every collection.",
+    "story": "Small pieces. Brilliant presence.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Studs",
+    "image": "brilliant-diamond-studs",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "orbit-single-hoop",
+    "sku": "HV28",
+    "name": "The Orbit Single Hoop",
+    "category": "Earrings",
+    "price": 4200,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Single 12mm hoop",
+    "description": "A compact polished gold hoop with a secure hinged silhouette. Sold individually for an asymmetrical or minimal look.",
+    "story": "One considered detail.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Single hoop",
+    "image": "orbit-single-hoop",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "midnight-onyx-stud",
+    "sku": "HV29",
+    "name": "The Midnight Onyx Stud",
+    "category": "Earrings",
+    "price": 3900,
+    "metal": "Sterling silver",
+    "gemstone": "Onyx",
+    "stone": "Single square onyx stud",
+    "description": "A square black onyx stone in a crisp silver setting. Sold as a single stud, with a quietly graphic presence.",
+    "story": "A darker kind of brilliance.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Single stud",
+    "image": "midnight-onyx-stud",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "pearl-poetry-drops",
+    "sku": "HV30",
+    "name": "The Pearl Poetry Drops",
+    "category": "Earrings",
+    "price": 12600,
+    "metal": "18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Freshwater pearl drops",
+    "description": "Luminous drop pearls suspended from delicate gold hooks. A graceful pair with a softly sculptural movement.",
+    "story": "Beauty in the pause.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Drop earrings",
+    "image": "pearl-poetry-drops",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "emerald-muse-drops",
+    "sku": "HV31",
+    "name": "The Emerald Muse Drops",
+    "category": "Earrings",
+    "price": 24800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Emerald",
+    "stone": "Green emerald drops",
+    "description": "Rich green emeralds and polished gold, drawn into a refined pair of drop earrings. Colour with a timeless presence.",
+    "story": "A vivid little verse.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Drop earrings",
+    "image": "emerald-muse-drops",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "golden-bar-studs",
+    "sku": "HV32",
+    "name": "The Golden Bar Studs",
+    "category": "Earrings",
+    "price": 5400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished gold bars",
+    "description": "Clean gold bars with an architectural silhouette. A minimal pair designed to sit effortlessly in an everyday collection.",
+    "story": "Simple lines. Strong character.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Studs",
+    "image": "golden-bar-studs",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "sculpture-ear-cuffs",
+    "sku": "HV33",
+    "name": "The Sculpture Ear Cuffs",
+    "category": "Earrings",
+    "price": 6200,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Open sculptural cuffs",
+    "description": "A pair of sculpted silver ear cuffs with a smooth, open curve. An expressive finishing touch that needs no piercing.",
+    "story": "Make room for your own style.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Ear cuffs",
+    "image": "sculpture-ear-cuffs",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Sold as"
+  },
+  {
+    "id": "eternity-bracelet",
+    "sku": "HV10",
+    "name": "The Eternity Bracelet",
+    "category": "Bracelets",
+    "price": 32000,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "1.00ct total diamond weight",
+    "description": "A continuous line of brilliant diamonds held in warm gold. A classic tennis bracelet, imagined as a future family treasure.",
+    "story": "Some things deserve to last forever.",
+    "image": "bracelet",
+    "tag": "Future heirloom",
+    "options": [
+      "16cm",
+      "17cm",
+      "19cm",
+      "21cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "featured": true,
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Tennis"
+  },
+  {
+    "id": "starlit-bracelet",
+    "sku": "HV11",
+    "name": "The Starlit Bracelet",
+    "category": "Bracelets",
+    "price": 21800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.60ct total diamond weight",
+    "description": "A delicate diamond bracelet that catches the light with every movement. An understated companion for memorable evenings.",
+    "story": "For a moment that feels like magic.",
+    "image": "starlit-bracelet",
+    "options": [
+      "16cm",
+      "17cm",
+      "19cm",
+      "21cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "audience": [
+      "Women"
+    ],
+    "style": "Tennis"
+  },
+  {
+    "id": "keepsake-bracelet",
+    "sku": "HV12",
+    "name": "The Keepsake Bracelet",
+    "category": "Bracelets",
+    "price": 15400,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.35ct total diamond weight",
+    "description": "A refined gold and diamond bracelet with an easy elegance. A meaningful piece to give, receive, and make your own.",
+    "story": "A reminder of what matters most.",
+    "image": "keepsake-bracelet",
+    "options": [
+      "16cm",
+      "17cm",
+      "19cm",
+      "21cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "audience": [
+      "Women"
+    ],
+    "style": "Station"
+  },
+  {
+    "id": "sovereign-cuff",
+    "sku": "HV34",
+    "name": "The Sovereign Cuff",
+    "category": "Bracelets",
+    "price": 26400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Brushed open cuff",
+    "description": "A substantial open gold cuff with a brushed face and polished edges. A strong silhouette with a considered finish.",
+    "story": "A little strength to carry with you.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Cuff",
+    "image": "sovereign-cuff",
+    "options": [
+      "S",
+      "M",
+      "L"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "heritage-curb-bracelet",
+    "sku": "HV35",
+    "name": "The Heritage Curb Bracelet",
+    "category": "Bracelets",
+    "price": 21800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "6mm curb links",
+    "description": "Smooth, substantial gold links form a classic curb bracelet. An enduring piece, easy to wear and make your own.",
+    "story": "Connected to what matters.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Chain bracelet",
+    "image": "heritage-curb-bracelet",
+    "options": [
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "midnight-onyx-bracelet",
+    "sku": "HV36",
+    "name": "The Midnight Onyx Bracelet",
+    "category": "Bracelets",
+    "price": 8900,
+    "metal": "Sterling silver",
+    "gemstone": "Onyx",
+    "stone": "Black onyx & silver",
+    "description": "Polished black onyx beads punctuated by sterling silver details. A grounded, tactile companion for everyday wear.",
+    "story": "Find your own balance.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Beaded bracelet",
+    "image": "midnight-onyx-bracelet",
+    "options": [
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "pearl-whisper-bracelet",
+    "sku": "HV37",
+    "name": "The Pearl Whisper Bracelet",
+    "category": "Bracelets",
+    "price": 11800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Freshwater pearls & gold",
+    "description": "A strand of luminous freshwater pearls finished with a fine gold clasp. Soft beauty, with every pearl a little different.",
+    "story": "Quietly unforgettable.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Pearl bracelet",
+    "image": "pearl-whisper-bracelet",
+    "options": [
+      "16cm",
+      "17cm",
+      "19cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "rose-ribbon-bangle",
+    "sku": "HV38",
+    "name": "The Rose Ribbon Bangle",
+    "category": "Bracelets",
+    "price": 18200,
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Polished rose-gold bangle",
+    "description": "A slim, fluid rose-gold bangle with a softly rounded profile. Wear it alone or alongside a favourite keepsake.",
+    "story": "A warm little reminder.",
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "style": "Bangle",
+    "image": "rose-ribbon-bangle",
+    "options": [
+      "S",
+      "M",
+      "L"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "platinum-link-bracelet",
+    "sku": "HV39",
+    "name": "The Platinum Link Bracelet",
+    "category": "Bracelets",
+    "price": 29800,
+    "metal": "Platinum",
+    "gemstone": "None",
+    "stone": "Polished oval links",
+    "description": "Cool platinum links and a refined clasp create a bracelet with a confident, modern rhythm.",
+    "story": "An enduring connection.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Chain bracelet",
+    "image": "platinum-link-bracelet",
+    "options": [
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "woven-legacy-bracelet",
+    "sku": "HV40",
+    "name": "The Woven Legacy Bracelet",
+    "category": "Bracelets",
+    "price": 7400,
+    "metal": "Leather & 18ct gold",
+    "gemstone": "None",
+    "stone": "Braided leather, gold clasp",
+    "description": "Rich black braided leather meets a polished gold clasp. An understated contrast of warm metal and tactile texture.",
+    "story": "Character in every detail.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Leather bracelet",
+    "image": "woven-legacy-bracelet",
+    "options": [
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "shared-black-gold",
+    "sku": "HV41",
+    "name": "The Shared Verse — Black & Gold",
+    "category": "Bracelets",
+    "price": 6200,
+    "metal": "18ct yellow gold",
+    "gemstone": "Onyx",
+    "stone": "6mm black onyx beads",
+    "description": "Black onyx beads, finished with 18ct yellow gold spacer details. The same considered design as its contrasting companion, with a colour entirely your own.",
+    "story": "Your colour. A shared connection.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Beaded bracelet",
+    "image": "shared-black-gold",
+    "colour": "Black",
+    "finish": "Gold",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "shared-white-gold",
+    "sku": "HV42",
+    "name": "The Shared Verse — White & Gold",
+    "category": "Bracelets",
+    "price": 6200,
+    "metal": "18ct yellow gold",
+    "gemstone": "Howlite",
+    "stone": "6mm white howlite beads",
+    "description": "White howlite beads, finished with 18ct yellow gold spacer details. The same considered design as its contrasting companion, with a colour entirely your own.",
+    "story": "Your colour. A shared connection.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Beaded bracelet",
+    "image": "shared-white-gold",
+    "colour": "White",
+    "finish": "Gold",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "shared-black-silver",
+    "sku": "HV43",
+    "name": "The Shared Verse — Black & Silver",
+    "category": "Bracelets",
+    "price": 3900,
+    "metal": "Sterling silver",
+    "gemstone": "Onyx",
+    "stone": "6mm black onyx beads",
+    "description": "Black onyx beads, finished with sterling silver spacer details. The same considered design as its contrasting companion, with a colour entirely your own.",
+    "story": "Your colour. A shared connection.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Beaded bracelet",
+    "image": "shared-black-silver",
+    "colour": "Black",
+    "finish": "Silver",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "shared-white-silver",
+    "sku": "HV44",
+    "name": "The Shared Verse — White & Silver",
+    "category": "Bracelets",
+    "price": 3900,
+    "metal": "Sterling silver",
+    "gemstone": "Howlite",
+    "stone": "6mm white howlite beads",
+    "description": "White howlite beads, finished with sterling silver spacer details. The same considered design as its contrasting companion, with a colour entirely your own.",
+    "story": "Your colour. A shared connection.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Beaded bracelet",
+    "image": "shared-white-silver",
+    "colour": "White",
+    "finish": "Silver",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length"
+  },
+  {
+    "id": "unity-black-gold",
+    "sku": "HV47",
+    "name": "The Unity — Black & Gold",
+    "category": "Bracelets",
+    "price": 7400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Black-and-white yin-yang enamel medallion",
+    "description": "A black braided cord bracelet with a black-and-white yin-yang enamel medallion, framed in 18ct yellow gold. A distinct, graphic design that celebrates balance and connection.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Yin-yang bracelet",
+    "image": "unity-black-gold",
+    "colour": "Black",
+    "finish": "Gold",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "yin yang",
+      "ying yang",
+      "yin-yang",
+      "balance"
+    ]
+  },
+  {
+    "id": "unity-white-gold",
+    "sku": "HV48",
+    "name": "The Unity — White & Gold",
+    "category": "Bracelets",
+    "price": 7400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Black-and-white yin-yang enamel medallion",
+    "description": "A white braided cord bracelet with a black-and-white yin-yang enamel medallion, framed in 18ct yellow gold. A distinct, graphic design that celebrates balance and connection.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Yin-yang bracelet",
+    "image": "unity-white-gold",
+    "colour": "White",
+    "finish": "Gold",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "yin yang",
+      "ying yang",
+      "yin-yang",
+      "balance"
+    ]
+  },
+  {
+    "id": "unity-black-silver",
+    "sku": "HV50",
+    "name": "The Unity — Black & Silver",
+    "category": "Bracelets",
+    "price": 4200,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Black-and-white yin-yang enamel medallion",
+    "description": "A black braided cord bracelet with a black-and-white yin-yang enamel medallion, framed in sterling silver. A distinct, graphic design that celebrates balance and connection.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Yin-yang bracelet",
+    "image": "unity-black-silver",
+    "colour": "Black",
+    "finish": "Silver",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "yin yang",
+      "ying yang",
+      "yin-yang",
+      "balance"
+    ]
+  },
+  {
+    "id": "unity-white-silver",
+    "sku": "HV51",
+    "name": "The Unity — White & Silver",
+    "category": "Bracelets",
+    "price": 4200,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Black-and-white yin-yang enamel medallion",
+    "description": "A white braided cord bracelet with a black-and-white yin-yang enamel medallion, framed in sterling silver. A distinct, graphic design that celebrates balance and connection.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Yin-yang bracelet",
+    "image": "unity-white-silver",
+    "colour": "White",
+    "finish": "Silver",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "yin yang",
+      "ying yang",
+      "yin-yang",
+      "balance"
+    ]
+  },
+  {
+    "id": "fleur-black-gold",
+    "sku": "HV53",
+    "name": "The Fleur Chain — Black & Gold",
+    "category": "Bracelets",
+    "price": 9400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "4 black enamel flower stations",
+    "description": "Four black enamel flowers with 18ct yellow gold centres, spaced along a delicate gold chain. Fine chain links connect every flower across the gaps for a light, flowing design.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Flower-chain bracelet",
+    "image": "fleur-black-gold",
+    "colour": "Black",
+    "finish": "Gold",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "flower",
+      "floral",
+      "daisy",
+      "flower chain"
+    ]
+  },
+  {
+    "id": "fleur-white-gold",
+    "sku": "HV54",
+    "name": "The Fleur Chain — White & Gold",
+    "category": "Bracelets",
+    "price": 9400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "4 white enamel flower stations",
+    "description": "Four white enamel flowers with 18ct yellow gold centres, spaced along a delicate gold chain. Fine chain links connect every flower across the gaps for a light, flowing design.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Flower-chain bracelet",
+    "image": "fleur-white-gold",
+    "colour": "White",
+    "finish": "Gold",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "flower",
+      "floral",
+      "daisy",
+      "flower chain"
+    ]
+  },
+  {
+    "id": "fleur-black-silver",
+    "sku": "HV56",
+    "name": "The Fleur Chain — Black & Silver",
+    "category": "Bracelets",
+    "price": 5800,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "4 black enamel flower stations",
+    "description": "Four black enamel flowers with sterling silver centres, spaced along a delicate silver chain. Fine chain links connect every flower across the gaps for a light, flowing design.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Flower-chain bracelet",
+    "image": "fleur-black-silver",
+    "colour": "Black",
+    "finish": "Silver",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "flower",
+      "floral",
+      "daisy",
+      "flower chain"
+    ]
+  },
+  {
+    "id": "fleur-white-silver",
+    "sku": "HV57",
+    "name": "The Fleur Chain — White & Silver",
+    "category": "Bracelets",
+    "price": 5800,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "4 white enamel flower stations",
+    "description": "Four white enamel flowers with sterling silver centres, spaced along a delicate silver chain. Fine chain links connect every flower across the gaps for a light, flowing design.",
+    "story": "Your own expression of a shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Flower-chain bracelet",
+    "image": "fleur-white-silver",
+    "colour": "White",
+    "finish": "Silver",
+    "options": [
+      "15cm",
+      "17cm",
+      "19cm",
+      "21cm",
+      "23cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "keywords": [
+      "flower",
+      "floral",
+      "daisy",
+      "flower chain"
+    ]
+  },
+  {
+    "id": "fleur-chain-gold-pair",
+    "sku": "HV55",
+    "name": "The Fleur Chain — Gold Pair",
+    "category": "Bracelets",
+    "price": 18800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Four enamel flowers per bracelet · fine chain between",
+    "description": "One black-flower bracelet and one white-flower bracelet. Each has four enamel flowers with gold centres, joined by fine gold chain across every gap. A delicate matching pair for every kind of connection.",
+    "story": "Different colours. One shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Flower-chain set",
+    "image": "fleur-chain-gold-pair",
+    "colour": "Black & white",
+    "finish": "Gold",
+    "finishFamily": "fleur-pair",
+    "designLabel": "Flower chain",
+    "tag": "2-bracelet set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Any relationship"
+    ],
+    "options": [],
+    "optionLabel": "Individual bracelet lengths",
+    "components": [
+      {
+        "productId": "fleur-black-gold",
+        "label": "Black bracelet"
+      },
+      {
+        "productId": "fleur-white-gold",
+        "label": "White bracelet"
+      }
+    ],
+    "keywords": [
+      "flower",
+      "floral",
+      "daisy",
+      "four flowers",
+      "flower chain"
+    ]
+  },
+  {
+    "id": "fleur-chain-silver-pair",
+    "sku": "HV58",
+    "name": "The Fleur Chain — Silver Pair",
+    "category": "Bracelets",
+    "price": 11600,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Four enamel flowers per bracelet · fine chain between",
+    "description": "One black-flower bracelet and one white-flower bracelet. Each has four enamel flowers with silver centres, joined by fine silver chain across every gap. A delicate matching pair for every kind of connection.",
+    "story": "Different colours. One shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Flower-chain set",
+    "image": "fleur-chain-silver-pair",
+    "colour": "Black & white",
+    "finish": "Silver",
+    "finishFamily": "fleur-pair",
+    "designLabel": "Flower chain",
+    "tag": "2-bracelet set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Any relationship"
+    ],
+    "options": [],
+    "optionLabel": "Individual bracelet lengths",
+    "components": [
+      {
+        "productId": "fleur-black-silver",
+        "label": "Black bracelet"
+      },
+      {
+        "productId": "fleur-white-silver",
+        "label": "White bracelet"
+      }
+    ],
+    "keywords": [
+      "flower",
+      "floral",
+      "daisy",
+      "four flowers",
+      "flower chain"
+    ]
+  },
+  {
+    "id": "unity-yin-yang-gold-pair",
+    "sku": "HV49",
+    "name": "The Unity — Gold Pair",
+    "category": "Bracelets",
+    "price": 14800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Two yin-yang cord bracelets",
+    "description": "One black cord bracelet and one white cord bracelet, each with a black-and-white yin-yang medallion and gold details. A coordinated pair for couples, friends, siblings or any meaningful bond.",
+    "story": "Different colours. One shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Yin-yang set",
+    "image": "unity-yin-yang-gold-pair",
+    "colour": "Black & white",
+    "finish": "Gold",
+    "finishFamily": "unity-pair",
+    "designLabel": "Yin-yang",
+    "tag": "2-bracelet set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Any relationship"
+    ],
+    "options": [],
+    "optionLabel": "Individual bracelet lengths",
+    "components": [
+      {
+        "productId": "unity-black-gold",
+        "label": "Black bracelet"
+      },
+      {
+        "productId": "unity-white-gold",
+        "label": "White bracelet"
+      }
+    ],
+    "keywords": [
+      "yin yang",
+      "ying yang",
+      "yin-yang",
+      "balance"
+    ]
+  },
+  {
+    "id": "unity-yin-yang-silver-pair",
+    "sku": "HV52",
+    "name": "The Unity — Silver Pair",
+    "category": "Bracelets",
+    "price": 8400,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Two yin-yang cord bracelets",
+    "description": "One black cord bracelet and one white cord bracelet, each with a black-and-white yin-yang medallion and silver details. A coordinated pair for couples, friends, siblings or any meaningful bond.",
+    "story": "Different colours. One shared story.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Yin-yang set",
+    "image": "unity-yin-yang-silver-pair",
+    "colour": "Black & white",
+    "finish": "Silver",
+    "finishFamily": "unity-pair",
+    "designLabel": "Yin-yang",
+    "tag": "2-bracelet set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Any relationship"
+    ],
+    "options": [],
+    "optionLabel": "Individual bracelet lengths",
+    "components": [
+      {
+        "productId": "unity-black-silver",
+        "label": "Black bracelet"
+      },
+      {
+        "productId": "unity-white-silver",
+        "label": "White bracelet"
+      }
+    ],
+    "keywords": [
+      "yin yang",
+      "ying yang",
+      "yin-yang",
+      "balance"
+    ]
+  },
+  {
+    "id": "shared-verse-gold-duo",
+    "sku": "HV45",
+    "name": "The Shared Verse — Gold Pair",
+    "category": "Bracelets",
+    "price": 12400,
+    "metal": "18ct yellow gold",
+    "gemstone": "Onyx & howlite",
+    "stone": "Black onyx & white howlite · 6mm beads",
+    "description": "One black onyx bracelet. One white howlite bracelet. The same beaded design, with matching gold details and complementary colours. A pair for couples, friends, siblings, chosen family or any meaningful connection.",
+    "story": "Different colours. A connection that is yours.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Matching bracelet set",
+    "image": "shared-verse-gold-duo",
+    "colour": "Black & white",
+    "finish": "Gold",
+    "finishFamily": "shared-verse-pair",
+    "tag": "2-bracelet set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Any relationship"
+    ],
+    "options": [],
+    "optionLabel": "Individual bracelet lengths",
+    "components": [
+      {
+        "productId": "shared-black-gold",
+        "label": "Black bracelet"
+      },
+      {
+        "productId": "shared-white-gold",
+        "label": "White bracelet"
+      }
+    ],
+    "designLabel": "Beaded"
+  },
+  {
+    "id": "shared-verse-silver-duo",
+    "sku": "HV46",
+    "name": "The Shared Verse — Silver Pair",
+    "category": "Bracelets",
+    "price": 7800,
+    "metal": "Sterling silver",
+    "gemstone": "Onyx & howlite",
+    "stone": "Black onyx & white howlite · 6mm beads",
+    "description": "One black onyx bracelet. One white howlite bracelet. The same beaded design, with matching silver details and complementary colours. A pair for couples, friends, siblings, chosen family or any meaningful connection.",
+    "story": "Different colours. A connection that is yours.",
+    "audience": [
+      "Women",
+      "Men",
+      "Unisex"
+    ],
+    "style": "Matching bracelet set",
+    "image": "shared-verse-silver-duo",
+    "colour": "Black & white",
+    "finish": "Silver",
+    "finishFamily": "shared-verse-pair",
+    "tag": "2-bracelet set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Any relationship"
+    ],
+    "options": [],
+    "optionLabel": "Individual bracelet lengths",
+    "components": [
+      {
+        "productId": "shared-black-silver",
+        "label": "Black bracelet"
+      },
+      {
+        "productId": "shared-white-silver",
+        "label": "White bracelet"
+      }
+    ],
+    "designLabel": "Beaded"
+  },
+  {
+    "id": "teardrop-solitaire",
+    "sku": "HV59",
+    "name": "The Teardrop Solitaire",
+    "category": "Rings",
+    "price": 21800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.60ct pear-cut diamond",
+    "description": "A pear-cut diamond brings a graceful point of light to a slender yellow gold band. A simple setting gives the teardrop silhouette room to shine.",
+    "story": "For the moments that move you.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire",
+    "image": "teardrop-solitaire",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Solitaire",
+      "0.60ct pear-cut diamond",
+      "One pear-cut clear diamond in a five-prong yellow gold setting on a plain slender band"
+    ]
+  },
+  {
+    "id": "atelier-solitaire",
+    "sku": "HV60",
+    "name": "The Atelier Solitaire",
+    "category": "Rings",
+    "price": 26800,
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.70ct emerald-cut diamond",
+    "description": "Clean lines and long facets give this emerald-cut diamond a quiet confidence. A white gold band completes its architectural silhouette.",
+    "story": "A little structure. A lasting impression.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Solitaire",
+    "image": "atelier-solitaire",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Solitaire",
+      "0.70ct emerald-cut diamond",
+      "One rectangular emerald-cut clear diamond, four-prong white gold setting, plain angular white gold band"
+    ]
+  },
+  {
+    "id": "celeste-solitaire",
+    "sku": "HV61",
+    "name": "The Celeste Solitaire",
+    "category": "Rings",
+    "price": 23600,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.60ct marquise diamond",
+    "description": "An elongated marquise diamond rests along a fine yellow gold band. Its pointed ends create an elegant, unmistakable silhouette.",
+    "story": "Follow your own constellation.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire",
+    "image": "celeste-solitaire",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Solitaire",
+      "0.60ct marquise diamond",
+      "One long narrow marquise-cut clear diamond with pointed ends oriented along the finger, six-prong yellow gold setting, slender plain band"
+    ]
+  },
+  {
+    "id": "heartfelt-solitaire",
+    "sku": "HV62",
+    "name": "The Heartfelt Solitaire",
+    "category": "Rings",
+    "price": 22900,
+    "metal": "18ct rose gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "0.50ct heart-shaped diamond",
+    "description": "A heart-shaped diamond rests in warm rose gold. A slim, unadorned band keeps the softly romantic centre in focus.",
+    "story": "A love letter, worn every day.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Solitaire",
+    "image": "heartfelt-solitaire",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Solitaire",
+      "0.50ct heart-shaped diamond",
+      "One clearly heart-shaped clear diamond with two lobes and a pointed bottom, three-prong rose gold setting and slender plain rose gold band"
+    ]
+  },
+  {
+    "id": "whisper-halo",
+    "sku": "HV63",
+    "name": "The Whisper Halo",
+    "category": "Rings",
+    "price": 28900,
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Round diamond with a fine diamond halo",
+    "description": "A fine circle of small diamonds frames a round centre stone. The slender white gold band makes this a delicate take on the halo.",
+    "story": "Small details. Lasting light.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Halo",
+    "image": "whisper-halo",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Halo",
+      "Round diamond with a fine diamond halo",
+      "Round brilliant clear diamond surrounded by one very fine circular halo of tiny clear diamonds, slim plain white gold band, delicate understated proportions"
+    ]
+  },
+  {
+    "id": "radiance-halo",
+    "sku": "HV64",
+    "name": "The Radiance Halo",
+    "category": "Rings",
+    "price": 38900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Cushion-cut diamond with a double halo",
+    "description": "A cushion-cut centre sits within two rows of diamonds, held by a yellow gold split shank. A statement halo with presence from every angle.",
+    "story": "For a chapter that deserves to shine.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Halo",
+    "image": "radiance-halo",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Halo",
+      "Cushion-cut diamond with a double halo",
+      "Large cushion-cut clear centre diamond surrounded by two graduated cushion-shaped rows of smaller clear diamonds, dramatic broad head and split-shank yellow gold band"
+    ]
+  },
+  {
+    "id": "past-present-future",
+    "sku": "HV65",
+    "name": "The Past, Present & Future Ring",
+    "category": "Rings",
+    "price": 34900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Three round diamonds",
+    "description": "Three round diamonds sit across a plain yellow gold band, with a larger centre and two smaller companions. A balanced trio with a timeless rhythm.",
+    "story": "Yesterday, today and everything ahead.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Three-stone",
+    "image": "past-present-future",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Three-stone",
+      "Three round diamonds",
+      "Exactly three round clear diamonds across the front, largest in centre with two smaller round side stones, classic yellow gold prongs and plain band"
+    ]
+  },
+  {
+    "id": "horizon-trilogy",
+    "sku": "HV66",
+    "name": "The Horizon Trilogy",
+    "category": "Rings",
+    "price": 36700,
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Emerald-cut diamond with baguette side stones",
+    "description": "An emerald-cut diamond meets two tapered baguette side stones in white gold. Contrasting cuts create a crisp, geometric three-stone design.",
+    "story": "Three perspectives. One shared horizon.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Three-stone",
+    "image": "horizon-trilogy",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Three-stone",
+      "Emerald-cut diamond with baguette side stones",
+      "One rectangular emerald-cut clear centre diamond flanked by exactly two tapered baguette clear diamonds pointing outward, architectural white gold setting and plain band"
+    ]
+  },
+  {
+    "id": "lumiere-half-eternity",
+    "sku": "HV67",
+    "name": "The Lumiere Half Eternity",
+    "category": "Rings",
+    "price": 17800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Round diamonds across half the band",
+    "description": "Round diamonds trace the upper half of a slender yellow gold band, leaving the lower half smooth. Wear it alone or beside your favourite solitaire.",
+    "story": "A line of light for everyday chapters.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Eternity bands",
+    "image": "lumiere-half-eternity",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Eternity bands",
+      "Round diamonds across half the band",
+      "Slim yellow gold half-eternity ring with nine small round clear diamonds across upper half, lower half visibly plain polished gold"
+    ]
+  },
+  {
+    "id": "infinity-eternity",
+    "sku": "HV68",
+    "name": "The Infinity Eternity Band",
+    "category": "Rings",
+    "price": 29800,
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Channel-set baguette diamonds around the full band",
+    "description": "Baguette diamonds continue around this white gold band in a channel setting. Clean metal borders frame an uninterrupted ribbon of light.",
+    "story": "A story without an ending.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Eternity bands",
+    "image": "infinity-eternity",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Eternity bands",
+      "Channel-set baguette diamonds around the full band",
+      "Wide white gold full-eternity band with rectangular baguette diamonds channel-set continuously around entire circumference, strong clean geometric borders"
+    ]
+  },
+  {
+    "id": "nocturne-signet",
+    "sku": "HV69",
+    "name": "The Nocturne Signet",
+    "category": "Rings",
+    "price": 8900,
+    "metal": "Sterling silver",
+    "gemstone": "Black onyx",
+    "stone": "Rectangular black onyx",
+    "description": "A rectangular black onyx face meets broad, tapered silver shoulders. Its dark centre and substantial profile give the classic signet a modern character.",
+    "story": "Keep a little mystery close.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Signet",
+    "image": "nocturne-signet",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Signet",
+      "Rectangular black onyx",
+      "Chunky sterling silver signet with flat rectangular black onyx face and softened corners, broad tapered shoulders, no engraving"
+    ]
+  },
+  {
+    "id": "tidal-wave-ring",
+    "sku": "HV70",
+    "name": "The Tidal Wave Ring",
+    "category": "Rings",
+    "price": 12400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished gold",
+    "description": "A broad crest of yellow gold rises into a flowing, asymmetric wave. Sculpted curves create movement without a single gemstone.",
+    "story": "Move to your own rhythm.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Sculptural",
+    "image": "tidal-wave-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Sculptural",
+      "Polished gold",
+      "Solid polished yellow gold ring with broad fluid asymmetric wave-shaped crest, sculptural curved silhouette, no stones"
+    ]
+  },
+  {
+    "id": "eclipse-dome-ring",
+    "sku": "HV71",
+    "name": "The Eclipse Dome Ring",
+    "category": "Rings",
+    "price": 6400,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Polished silver",
+    "description": "A generous silver dome curves into a tapered band. Its smooth, rounded surface turns a simple shape into a bold everyday piece.",
+    "story": "Presence in its purest form.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Sculptural",
+    "image": "eclipse-dome-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Sculptural",
+      "Polished silver",
+      "Bold chunky polished sterling silver dome ring, highly rounded inflated top tapering to narrow underside, entirely smooth no stones no engraving"
+    ]
+  },
+  {
+    "id": "fleur-petal-ring",
+    "sku": "HV72",
+    "name": "The Fleur Petal Ring",
+    "category": "Rings",
+    "price": 19800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Five diamond petals",
+    "description": "Five marquise diamond petals gather around a small gold centre. A fine yellow gold band carries the flower with a light, open feel.",
+    "story": "For the chapters in bloom.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Nature-inspired",
+    "image": "fleur-petal-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Nature-inspired",
+      "Five diamond petals",
+      "Delicate flower ring with exactly five marquise-shaped clear diamond petals radiating around a tiny round gold centre, slender yellow gold band"
+    ]
+  },
+  {
+    "id": "ivy-vine-ring",
+    "sku": "HV73",
+    "name": "The Ivy Vine Ring",
+    "category": "Rings",
+    "price": 14300,
+    "metal": "18ct rose gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Diamond-set leaves",
+    "description": "A curling rose gold vine ends in delicate diamond-set leaves. The open silhouette wraps around the finger with an organic, asymmetric flow.",
+    "story": "Grow in your own direction.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Nature-inspired",
+    "image": "ivy-vine-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Nature-inspired",
+      "Diamond-set leaves",
+      "Open-ended rose gold vine ring curling around finger with three small pointed leaves each end, tiny clear diamonds set into leaves, organic asymmetric botanical design"
+    ]
+  },
+  {
+    "id": "verdant-emerald-ring",
+    "sku": "HV74",
+    "name": "The Verdant Emerald Ring",
+    "category": "Rings",
+    "price": 27900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Emerald",
+    "stone": "Oval emerald",
+    "description": "An oval emerald sits within a smooth yellow gold bezel. The substantial polished band gives the deep green centre a clean, confident frame.",
+    "story": "A fresh perspective, held in gold.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Gemstone",
+    "image": "verdant-emerald-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Gemstone",
+      "Oval emerald",
+      "Large oval deep emerald-green gemstone in smooth yellow gold bezel, substantial plain polished yellow gold band, no halo"
+    ]
+  },
+  {
+    "id": "midnight-sapphire-ring",
+    "sku": "HV75",
+    "name": "The Midnight Sapphire Ring",
+    "category": "Rings",
+    "price": 25900,
+    "metal": "18ct white gold",
+    "gemstone": "Sapphire",
+    "stone": "Square-cut blue sapphire",
+    "description": "A square blue sapphire sits flush within a broad, brushed white gold band. A geometric profile and rich colour give this ring a grounded presence.",
+    "story": "Carry the stillness of midnight.",
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "style": "Gemstone",
+    "image": "midnight-sapphire-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Gemstone",
+      "Square-cut blue sapphire",
+      "Square-cut deep sapphire-blue gemstone flush-set in a broad brushed white gold band, geometric masculine shape, no side stones"
+    ]
+  },
+  {
+    "id": "blush-morganite-ring",
+    "sku": "HV76",
+    "name": "The Blush Morganite Ring",
+    "category": "Rings",
+    "price": 17900,
+    "metal": "18ct rose gold",
+    "gemstone": "Morganite",
+    "stone": "Hexagonal peach-pink morganite",
+    "description": "A hexagonal peach-pink morganite meets a twisted rose gold band. The softly coloured stone and rope-like texture bring two gentle details together.",
+    "story": "A softer shade of something lasting.",
+    "audience": [
+      "Women"
+    ],
+    "style": "Gemstone",
+    "image": "blush-morganite-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Gemstone",
+      "Hexagonal peach-pink morganite",
+      "Hexagonal pastel peach-pink morganite stone in delicate six-prong rose gold setting with twisted rope-style rose gold band, no halo"
+    ]
+  },
+  {
+    "id": "scarlet-ruby-ring",
+    "sku": "HV77",
+    "name": "The Scarlet Ruby Ring",
+    "category": "Rings",
+    "price": 24900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Ruby",
+    "stone": "Oval ruby with diamond accents",
+    "description": "An oval ruby brings rich red colour to a fine yellow gold band. Small diamond accents along the shoulders add a measured touch of light.",
+    "story": "For the stories told from the heart.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Gemstone",
+    "image": "scarlet-ruby-ring",
+    "options": [
+      "J",
+      "L",
+      "N",
+      "P",
+      "R",
+      "T",
+      "V",
+      "X",
+      "Z"
+    ],
+    "optionLabel": "Ring size",
+    "keywords": [
+      "Gemstone",
+      "Oval ruby with diamond accents",
+      "Oval rich ruby-red gemstone in yellow gold four-prong setting with three tiny round clear diamonds on each shoulder, slim yellow gold band"
+    ]
+  },
+  {
+    "id": "dewdrop-diamond-necklace",
+    "name": "The Dewdrop Diamond Necklace",
+    "style": "Solitaire pendants",
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Pear-cut diamond",
+    "price": 16800,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A pear-cut diamond hangs from a fine white gold chain. A simple setting gives its teardrop silhouette a clear, quiet presence.",
+    "story": "A little light for your next beginning.",
+    "sku": "HV78",
+    "category": "Necklaces",
+    "image": "dewdrop-diamond-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Solitaire pendants",
+      "Pear-cut diamond"
+    ]
+  },
+  {
+    "id": "heart-of-light-necklace",
+    "name": "The Heart of Light Necklace",
+    "style": "Solitaire pendants",
+    "metal": "18ct rose gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Heart-shaped diamond",
+    "price": 17600,
+    "audience": [
+      "Women"
+    ],
+    "description": "A heart-shaped diamond rests on a slender rose gold chain. Soft colour and an unmistakable shape make a small gesture feel lasting.",
+    "story": "A love letter close to the heart.",
+    "sku": "HV79",
+    "category": "Necklaces",
+    "image": "heart-of-light-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Solitaire pendants",
+      "Heart-shaped diamond"
+    ]
+  },
+  {
+    "id": "woven-rope-chain",
+    "name": "The Woven Rope Chain",
+    "style": "Chains",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "6mm twisted rope chain",
+    "price": 23800,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "A substantial rope chain brings depth through tightly interwoven links. Its warm gold texture makes a statement alone or with a pendant.",
+    "story": "Every strand has a story.",
+    "sku": "HV80",
+    "category": "Necklaces",
+    "image": "woven-rope-chain",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Chains",
+      "6mm twisted rope chain"
+    ]
+  },
+  {
+    "id": "liquid-snake-chain",
+    "name": "The Liquid Snake Chain",
+    "style": "Chains",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "3mm smooth snake chain",
+    "price": 4900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "Closely fitted silver links create a smooth, fluid line. A slender snake chain with an understated shine and a clean silhouette.",
+    "story": "Find your own flow.",
+    "sku": "HV81",
+    "category": "Necklaces",
+    "image": "liquid-snake-chain",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Chains",
+      "3mm smooth snake chain"
+    ]
+  },
+  {
+    "id": "starlight-tennis-necklace",
+    "name": "The Starlight Tennis Necklace",
+    "style": "Tennis necklaces",
+    "metal": "18ct white gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Uniform round diamonds",
+    "price": 46800,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "An even line of round diamonds traces a fine white gold necklace. Uniform settings create a continuous rhythm of light.",
+    "story": "A little starlight, all the way around.",
+    "sku": "HV82",
+    "category": "Necklaces",
+    "image": "starlight-tennis-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Tennis necklaces",
+      "Uniform round diamonds"
+    ]
+  },
+  {
+    "id": "grand-verse-riviera",
+    "name": "The Grand Verse Riviera",
+    "style": "Tennis necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Graduated round diamonds",
+    "price": 68500,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Round diamonds grow larger toward the centre of this yellow gold Riviera necklace. A sweeping, graduated design made for a statement moment.",
+    "story": "Some chapters deserve a grand entrance.",
+    "sku": "HV83",
+    "category": "Necklaces",
+    "image": "grand-verse-riviera",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Tennis necklaces",
+      "Graduated round diamonds"
+    ]
+  },
+  {
+    "id": "fleur-station-necklace",
+    "name": "The Fleur Station Necklace",
+    "style": "Nature-inspired",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Four white enamel flowers",
+    "price": 15400,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Four white enamel flowers sit along a fine yellow gold chain, with chain connecting every gap. A companion to the Fleur Chain bracelets.",
+    "story": "Carry a little bloom with you.",
+    "sku": "HV84",
+    "category": "Necklaces",
+    "image": "fleur-station-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Four white enamel flowers"
+    ]
+  },
+  {
+    "id": "ivy-leaf-pendant",
+    "name": "The Ivy Leaf Pendant",
+    "style": "Nature-inspired",
+    "metal": "18ct rose gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Diamond-set leaf pendant",
+    "price": 12900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A curved rose gold twig carries three diamond-set leaves. An organic pendant with a gently asymmetric shape.",
+    "story": "Grow in your own direction.",
+    "sku": "HV85",
+    "category": "Necklaces",
+    "image": "ivy-leaf-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Nature-inspired",
+      "Diamond-set leaf pendant"
+    ]
+  },
+  {
+    "id": "scarlet-octagon-pendant",
+    "name": "The Scarlet Octagon Pendant",
+    "style": "Gemstone pendants",
+    "metal": "18ct yellow gold",
+    "gemstone": "Ruby",
+    "stone": "Octagonal red ruby",
+    "price": 21900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "An octagonal ruby sits in a smooth yellow gold bezel. Strong lines give the rich red stone a confident frame.",
+    "story": "For stories told from the heart.",
+    "sku": "HV86",
+    "category": "Necklaces",
+    "image": "scarlet-octagon-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Gemstone pendants",
+      "Octagonal red ruby"
+    ]
+  },
+  {
+    "id": "azure-teardrop-pendant",
+    "name": "The Azure Teardrop Pendant",
+    "style": "Gemstone pendants",
+    "metal": "Sterling silver",
+    "gemstone": "Sapphire",
+    "stone": "Pear-cut blue sapphire",
+    "price": 13900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A pear-cut blue sapphire hangs from a silver cable chain. Open prongs let the colour lead the design.",
+    "story": "A quiet piece of the blue.",
+    "sku": "HV87",
+    "category": "Necklaces",
+    "image": "azure-teardrop-pendant",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Gemstone pendants",
+      "Pear-cut blue sapphire"
+    ]
+  },
+  {
+    "id": "moonlit-pearl-strand",
+    "name": "The Moonlit Pearl Strand",
+    "style": "Pearls",
+    "metal": "Sterling silver",
+    "gemstone": "Cultured pearl",
+    "stone": "Continuous cultured pearl strand",
+    "price": 11800,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A continuous strand of cultured pearls brings a soft, natural lustre. A silver clasp completes this enduring silhouette.",
+    "story": "Classic stories, told your way.",
+    "sku": "HV88",
+    "category": "Necklaces",
+    "image": "moonlit-pearl-strand",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Pearls",
+      "Continuous cultured pearl strand"
+    ]
+  },
+  {
+    "id": "scattered-pearl-stations",
+    "name": "The Scattered Pearl Stations",
+    "style": "Pearls",
+    "metal": "18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Six pearl stations",
+    "price": 14900,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "Six cultured pearls are spaced along a fine yellow gold chain. The open gaps keep the design light and easy to layer.",
+    "story": "Small moments, beautifully spaced.",
+    "sku": "HV89",
+    "category": "Necklaces",
+    "image": "scattered-pearl-stations",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Pearls",
+      "Six pearl stations"
+    ]
+  },
+  {
+    "id": "secret-heart-locket",
+    "name": "The Secret Heart Locket",
+    "style": "Personal pieces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished heart locket",
+    "price": 16400,
+    "audience": [
+      "Women",
+      "Unisex"
+    ],
+    "description": "A polished gold heart locket keeps a small memento close. Its plain face and soft curve make it a personal everyday piece.",
+    "story": "Some stories are just for you.",
+    "sku": "HV90",
+    "category": "Necklaces",
+    "image": "secret-heart-locket",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Personal pieces",
+      "Polished heart locket"
+    ]
+  },
+  {
+    "id": "keepsake-initial-m",
+    "name": "The Keepsake Initial M",
+    "style": "Personal pieces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Fixed letter M pendant",
+    "price": 3900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A polished silver M hangs from a fine chain. This design features the fixed initial M, a small detail with personal meaning.",
+    "story": "One letter. Your own meaning.",
+    "sku": "HV91",
+    "category": "Necklaces",
+    "image": "keepsake-initial-m",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Personal pieces",
+      "Fixed letter M pendant"
+    ]
+  },
+  {
+    "id": "duet-layered-necklace",
+    "name": "The Duet Layered Necklace",
+    "style": "Layered necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Two connected layers with a disc pendant",
+    "price": 19800,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A smooth herringbone layer sits above a finer chain with a plain disc pendant. Both layers share one clasp. Choose the inner length; the outer layer is 5cm longer.",
+    "story": "Two textures. One easy rhythm.",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "optionLabel": "Inner chain length",
+    "sku": "HV92",
+    "category": "Necklaces",
+    "image": "duet-layered-necklace",
+    "keywords": [
+      "Layered necklaces",
+      "Two connected layers with a disc pendant"
+    ],
+    "tag": "2 connected layers"
+  },
+  {
+    "id": "threefold-layered-necklace",
+    "name": "The Threefold Layered Necklace",
+    "style": "Layered necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Three connected layers with a bar pendant",
+    "price": 8900,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "Three silver chains combine box links, open cable links and a vertical bar pendant. They share one clasp. Choose the inner length; the next layers add 5cm and 10cm.",
+    "story": "More than one way to tell your story.",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm"
+    ],
+    "optionLabel": "Inner chain length",
+    "sku": "HV93",
+    "category": "Necklaces",
+    "image": "threefold-layered-necklace",
+    "keywords": [
+      "Layered necklaces",
+      "Three connected layers with a bar pendant"
+    ],
+    "tag": "3 connected layers"
+  },
+  {
+    "id": "orbit-sculpture-necklace",
+    "name": "The Orbit Sculpture Necklace",
+    "style": "Statement pieces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Sculptural open-circle pendant",
+    "price": 28900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "An asymmetric gold loop hangs from a substantial cable chain. Rounded surfaces and an open centre give the sculptural pendant its presence.",
+    "story": "Make room for your own orbit.",
+    "sku": "HV94",
+    "category": "Necklaces",
+    "image": "orbit-sculpture-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Statement pieces",
+      "Sculptural open-circle pendant"
+    ]
+  },
+  {
+    "id": "arc-silver-collar",
+    "name": "The Arc Silver Collar",
+    "style": "Statement pieces",
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Sculpted rigid silver collar",
+    "price": 12400,
+    "audience": [
+      "Men",
+      "Unisex"
+    ],
+    "description": "A broad silver crescent sweeps into an asymmetric wave. This rigid collar has an open back and a polished surface; choose its inner circumference.",
+    "story": "A confident line, drawn your way.",
+    "optionLabel": "Inner circumference",
+    "sku": "HV95",
+    "category": "Necklaces",
+    "image": "arc-silver-collar",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Statement pieces",
+      "Sculpted rigid silver collar"
+    ]
+  },
+  {
+    "id": "solstice-sun-necklace",
+    "name": "The Solstice Sun Necklace",
+    "style": "Matching necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Sun disc pendant",
+    "price": 9800,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A small gold sun pendant brings a bright, textured edge to a fine chain. Available alone or in the Solstice Sun & Moon Pair.",
+    "story": "For the light you share.",
+    "sku": "HV96",
+    "category": "Necklaces",
+    "image": "solstice-sun-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Sun disc pendant"
+    ]
+  },
+  {
+    "id": "solstice-moon-necklace",
+    "name": "The Solstice Moon Necklace",
+    "style": "Matching necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Crescent moon pendant",
+    "price": 9400,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "A polished crescent moon rests on a fine gold chain. Available alone or beside its sun in the Solstice Sun & Moon Pair.",
+    "story": "For the calm you bring.",
+    "sku": "HV97",
+    "category": "Necklaces",
+    "image": "solstice-moon-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Crescent moon pendant"
+    ]
+  },
+  {
+    "id": "unity-black-necklace",
+    "name": "The Unity Black Necklace",
+    "style": "Matching necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "Black onyx",
+    "stone": "Black onyx half yin-yang pendant",
+    "price": 5900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "Black onyx forms one curved half of a yin-yang motif, finished with a small white inlay. Wear it alone or in the Unity Black & White Pair.",
+    "story": "Different colours. Shared balance.",
+    "sku": "HV98",
+    "category": "Necklaces",
+    "image": "unity-black-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "Black onyx half yin-yang pendant"
+    ]
+  },
+  {
+    "id": "unity-white-necklace",
+    "name": "The Unity White Necklace",
+    "style": "Matching necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "White agate",
+    "stone": "White agate half yin-yang pendant",
+    "price": 5900,
+    "audience": [
+      "Unisex"
+    ],
+    "description": "White agate forms the complementary half of a yin-yang motif, finished with a black inlay. Available alone or in the Unity Black & White Pair.",
+    "story": "Your own piece of a shared story.",
+    "sku": "HV99",
+    "category": "Necklaces",
+    "image": "unity-white-necklace",
+    "optionLabel": "Chain length",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "keywords": [
+      "Matching necklaces",
+      "White agate half yin-yang pendant"
+    ]
+  },
+  {
+    "id": "solstice-sun-moon-pair",
+    "name": "The Solstice Sun & Moon Pair",
+    "style": "Matching necklaces",
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Sun and crescent moon pendants",
+    "audience": [
+      "Unisex"
+    ],
+    "description": "One sun and one crescent moon, each on its own gold chain. A complementary pair for couples, friends, siblings or any meaningful connection. Choose each necklace length separately.",
+    "story": "Different skies. One shared story.",
+    "components": [
+      {
+        "productId": "solstice-sun-necklace",
+        "label": "Sun necklace"
+      },
+      {
+        "productId": "solstice-moon-necklace",
+        "label": "Moon necklace"
+      }
+    ],
+    "sku": "HV100",
+    "category": "Necklaces",
+    "image": "solstice-sun-moon-pair",
+    "optionLabel": "Individual chain lengths",
+    "options": [],
+    "keywords": [
+      "Matching necklaces",
+      "Sun and crescent moon pendants"
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "price": 19200
+  },
+  {
+    "id": "unity-black-white-necklace-pair",
+    "name": "The Unity Black & White Pair",
+    "style": "Matching necklaces",
+    "metal": "Sterling silver",
+    "gemstone": "Black onyx & white agate",
+    "stone": "Complementary black and white yin-yang halves",
+    "audience": [
+      "Unisex"
+    ],
+    "description": "One black onyx pendant and one white agate pendant form complementary halves of a yin-yang motif. Each has its own silver chain and length choice. For any relationship that brings balance.",
+    "story": "Two colours. One connection.",
+    "components": [
+      {
+        "productId": "unity-black-necklace",
+        "label": "Black necklace"
+      },
+      {
+        "productId": "unity-white-necklace",
+        "label": "White necklace"
+      }
+    ],
+    "sku": "HV101",
+    "category": "Necklaces",
+    "image": "unity-black-white-necklace-pair",
+    "optionLabel": "Individual chain lengths",
+    "options": [],
+    "keywords": [
+      "Matching necklaces",
+      "Complementary black and white yin-yang halves"
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "price": 11800
+  }
+]

@@ -3,6 +3,7 @@ package za.co.shoplink.order.client;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import za.co.shoplink.order.dto.StockReservationRequest;
 
 import java.util.List;
@@ -13,7 +14,10 @@ public class InventoryServiceClient {
 
     public InventoryServiceClient(RestClient.Builder builder,
                                   @Value("${inventory.service.base-url:http://localhost:8082}") String baseUrl) {
-        this.restClient = builder.baseUrl(baseUrl).build();
+        var factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(2000);
+        factory.setReadTimeout(3000);
+        this.restClient = builder.requestFactory(factory).baseUrl(baseUrl).build();
     }
 
     public void release(String orderId) {

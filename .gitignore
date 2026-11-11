@@ -8,3 +8,10 @@ target/
 
 # Visual Studio Code
 .vscode/
+
+# Local verification and generated demo media
+*.log
+.demo-tools/
+demo/generated/
+__pycache__/
+storefront/.sites-checkout/

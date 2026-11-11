@@ -1,3 +1,18 @@
+x-service: &service
+  restart: unless-stopped
+  mem_limit: 384m
+  healthcheck:
+    test: ["CMD-SHELL", "curl --fail --silent http://localhost:$${SERVER_PORT}/actuator/health > /dev/null"]
+    interval: 10s
+    timeout: 5s
+    retries: 12
+    start_period: 45s
+
+x-messaging: &messaging
+  ACTIVEMQ_BROKER_URL: tcp://activemq:61616?connectionTimeout=2000&soTimeout=5000
+  ACTIVEMQ_USER: admin
+  ACTIVEMQ_PASSWORD: admin
+
 services:
   activemq:
     image: apache/activemq-classic:6.2.0
@@ -6,5 +21,108 @@ services:
       - "127.0.0.1:8161:8161"
     volumes:
       - activemq-data:/opt/apache-activemq/data
+    restart: unless-stopped
+    mem_limit: 512m
+    environment:
+      ACTIVEMQ_OPTS_MEMORY: -Xms64M -Xmx256M
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/61616"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 30s
+
+  product:
+    <<: *service
+    build:
+      context: .
+      args: {SERVICE: product-service}
+    environment:
+      SERVER_PORT: 8080
+    ports: ["127.0.0.1:8080:8080"]
+
+  inventory:
+    <<: *service
+    build:
+      context: .
+      args: {SERVICE: inventory-service}
+    environment:
+      SERVER_PORT: 8082
+    ports: ["127.0.0.1:8082:8082"]
+
+  order:
+    <<: *service
+    build:
+      context: .
+      args: {SERVICE: order-service}
+    environment:
+      <<: *messaging
+      SERVER_PORT: 8081
+      PRODUCT_SERVICE_URL: http://product:8080
+      INVENTORY_SERVICE_URL: http://inventory:8082
+    ports: ["127.0.0.1:8081:8081"]
+    depends_on:
+      product: {condition: service_healthy}
+      inventory: {condition: service_healthy}
+      activemq: {condition: service_healthy}
+
+  payment:
+    <<: *service
+    build:
+      context: .
+      args: {SERVICE: payment-service}
+    environment:
+      <<: *messaging
+      SERVER_PORT: 8083
+      PAYMENT_SIMULATION_DECLINE: ${PAYMENT_SIMULATION_DECLINE:-false}
+    ports: ["127.0.0.1:8083:8083"]
+    depends_on:
+      activemq: {condition: service_healthy}
+
+  delivery:
+    <<: *service
+    build:
+      context: .
+      args: {SERVICE: delivery-service}
+    environment:
+      <<: *messaging
+      SERVER_PORT: 8084
+    ports: ["127.0.0.1:8084:8084"]
+    depends_on:
+      activemq: {condition: service_healthy}
+
+  notification:
+    <<: *service
+    build:
+      context: .
+      args: {SERVICE: notification-service}
+    environment:
+      <<: *messaging
+      SERVER_PORT: 8085
+    ports: ["127.0.0.1:8085:8085"]
+    depends_on:
+      activemq: {condition: service_healthy}
+  storefront:
+    build:
+      context: ./storefront
+    restart: unless-stopped
+    mem_limit: 192m
+    environment:
+      PRODUCT_SERVICE_URL: http://product:8080
+      INVENTORY_SERVICE_URL: http://inventory:8082
+      ORDER_SERVICE_URL: http://order:8081
+      PAYMENT_SERVICE_URL: http://payment:8083
+      DELIVERY_SERVICE_URL: http://delivery:8084
+    ports: ["127.0.0.1:3000:3000"]
+    volumes:
+      - storefront-data:/app/data
+    depends_on:
+      product: {condition: service_healthy}
+      inventory: {condition: service_healthy}
+      order: {condition: service_healthy}
+      payment: {condition: service_healthy}
+      delivery: {condition: service_healthy}
+
 volumes:
   activemq-data:
+  storefront-data:

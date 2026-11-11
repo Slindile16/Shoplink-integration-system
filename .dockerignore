@@ -1,0 +1,15 @@
+.git
+.idea
+.vscode
+**/target
+*.log
+.env
+.codex
+.agents
+docs
+.demo-tools
+demo
+**/__pycache__
+storefront/data
+storefront/.sites-checkout
+storefront/node_modules

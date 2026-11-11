@@ -31,13 +31,21 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+
     <modules>
         <module>common</module>
         <module>product-service</module>
         <module>inventory-service</module>
         <module>payment-service</module>
         <module>order-service</module>
-        <module>integration-tests</module>
+        <module>delivery-service</module>
+        <module>notification-service</module>
     </modules>
 
     <build>
@@ -47,6 +55,12 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals><goal>repackage</goal></goals>
+                            <configuration><classifier>exec</classifier></configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

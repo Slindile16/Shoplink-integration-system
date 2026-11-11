@@ -1,6 +1,6 @@
 # ShopLink Payment Service
 
-Simulates payments in memory; no real money or payment credentials are involved. Runs on port 8083. In Phase 5 it consumes JSON `ORDER_CREATED` events from ActiveMQ and returns `PAYMENT_PROCESSED` events to Order Service. Consumption and reply use the same JMS transaction.
+Simulates payments in memory; no real money or payment credentials are involved. Runs on port 8083. It consumes JSON `ORDER_CREATED` events from ActiveMQ and returns `PAYMENT_PROCESSED` events to Order Service. Consumption and reply use the same JMS transaction.
 
 Payments approve by default. Set `PAYMENT_SIMULATION_DECLINE=true` before starting to simulate declines. Repeated order IDs reuse their existing payment; conflicting amounts/currencies are rejected.
 
@@ -11,4 +11,4 @@ The REST API remains available for simulation and inspection:
 
 Order Service uses messaging instead of the payment REST endpoint. Data and duplicate protection reset when this service restarts.
 
-See [Phase 5 setup and verification](../docs/messaging.md). Install shared modules first, start ActiveMQ, then run `mvn -f payment-service/pom.xml spring-boot:run`. Configure `ACTIVEMQ_BROKER_URL`, `ACTIVEMQ_USER`, and `ACTIVEMQ_PASSWORD` for a different broker.
+See [setup and verification](../docs/messaging.md). Install shared modules first, start ActiveMQ, then run `mvn -f payment-service/pom.xml spring-boot:run`. Configure `ACTIVEMQ_BROKER_URL`, `ACTIVEMQ_USER`, and `ACTIVEMQ_PASSWORD` for a different broker.

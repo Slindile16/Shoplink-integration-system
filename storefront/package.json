@@ -1,0 +1,14 @@
+{
+  "name": "heirloom-verse-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Heirloom Verse storefront and same-origin ShopLink gateway",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check dist/app.js && node --check dist/catalogue-model.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
