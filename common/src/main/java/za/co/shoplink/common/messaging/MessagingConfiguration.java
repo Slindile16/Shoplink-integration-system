@@ -1,6 +1,7 @@
 package za.co.shoplink.common.messaging;
 
 import java.util.Map;
+<<<<<<< HEAD
 import jakarta.jms.JMSException;
 import jakarta.jms.Message;
 import com.fasterxml.jackson.databind.JavaType;
@@ -10,11 +11,17 @@ import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFac
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.support.converter.MessageConversionException;
 import jakarta.jms.ConnectionFactory;
+=======
+
+>>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
+
 import za.co.shoplink.common.events.OrderCreatedEvent;
+import za.co.shoplink.common.events.OrderPaidEvent;
+import za.co.shoplink.common.events.OrderPaymentFailedEvent;
 import za.co.shoplink.common.events.PaymentProcessedEvent;
 import za.co.shoplink.common.events.OrderPaidEvent;
 import za.co.shoplink.common.events.DeliveryCreatedEvent;
@@ -22,6 +29,7 @@ import za.co.shoplink.common.events.OrderStatusChangedEvent;
 
 @Configuration(proxyBeanMethods = false)
 public class MessagingConfiguration {
+<<<<<<< HEAD
     private static final ObjectMapper EVENT_MAPPER = new ObjectMapper();
     public static final String ORDER_CREATED = "shoplink.order.created";
     public static final String PAYMENT_PROCESSED = "shoplink.payment.processed";
@@ -43,6 +51,29 @@ public class MessagingConfiguration {
         converter.setTargetType(MessageType.TEXT);
         converter.setTypeIdPropertyName("eventType");
         converter.setTypeIdMappings(EVENT_TYPES);
+=======
+
+    public static final String ORDER_CREATED = "shoplink.order.created";
+    public static final String PAYMENT_PROCESSED = "shoplink.payment.processed";
+    public static final String ORDER_PAID = "shoplink.order.paid";
+    public static final String NOTIFICATION_PAID = "shoplink.notification.paid";
+    public static final String ORDER_PAYMENT_FAILED = "shoplink.order.payment.failed";
+
+    @Bean
+    public MappingJackson2MessageConverter eventMessageConverter() {
+        var converter = new MappingJackson2MessageConverter();
+
+        converter.setTargetType(MessageType.TEXT);
+        converter.setTypeIdPropertyName("eventType");
+
+        converter.setTypeIdMappings(Map.of(
+                "ORDER_CREATED", OrderCreatedEvent.class,
+                "PAYMENT_PROCESSED", PaymentProcessedEvent.class,
+                "ORDER_PAID", OrderPaidEvent.class,
+                "ORDER_PAYMENT_FAILED", OrderPaymentFailedEvent.class
+        ));
+
+>>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
         return converter;
     }
 
