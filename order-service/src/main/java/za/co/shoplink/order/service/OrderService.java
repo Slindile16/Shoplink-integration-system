@@ -1,11 +1,5 @@
 package za.co.shoplink.order.service;
 
-<<<<<<< HEAD
-=======
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -14,27 +8,17 @@ import org.springframework.web.server.ResponseStatusException;
 
 import za.co.shoplink.common.events.OrderCreatedEvent;
 import za.co.shoplink.common.events.OrderPaidEvent;
-<<<<<<< HEAD
 import za.co.shoplink.common.events.OrderStatusChangedEvent;
-=======
-import za.co.shoplink.common.events.OrderPaymentFailedEvent;
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
 import za.co.shoplink.common.events.PaymentProcessedEvent;
 
 import za.co.shoplink.order.client.InventoryServiceClient;
 import za.co.shoplink.order.client.ProductServiceClient;
 import za.co.shoplink.order.dto.CreateOrderRequest;
 import za.co.shoplink.order.dto.ProductDetails;
-import za.co.shoplink.order.dto.StockReservationRequest;
 
 import za.co.shoplink.order.messaging.OrderCreatedPublisher;
-<<<<<<< HEAD
 import za.co.shoplink.order.messaging.OrderWorkflowPublisher;
 import za.co.shoplink.order.messaging.OrderEventOutbox;
-=======
-import za.co.shoplink.order.messaging.OrderOutcomePublisher;
-
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
 import za.co.shoplink.order.model.Order;
 import za.co.shoplink.order.model.OrderItem;
 import za.co.shoplink.order.model.OrderStatus;
@@ -50,20 +34,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class OrderService {
-<<<<<<< HEAD
     private static final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(OrderService.class);
     private final Map<String, PaymentProcessedEvent> pendingReleases = new HashMap<>();
-=======
-
-    private static final Logger LOG =
-            LoggerFactory.getLogger(OrderService.class);
-
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
     private final OrderRepository repository;
     private final ProductServiceClient productServiceClient;
     private final InventoryServiceClient inventoryServiceClient;
     private final OrderCreatedPublisher publisher;
-<<<<<<< HEAD
     private final OrderWorkflowPublisher workflowPublisher;
     private final OrderEventOutbox outbox;
 
@@ -74,22 +50,8 @@ public class OrderService {
         this.publisher = publisher;
         this.workflowPublisher = workflowPublisher;
         this.outbox = outbox;
-=======
-    private final OrderOutcomePublisher outcomePublisher;
-
-    public OrderService(
-            OrderRepository repository,
-            ProductServiceClient productServiceClient,
-            InventoryServiceClient inventoryServiceClient,
-            OrderCreatedPublisher publisher,
-            OrderOutcomePublisher outcomePublisher
-    ) {
-        this.repository = repository;
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
         this.productServiceClient = productServiceClient;
         this.inventoryServiceClient = inventoryServiceClient;
-        this.publisher = publisher;
-        this.outcomePublisher = outcomePublisher;
     }
 
     public Order create(CreateOrderRequest request) {
@@ -148,7 +110,6 @@ public class OrderService {
         String orderId = UUID.randomUUID().toString();
 
         try {
-<<<<<<< HEAD
             inventoryServiceClient.reserve(orderId, items.stream()
                     .collect(Collectors.groupingBy(OrderItem::productId,
                             Collectors.reducing(0, OrderItem::quantity, Math::addExact)))
@@ -157,28 +118,6 @@ public class OrderService {
         } catch (ArithmeticException ex) {
             throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY,
                     "Total quantity exceeds the supported maximum", ex);
-=======
-            inventoryServiceClient.reserve(
-                    orderId,
-                    items.stream()
-                            .collect(Collectors.groupingBy(
-                                    OrderItem::productId,
-                                    Collectors.summingInt(
-                                            OrderItem::quantity
-                                    )
-                            ))
-                            .entrySet()
-                            .stream()
-                            .map(entry ->
-                                    new StockReservationRequest.Item(
-                                            entry.getKey(),
-                                            entry.getValue()
-                                    )
-                            )
-                            .toList()
-            );
-
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
         } catch (HttpClientErrorException.Conflict ex) {
 
             throw new ResponseStatusException(
@@ -197,40 +136,10 @@ public class OrderService {
         }
 
         Instant createdAt = Instant.now();
-<<<<<<< HEAD
         Order pending = repository.save(new Order(orderId, request.customerId(), OrderStatus.PAYMENT_PENDING, items, createdAt));
         outbox.enqueue("created:" + orderId,
                 () -> publisher.publish(new OrderCreatedEvent(orderId, total(items), items.get(0).currency())));
         outbox.retryPending();
-=======
-
-        Order pending = repository.save(
-                new Order(
-                        orderId,
-                        request.customerId(),
-                        OrderStatus.PAYMENT_PENDING,
-                        items,
-                        createdAt
-                )
-        );
-
-        try {
-            publisher.publish(
-                    new OrderCreatedEvent(
-                            orderId,
-                            total(items),
-                            items.get(0).currency()
-                    )
-            );
-        } catch (JmsException ex) {
-            LOG.error(
-                    "Order {} is pending: could not confirm message publication",
-                    orderId,
-                    ex
-            );
-        }
-
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
         return pending;
     }
 
@@ -275,29 +184,14 @@ public class OrderService {
             status = OrderStatus.PAID;
 
         } else {
-<<<<<<< HEAD
             pendingReleases.put(order.id(), payment);
             repository.save(new Order(order.id(), order.customerId(), OrderStatus.STOCK_RELEASE_PENDING,
                     order.items(), order.createdAt()));
             // Propagate failure so the transacted listener rolls back and the broker redelivers.
-=======
-
-            repository.save(
-                    new Order(
-                            order.id(),
-                            order.customerId(),
-                            OrderStatus.STOCK_RELEASE_PENDING,
-                            order.items(),
-                            order.createdAt()
-                    )
-            );
-
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
             inventoryServiceClient.release(order.id());
 
             status = OrderStatus.PAYMENT_FAILED;
         }
-<<<<<<< HEAD
         repository.save(new Order(order.id(), order.customerId(), status, order.items(), order.createdAt()));
         pendingReleases.remove(order.id());
         publishWorkflowEvents(order.id(), payment.status());
@@ -323,39 +217,6 @@ public class OrderService {
         }
         // Do not send on the listener's JMS session: its transaction may roll back
         // after this method returns. The scheduler publishes independently.
-=======
-
-        repository.save(
-                new Order(
-                        order.id(),
-                        order.customerId(),
-                        status,
-                        order.items(),
-                        order.createdAt()
-                )
-        );
-
-        if (status == OrderStatus.PAID) {
-
-            outcomePublisher.paid(
-                    new OrderPaidEvent(
-                            order.id(),
-                            order.customerId(),
-                            total(order.items()),
-                            order.items().get(0).currency()
-                    )
-            );
-
-        } else {
-
-            outcomePublisher.failed(
-                    new OrderPaymentFailedEvent(
-                            order.id(),
-                            order.customerId()
-                    )
-            );
-        }
->>>>>>> 06b2bff313488b39abfe5428335d6d78d87eae83
     }
 
     public Order findById(String id) {

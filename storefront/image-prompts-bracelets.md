@@ -1,18 +1,27 @@
-# Shared Verse bracelet imagery
+# Bracelet product image prompts
 
-Created with the built-in image generation tool. Final optimized assets are saved in `dist/assets/`.
+Generated with the built-in image_gen tool. Final assets are in `dist/assets/`.
 
-## Shared prompt
+## initial-verse-bracelet.png
 
-Use case: product-mockup. Asset type: square luxury jewellery ecommerce catalogue photograph for The Heirloom Verse fictional portfolio. Subject: [subject below]. Precisely preserve the specified bracelet count, colours and metal finish. Consistent 6mm round bead sizes. Center products fully visible filling 70 percent of the frame, clean warm pearl ivory matte studio background, realistic fine jewellery product photography, soft contact shadows, premium tactile details, elegant restrained composition. No text, no logos, no hearts, no magnets, no props, no watermarks.
+Use case: product-mockup. One square luxury jewellery catalogue photo: fine yellow gold chain bracelet with a single small A initial charm. Warm ivory seamless background, soft realistic studio shadow, high-end photorealistic gold materials, full bracelet centred with generous margins. No text, labels, logos, collage or extra jewellery. Match an elegant fine jewellery online store.
 
-## Saved assets and subjects
+## birthstone-story-bracelet.png
 
-| Asset | Subject |
-| --- | --- |
-| `dist/assets/shared-verse-gold-duo.webp` | exactly TWO matching beaded bracelets of the same design placed side by side. One bracelet is entirely matte BLACK round onyx beads, the other entirely WHITE round howlite beads with very subtle grey veins. Each has identical small polished YELLOW GOLD spacer accents in the same arrangement. Both are full closed circular bracelets, each distinct and countable; no mixed black and white beads within a bracelet. |
-| `dist/assets/shared-verse-silver-duo.webp` | exactly TWO matching beaded bracelets of the same design placed side by side. One bracelet is entirely matte BLACK round onyx beads, the other entirely WHITE round howlite beads with very subtle grey veins. Each has identical small polished STERLING SILVER spacer accents in the same arrangement. Both are full closed circular bracelets, each distinct and countable; no mixed black and white beads within a bracelet. |
-| `dist/assets/shared-black-gold.webp` | exactly ONE full closed circular beaded bracelet, entirely matte BLACK round onyx beads, three small polished YELLOW GOLD spacer accents, refined unisex bracelet, no white beads, no other bracelets. |
-| `dist/assets/shared-white-gold.webp` | exactly ONE full closed circular beaded bracelet, entirely WHITE round howlite beads with very subtle grey veins, three small polished YELLOW GOLD spacer accents, refined unisex bracelet, no black beads, no other bracelets. |
-| `dist/assets/shared-black-silver.webp` | exactly ONE full closed circular beaded bracelet, entirely matte BLACK round onyx beads, three small polished STERLING SILVER spacer accents, refined unisex bracelet, no white beads, no other bracelets. |
-| `dist/assets/shared-white-silver.webp` | exactly ONE full closed circular beaded bracelet, entirely WHITE round howlite beads with very subtle grey veins, three small polished STERLING SILVER spacer accents, refined unisex bracelet, no black beads, no other bracelets. |
+Use case: product-mockup. One square luxury jewellery catalogue photo: fine adjustable gold chain bracelet with a single round red garnet bezel centre. Warm ivory seamless background, soft realistic studio shadow, high-end photorealistic gold materials, full bracelet centred with generous margins. No text, labels, logos, collage or extra jewellery. Match an elegant fine jewellery online store.
+
+## written-promise-bracelet.png
+
+Use case: product-mockup. One square luxury jewellery catalogue photo: fine gold chain bracelet with a slim curved polished blank engraving bar. Warm ivory seamless background, soft realistic studio shadow, high-end photorealistic gold materials, full bracelet centred with generous margins. No text, labels, logos, collage or extra jewellery. Match an elegant fine jewellery online store.
+
+## bound-together-bangle.png
+
+Use case: product-mockup. One square luxury jewellery catalogue photo: two slender polished gold bangle bands meeting in a soft central knot. Warm ivory seamless background, soft realistic studio shadow, high-end photorealistic gold materials, full bracelet centred with generous margins. No text, labels, logos, collage or extra jewellery. Match an elegant fine jewellery online store.
+
+## chapter-charm-bracelet.png
+
+Use case: product-mockup. One square luxury jewellery catalogue photo: oval-link gold bracelet with just one small dangling heart charm. Warm ivory seamless background, soft realistic studio shadow, high-end photorealistic gold materials, full bracelet centred with generous margins. No text, labels, logos, collage or extra jewellery. Match an elegant fine jewellery online store.
+
+## liquid-ribbon-cuff.png
+
+Use case: product-mockup. One square luxury jewellery catalogue photo: wide sculptural polished gold open cuff resembling a flowing folded ribbon. Warm ivory seamless background, soft realistic studio shadow, high-end photorealistic gold materials, full bracelet centred with generous margins. No text, labels, logos, collage or extra jewellery. Match an elegant fine jewellery online store.

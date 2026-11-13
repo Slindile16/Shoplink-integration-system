@@ -3071,23 +3071,116 @@
     "price": 11800
   },
   {
-    "id": "round-light-solitaire",
-    "name": "The Round Light Solitaire",
-    "style": "Solitaire pendants",
-    "metal": "18ct white gold",
-    "gemstone": "Lab-grown diamond",
-    "stone": "Round brilliant-cut solitaire",
-    "price": 15900,
+    "id": "devotion-split-heart-pair-piece-a",
+    "sku": "HV112",
+    "name": "The Devotion Split Heart Pair: Gold heart half",
+    "category": "Necklaces",
+    "price": 7800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Gold heart half",
+    "description": "Gold heart half, included in The Devotion Split Heart Pair.",
+    "story": "Two halves, each with a story.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A brilliant round-cut diamond rests in a restrained white-gold setting, suspended from a fine chain.",
-    "story": "For light in its simplest form.",
+    "style": "Matching necklaces",
+    "image": "devotion-split-heart-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "devotion-split-heart-pair"
+  },
+  {
+    "id": "devotion-split-heart-pair-piece-b",
+    "sku": "HV113",
+    "name": "The Devotion Split Heart Pair: Silver heart half",
+    "category": "Necklaces",
+    "price": 4900,
+    "metal": "sterling silver",
+    "gemstone": "None",
+    "stone": "Silver heart half",
+    "description": "Silver heart half, included in The Devotion Split Heart Pair.",
+    "story": "Two halves, each with a story.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "devotion-split-heart-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "devotion-split-heart-pair"
+  },
+  {
+    "id": "devotion-split-heart-pair",
     "sku": "HV102",
+    "name": "The Devotion Split Heart Pair",
     "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "price": 12700,
+    "metal": "18ct yellow gold & sterling silver",
+    "gemstone": "None",
+    "stone": "Complementary polished heart halves",
+    "description": "Two complementary heart halves, one in gold and one in silver. Each has its own chain, with a length chosen for the person who wears it.",
+    "story": "Two halves, each with a story.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "devotion-split-heart-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "devotion-split-heart-pair-piece-a",
+        "label": "Gold heart half"
+      },
+      {
+        "productId": "devotion-split-heart-pair-piece-b",
+        "label": "Silver heart half"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Complementary polished heart halves",
+      "Gold heart half",
+      "Silver heart half"
+    ]
+  },
+  {
+    "id": "kept-lock-key-pair-piece-a",
+    "sku": "HV114",
+    "name": "The Kept Lock & Key Pair: Lock necklace",
+    "category": "Necklaces",
+    "price": 10800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Lock necklace",
+    "description": "Lock necklace, included in The Kept Lock & Key Pair.",
+    "story": "For the people you keep close.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "kept-lock-key-pair",
     "options": [
       "40cm",
       "45cm",
@@ -3095,89 +3188,94 @@
       "55cm",
       "60cm"
     ],
-    "keywords": [
-      "Solitaire pendants",
-      "Round brilliant-cut solitaire"
-    ]
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "kept-lock-key-pair"
   },
   {
-    "id": "oval-grace-solitaire",
-    "name": "The Oval Grace Solitaire",
-    "style": "Solitaire pendants",
+    "id": "kept-lock-key-pair-piece-b",
+    "sku": "HV115",
+    "name": "The Kept Lock & Key Pair: Key necklace",
+    "category": "Necklaces",
+    "price": 7900,
     "metal": "18ct yellow gold",
-    "gemstone": "Lab-grown diamond",
-    "stone": "Oval-cut solitaire",
-    "price": 17200,
+    "gemstone": "None",
+    "stone": "Key necklace",
+    "description": "Key necklace, included in The Kept Lock & Key Pair.",
+    "story": "For the people you keep close.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "An elongated oval diamond glows on a slender gold chain. Intimate, effortless and beautifully balanced.",
-    "story": "An elegant chapter, entirely yours.",
+    "style": "Matching necklaces",
+    "image": "kept-lock-key-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "kept-lock-key-pair"
+  },
+  {
+    "id": "kept-lock-key-pair",
     "sku": "HV103",
+    "name": "The Kept Lock & Key Pair",
     "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Solitaire pendants",
-      "Oval-cut solitaire"
-    ]
-  },
-  {
-    "id": "sovereign-cuban-links",
-    "name": "The Sovereign Cuban Links",
-    "style": "Chains",
+    "price": 18700,
     "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Chunky Cuban-link chain",
-    "price": 31800,
+    "stone": "Miniature lock and key pendants",
+    "description": "A small gold lock and a delicate key form a playful, complementary pair. Each pendant hangs from its own chain, with separate length choices.",
+    "story": "For the people you keep close.",
     "audience": [
-      "Men",
       "Unisex"
     ],
-    "description": "Broad polished Cuban links create a confident silhouette with a rich, sculptural weight.",
-    "story": "Wear your strength with ease.",
-    "sku": "HV104",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
+    "style": "Matching necklaces",
+    "image": "kept-lock-key-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "kept-lock-key-pair-piece-a",
+        "label": "Lock necklace"
+      },
+      {
+        "productId": "kept-lock-key-pair-piece-b",
+        "label": "Key necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
     ],
     "keywords": [
-      "Chains",
-      "Chunky Cuban-link chain"
+      "Miniature lock and key pendants",
+      "Lock necklace",
+      "Key necklace"
     ]
   },
   {
-    "id": "quiet-spark-tennis",
-    "name": "The Quiet Spark Tennis Necklace",
-    "style": "Tennis necklaces",
+    "id": "land-tide-necklace-pair-piece-a",
+    "sku": "HV116",
+    "name": "The Land & Tide Pair: Mountain necklace",
+    "category": "Necklaces",
+    "price": 5400,
     "metal": "Sterling silver",
-    "gemstone": "Lab-grown diamond",
-    "stone": "Petite continuous diamond line",
-    "price": 26800,
+    "gemstone": "None",
+    "stone": "Mountain necklace",
+    "description": "Mountain necklace, included in The Land & Tide Pair.",
+    "story": "Your own landscapes. A shared horizon.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A delicate row of petite stones follows the neckline with a quiet, continuous brilliance.",
-    "story": "A little sparkle goes a long way.",
-    "sku": "HV105",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Matching necklaces",
+    "image": "land-tide-necklace-pair",
     "options": [
       "40cm",
       "45cm",
@@ -3185,58 +3283,94 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "land-tide-necklace-pair"
+  },
+  {
+    "id": "land-tide-necklace-pair-piece-b",
+    "sku": "HV117",
+    "name": "The Land & Tide Pair: Wave necklace",
+    "category": "Necklaces",
+    "price": 5200,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Wave necklace",
+    "description": "Wave necklace, included in The Land & Tide Pair.",
+    "story": "Your own landscapes. A shared horizon.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "land-tide-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "land-tide-necklace-pair"
+  },
+  {
+    "id": "land-tide-necklace-pair",
+    "sku": "HV104",
+    "name": "The Land & Tide Pair",
+    "category": "Necklaces",
+    "price": 10600,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Mountain and wave outline pendants",
+    "description": "Angular mountain peaks meet the flowing curve of a wave. A silver pair for different personalities, shared adventures and your own sense of home.",
+    "story": "Your own landscapes. A shared horizon.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "land-tide-necklace-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "land-tide-necklace-pair-piece-a",
+        "label": "Mountain necklace"
+      },
+      {
+        "productId": "land-tide-necklace-pair-piece-b",
+        "label": "Wave necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
     "keywords": [
-      "Tennis necklaces",
-      "Petite continuous diamond line"
+      "Mountain and wave outline pendants",
+      "Mountain necklace",
+      "Wave necklace"
     ]
   },
   {
-    "id": "golden-petal-pendant",
-    "name": "The Golden Petal",
-    "style": "Nature-inspired",
+    "id": "fleur-contrast-necklace-pair-piece-a",
+    "sku": "HV118",
+    "name": "The Fleur Contrast Pair: Black flower necklace",
+    "category": "Necklaces",
+    "price": 8900,
     "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Sculpted five-petal flower",
-    "price": 10900,
+    "stone": "Black flower necklace",
+    "description": "Black flower necklace, included in The Fleur Contrast Pair.",
+    "story": "Different colours. The same place to bloom.",
     "audience": [
-      "Women"
-    ],
-    "description": "A softly sculpted flower rests against a fine gold chain, bringing a gentle moment of bloom.",
-    "story": "Forever in bloom.",
-    "sku": "HV106",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Nature-inspired",
-      "Sculpted five-petal flower"
-    ]
-  },
-  {
-    "id": "enchanted-vine-necklace",
-    "name": "The Enchanted Vine",
-    "style": "Nature-inspired",
-    "metal": "18ct rose gold",
-    "gemstone": "Lab-grown diamond",
-    "stone": "Curving leaf and vine pendant",
-    "price": 16900,
-    "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A winding rose-gold vine curls into fine leaf details, creating an organic, graceful silhouette.",
-    "story": "Let every season become a story.",
-    "sku": "HV107",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Matching necklaces",
+    "image": "fleur-contrast-necklace-pair",
     "options": [
       "40cm",
       "45cm",
@@ -3244,28 +3378,664 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "fleur-contrast-necklace-pair"
+  },
+  {
+    "id": "fleur-contrast-necklace-pair-piece-b",
+    "sku": "HV119",
+    "name": "The Fleur Contrast Pair: White flower necklace",
+    "category": "Necklaces",
+    "price": 8900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "White flower necklace",
+    "description": "White flower necklace, included in The Fleur Contrast Pair.",
+    "story": "Different colours. The same place to bloom.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "fleur-contrast-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "fleur-contrast-necklace-pair"
+  },
+  {
+    "id": "fleur-contrast-necklace-pair",
+    "sku": "HV105",
+    "name": "The Fleur Contrast Pair",
+    "category": "Necklaces",
+    "price": 17800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Black and white enamel flower pendants",
+    "description": "The same five-petal flower, in contrasting black and white enamel, with warm gold centres. A matching pair that also coordinates with the Fleur bracelets.",
+    "story": "Different colours. The same place to bloom.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "fleur-contrast-necklace-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "fleur-contrast-necklace-pair-piece-a",
+        "label": "Black flower necklace"
+      },
+      {
+        "productId": "fleur-contrast-necklace-pair-piece-b",
+        "label": "White flower necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
     "keywords": [
-      "Nature-inspired",
-      "Curving leaf and vine pendant"
+      "Black and white enamel flower pendants",
+      "Black flower necklace",
+      "White flower necklace"
     ]
   },
   {
-    "id": "butterfly-kiss-necklace",
-    "name": "The Butterfly Kiss",
-    "style": "Nature-inspired",
+    "id": "kindred-twin-star-pair-piece-a",
+    "sku": "HV120",
+    "name": "The Kindred Twin Star Pair: Gold star necklace",
+    "category": "Necklaces",
+    "price": 7900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Gold star necklace",
+    "description": "Gold star necklace, included in The Kindred Twin Star Pair.",
+    "story": "Shine in your own way.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "kindred-twin-star-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "kindred-twin-star-pair"
+  },
+  {
+    "id": "kindred-twin-star-pair-piece-b",
+    "sku": "HV121",
+    "name": "The Kindred Twin Star Pair: Silver star necklace",
+    "category": "Necklaces",
+    "price": 4500,
+    "metal": "sterling silver",
+    "gemstone": "None",
+    "stone": "Silver star necklace",
+    "description": "Silver star necklace, included in The Kindred Twin Star Pair.",
+    "story": "Shine in your own way.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "kindred-twin-star-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "kindred-twin-star-pair"
+  },
+  {
+    "id": "kindred-twin-star-pair",
+    "sku": "HV106",
+    "name": "The Kindred Twin Star Pair",
+    "category": "Necklaces",
+    "price": 12400,
+    "metal": "18ct yellow gold & sterling silver",
+    "gemstone": "None",
+    "stone": "Gold and silver five-point stars",
+    "description": "Two clean star pendants share the same shape in gold and silver. The gold star is slightly larger; each chain length is chosen separately.",
+    "story": "Shine in your own way.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "kindred-twin-star-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "kindred-twin-star-pair-piece-a",
+        "label": "Gold star necklace"
+      },
+      {
+        "productId": "kindred-twin-star-pair-piece-b",
+        "label": "Silver star necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Gold and silver five-point stars",
+      "Gold star necklace",
+      "Silver star necklace"
+    ]
+  },
+  {
+    "id": "flutter-wing-necklace-pair-piece-a",
+    "sku": "HV122",
+    "name": "The Flutter Wing Pair: Left wing necklace",
+    "category": "Necklaces",
+    "price": 5600,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Left wing necklace",
+    "description": "Left wing necklace, included in The Flutter Wing Pair.",
+    "story": "For the people who help you grow.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "flutter-wing-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "flutter-wing-necklace-pair"
+  },
+  {
+    "id": "flutter-wing-necklace-pair-piece-b",
+    "sku": "HV123",
+    "name": "The Flutter Wing Pair: Right wing necklace",
+    "category": "Necklaces",
+    "price": 5600,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Right wing necklace",
+    "description": "Right wing necklace, included in The Flutter Wing Pair.",
+    "story": "For the people who help you grow.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "flutter-wing-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "flutter-wing-necklace-pair"
+  },
+  {
+    "id": "flutter-wing-necklace-pair",
+    "sku": "HV107",
+    "name": "The Flutter Wing Pair",
+    "category": "Necklaces",
+    "price": 11200,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Complementary butterfly wing pendants",
+    "description": "A left wing and a right wing form a butterfly when brought together. Fine silver openwork gives each half its own light, delicate character.",
+    "story": "For the people who help you grow.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "flutter-wing-necklace-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "flutter-wing-necklace-pair-piece-a",
+        "label": "Left wing necklace"
+      },
+      {
+        "productId": "flutter-wing-necklace-pair-piece-b",
+        "label": "Right wing necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Complementary butterfly wing pendants",
+      "Left wing necklace",
+      "Right wing necklace"
+    ]
+  },
+  {
+    "id": "woven-orbits-necklace-pair-piece-a",
+    "sku": "HV124",
+    "name": "The Woven Orbits Pair: Gold-led circles necklace",
+    "category": "Necklaces",
+    "price": 12400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Gold-led circles necklace",
+    "description": "Gold-led circles necklace, included in The Woven Orbits Pair.",
+    "story": "Connected, with room to be yourself.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "woven-orbits-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "woven-orbits-necklace-pair"
+  },
+  {
+    "id": "woven-orbits-necklace-pair-piece-b",
+    "sku": "HV125",
+    "name": "The Woven Orbits Pair: Silver-led circles necklace",
+    "category": "Necklaces",
+    "price": 12400,
+    "metal": "sterling silver",
+    "gemstone": "None",
+    "stone": "Silver-led circles necklace",
+    "description": "Silver-led circles necklace, included in The Woven Orbits Pair.",
+    "story": "Connected, with room to be yourself.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "woven-orbits-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "woven-orbits-necklace-pair"
+  },
+  {
+    "id": "woven-orbits-necklace-pair",
+    "sku": "HV108",
+    "name": "The Woven Orbits Pair",
+    "category": "Necklaces",
+    "price": 24800,
+    "metal": "18ct yellow gold & sterling silver",
+    "gemstone": "None",
+    "stone": "Two-tone overlapping circle pendants",
+    "description": "Each pendant joins a gold circle and a silver circle. Reversed proportions and finishes create two related designs, each with its own character.",
+    "story": "Connected, with room to be yourself.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "woven-orbits-necklace-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "woven-orbits-necklace-pair-piece-a",
+        "label": "Gold-led circles necklace"
+      },
+      {
+        "productId": "woven-orbits-necklace-pair-piece-b",
+        "label": "Silver-led circles necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Two-tone overlapping circle pendants",
+      "Gold-led circles necklace",
+      "Silver-led circles necklace"
+    ]
+  },
+  {
+    "id": "rooted-leaf-branch-pair-piece-a",
+    "sku": "HV126",
+    "name": "The Rooted Leaf & Branch Pair: Leaf necklace",
+    "category": "Necklaces",
+    "price": 7400,
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Leaf necklace",
+    "description": "Leaf necklace, included in The Rooted Leaf & Branch Pair.",
+    "story": "Grow your own way. Stay connected.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "rooted-leaf-branch-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "rooted-leaf-branch-pair"
+  },
+  {
+    "id": "rooted-leaf-branch-pair-piece-b",
+    "sku": "HV127",
+    "name": "The Rooted Leaf & Branch Pair: Branch necklace",
+    "category": "Necklaces",
+    "price": 9200,
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Branch necklace",
+    "description": "Branch necklace, included in The Rooted Leaf & Branch Pair.",
+    "story": "Grow your own way. Stay connected.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "rooted-leaf-branch-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "rooted-leaf-branch-pair"
+  },
+  {
+    "id": "rooted-leaf-branch-pair",
+    "sku": "HV109",
+    "name": "The Rooted Leaf & Branch Pair",
+    "category": "Necklaces",
+    "price": 16600,
+    "metal": "18ct rose gold",
+    "gemstone": "None",
+    "stone": "Single leaf and leafy branch pendants",
+    "description": "One simple leaf and one small leafy branch hang from warm rose gold chains. Two botanical shapes for the connections that keep growing.",
+    "story": "Grow your own way. Stay connected.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "rooted-leaf-branch-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "rooted-leaf-branch-pair-piece-a",
+        "label": "Leaf necklace"
+      },
+      {
+        "productId": "rooted-leaf-branch-pair-piece-b",
+        "label": "Branch necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Single leaf and leafy branch pendants",
+      "Leaf necklace",
+      "Branch necklace"
+    ]
+  },
+  {
+    "id": "balance-gemstone-necklace-pair-piece-a",
+    "sku": "HV128",
+    "name": "The Balance Gemstone Pair: Black onyx necklace",
+    "category": "Necklaces",
+    "price": 6900,
+    "metal": "Sterling silver",
+    "gemstone": "Black onyx",
+    "stone": "Black onyx necklace",
+    "description": "Black onyx necklace, included in The Balance Gemstone Pair.",
+    "story": "A shared shape. Your own shade.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "balance-gemstone-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "balance-gemstone-necklace-pair"
+  },
+  {
+    "id": "balance-gemstone-necklace-pair-piece-b",
+    "sku": "HV129",
+    "name": "The Balance Gemstone Pair: White agate necklace",
+    "category": "Necklaces",
+    "price": 6900,
+    "metal": "Sterling silver",
+    "gemstone": "white agate",
+    "stone": "White agate necklace",
+    "description": "White agate necklace, included in The Balance Gemstone Pair.",
+    "story": "A shared shape. Your own shade.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "balance-gemstone-necklace-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "balance-gemstone-necklace-pair"
+  },
+  {
+    "id": "balance-gemstone-necklace-pair",
+    "sku": "HV110",
+    "name": "The Balance Gemstone Pair",
+    "category": "Necklaces",
+    "price": 13800,
+    "metal": "Sterling silver",
+    "gemstone": "Black onyx & white agate",
+    "stone": "Oval black onyx and white agate",
+    "description": "The same smooth oval setting holds black onyx on one necklace and white agate on the other. A quiet, contrasting silver pair for everyday wear.",
+    "story": "A shared shape. Your own shade.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "balance-gemstone-necklace-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "balance-gemstone-necklace-pair-piece-a",
+        "label": "Black onyx necklace"
+      },
+      {
+        "productId": "balance-gemstone-necklace-pair-piece-b",
+        "label": "White agate necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Oval black onyx and white agate",
+      "Black onyx necklace",
+      "White agate necklace"
+    ]
+  },
+  {
+    "id": "accord-connected-shapes-pair-piece-a",
+    "sku": "HV130",
+    "name": "The Accord Connected Shapes Pair: Gold curve necklace",
+    "category": "Necklaces",
+    "price": 10900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Gold curve necklace",
+    "description": "Gold curve necklace, included in The Accord Connected Shapes Pair.",
+    "story": "Different shapes. A natural connection.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "accord-connected-shapes-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "accord-connected-shapes-pair"
+  },
+  {
+    "id": "accord-connected-shapes-pair-piece-b",
+    "sku": "HV131",
+    "name": "The Accord Connected Shapes Pair: Silver curve necklace",
+    "category": "Necklaces",
+    "price": 7900,
+    "metal": "sterling silver",
+    "gemstone": "None",
+    "stone": "Silver curve necklace",
+    "description": "Silver curve necklace, included in The Accord Connected Shapes Pair.",
+    "story": "Different shapes. A natural connection.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "accord-connected-shapes-pair",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "hidden": true,
+    "parentSetId": "accord-connected-shapes-pair"
+  },
+  {
+    "id": "accord-connected-shapes-pair",
+    "sku": "HV111",
+    "name": "The Accord Connected Shapes Pair",
+    "category": "Necklaces",
+    "price": 18800,
+    "metal": "18ct yellow gold & sterling silver",
+    "gemstone": "None",
+    "stone": "Complementary rounded sculptural pendants",
+    "description": "Two rounded sculptural forms nest together through complementary curves. Gold and silver give each piece a distinct finish, without sharp edges or literal symbols.",
+    "story": "Different shapes. A natural connection.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Matching necklaces",
+    "image": "accord-connected-shapes-pair",
+    "options": [],
+    "optionLabel": "Individual chain lengths",
+    "components": [
+      {
+        "productId": "accord-connected-shapes-pair-piece-a",
+        "label": "Gold curve necklace"
+      },
+      {
+        "productId": "accord-connected-shapes-pair-piece-b",
+        "label": "Silver curve necklace"
+      }
+    ],
+    "tag": "2-necklace set",
+    "relationships": [
+      "Couples",
+      "Friends",
+      "Siblings",
+      "Family"
+    ],
+    "keywords": [
+      "Complementary rounded sculptural pendants",
+      "Gold curve necklace",
+      "Silver curve necklace"
+    ]
+  },
+  {
+    "id": "marquise-butterfly-pendant",
+    "sku": "HV132",
+    "name": "The Marquise Butterfly Pendant",
+    "category": "Necklaces",
+    "price": 18900,
     "metal": "18ct yellow gold",
     "gemstone": "Lab-grown diamond",
-    "stone": "Open-wing butterfly pendant",
-    "price": 14500,
+    "stone": "Openwork diamond wings with a marquise centre",
+    "description": "Open gold wings traced with small diamonds surround a marquise-shaped centre stone. A polished bail suspends the butterfly from its own chain.",
+    "story": "For the chapters that help you grow.",
     "audience": [
-      "Women"
+      "Unisex"
     ],
-    "description": "A delicate butterfly with airy wings and sparkling accents rests on a golden chain.",
-    "story": "For the beautiful things that change.",
-    "sku": "HV108",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Nature-inspired",
+    "image": "marquise-butterfly-pendant",
     "options": [
       "40cm",
       "45cm",
@@ -3273,29 +4043,30 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "New arrival",
     "keywords": [
-      "Nature-inspired",
-      "Open-wing butterfly pendant"
+      "Openwork diamond wings with a marquise centre",
+      "Single necklace"
     ]
   },
   {
-    "id": "rose-dream-pendant",
-    "name": "The Rose Dream Pendant",
-    "style": "Gemstone pendants",
-    "metal": "18ct rose gold",
-    "gemstone": "Rose quartz",
-    "stone": "Soft-pink oval rose quartz",
-    "price": 12500,
+    "id": "diamondwing-necklace",
+    "sku": "HV133",
+    "name": "The Diamondwing Necklace",
+    "category": "Necklaces",
+    "price": 21900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Diamond-set butterfly with jewelled antennae",
+    "description": "Diamond-set wings and two bright antennae give this gold butterfly a fuller silhouette. The chain joins the wings directly for a balanced finish.",
+    "story": "Find your own way to shine.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A blush-pink gemstone glows within a warm rose-gold frame, balancing colour with delicate restraint.",
-    "story": "Keep a little tenderness close.",
-    "sku": "HV109",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Nature-inspired",
+    "image": "diamondwing-necklace",
     "options": [
       "40cm",
       "45cm",
@@ -3303,29 +4074,155 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "New arrival",
     "keywords": [
-      "Gemstone pendants",
-      "Soft-pink oval rose quartz"
+      "Diamond-set butterfly with jewelled antennae",
+      "Single necklace"
+    ]
+  },
+  {
+    "id": "open-heart-diamond-necklace",
+    "sku": "HV134",
+    "name": "The Open Heart Diamond Necklace",
+    "category": "Necklaces",
+    "price": 12900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Open heart with a round diamond accent",
+    "description": "A polished open gold heart frames a single round diamond accent at its base. A simple pendant with a warm, personal meaning.",
+    "story": "A little space for someone you love.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "open-heart-diamond-necklace",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "New arrival",
+    "keywords": [
+      "Open heart with a round diamond accent",
+      "Single necklace"
+    ]
+  },
+  {
+    "id": "sapphire-birthstone-gold-pendant",
+    "sku": "HV135",
+    "name": "The Sapphire Birthstone Pendant",
+    "category": "Necklaces",
+    "price": 14900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Sapphire",
+    "stone": "Round blue sapphire in a four-prong setting",
+    "description": "A round blue sapphire rests in a clean four-prong gold setting. Its deep colour leads the design, carried on a fine gold chain.",
+    "story": "Your own colour, close to your heart.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Gemstone pendants",
+    "image": "sapphire-birthstone-gold-pendant",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "New arrival",
+    "keywords": [
+      "Round blue sapphire in a four-prong setting",
+      "Single necklace"
+    ]
+  },
+  {
+    "id": "moonlit-star-pendant",
+    "sku": "HV136",
+    "name": "The Moonlit Star Pendant",
+    "category": "Necklaces",
+    "price": 16900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Diamond crescent moon and suspended star",
+    "description": "A diamond-lined gold crescent holds a small suspended star with its own bright centre. Both celestial details belong to one pendant on one chain.",
+    "story": "A small constellation of your own.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "moonlit-star-pendant",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "New arrival",
+    "keywords": [
+      "Diamond crescent moon and suspended star",
+      "Single necklace"
+    ]
+  },
+  {
+    "id": "infinite-verse-necklace",
+    "sku": "HV137",
+    "name": "The Infinite Verse Necklace",
+    "category": "Necklaces",
+    "price": 15900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Polished and diamond-set infinity motif",
+    "description": "Polished gold and small clear stones trace the two flowing loops of an infinity motif. The chain joins each side of the pendant.",
+    "story": "For the stories that keep unfolding.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "infinite-verse-necklace",
+    "options": [
+      "40cm",
+      "45cm",
+      "50cm",
+      "55cm",
+      "60cm"
+    ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "New arrival",
+    "keywords": [
+      "Polished and diamond-set infinity motif",
+      "Single necklace"
     ]
   },
   {
     "id": "initial-verse-necklace",
+    "sku": "HV138",
     "name": "The Initial Verse",
-    "style": "Personal pieces",
+    "category": "Necklaces",
+    "price": 9800,
     "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Custom A–Z initial pendant",
-    "price": 6900,
+    "stone": "Polished letter pendant, A-Z",
+    "description": "A polished gold letter rests on a fine chain. Choose any initial from A to Z, a small detail that keeps your own story close.",
+    "story": "One letter. A world of meaning.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A polished letter pendant in radiant gold, made personal with the initial you choose.",
-    "story": "One letter, a thousand stories.",
-    "sku": "HV110",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Personal pieces",
+    "image": "initial-verse-necklace",
+    "imageExtension": "png",
     "options": [
       "40cm",
       "45cm",
@@ -3333,30 +4230,31 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "Make it yours",
     "keywords": [
-      "Personal pieces",
-      "Custom A–Z initial pendant"
-    ],
-    "personalization": "initial"
+      "Personalised",
+      "Single necklace"
+    ]
   },
   {
     "id": "birthstone-story-necklace",
+    "sku": "HV139",
     "name": "The Birthstone Story",
-    "style": "Personal pieces",
+    "category": "Necklaces",
+    "price": 14900,
     "metal": "18ct yellow gold",
     "gemstone": "Birthstone",
-    "stone": "Choice of twelve birth-month stones",
-    "price": 11900,
+    "stone": "Round birthstone pendant",
+    "description": "A round gemstone brings a personal touch of colour to a delicate gold chain. Choose your birth month to see its gemstone, from January garnet to December tanzanite.",
+    "story": "Your month. Your own little story.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A meaningful gemstone pendant chosen for your birth month, set against a timeless gold chain.",
-    "story": "Every month holds a story.",
-    "sku": "HV111",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Personal pieces",
+    "image": "birthstone-story-necklace",
+    "imageExtension": "png",
     "options": [
       "40cm",
       "45cm",
@@ -3364,30 +4262,31 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "Make it yours",
     "keywords": [
-      "Personal pieces",
-      "Choice of twelve birth-month stones"
-    ],
-    "personalization": "birthstone"
+      "Personalised",
+      "Single necklace"
+    ]
   },
   {
     "id": "written-promise-bar",
+    "sku": "HV140",
     "name": "The Written Promise Bar",
-    "style": "Personal pieces",
-    "metal": "Sterling silver",
+    "category": "Necklaces",
+    "price": 12800,
+    "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Custom engraved bar pendant",
-    "price": 7800,
+    "stone": "Personalised horizontal gold bar",
+    "description": "A slender gold bar carries the words you want to keep close. Add your own message of up to 24 characters; the pictured engraving is an example.",
+    "story": "A few words. A lasting promise.",
     "audience": [
-      "Men",
       "Unisex"
     ],
-    "description": "A sleek silver bar ready for the name, date or short message that matters to you.",
-    "story": "Some words deserve to be worn.",
-    "sku": "HV112",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Personal pieces",
+    "image": "written-promise-bar",
+    "imageExtension": "png",
     "options": [
       "40cm",
       "45cm",
@@ -3395,30 +4294,31 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "Make it yours",
     "keywords": [
-      "Personal pieces",
-      "Custom engraved bar pendant"
-    ],
-    "personalization": "engraving"
+      "Personalised",
+      "Single necklace"
+    ]
   },
   {
     "id": "forever-disc-necklace",
+    "sku": "HV141",
     "name": "The Forever Disc",
-    "style": "Personal pieces",
+    "category": "Necklaces",
+    "price": 11900,
     "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Custom engraved disc pendant",
-    "price": 9800,
+    "stone": "Personalised circular gold disc",
+    "description": "A polished circular gold disc becomes a keepsake with your initials, a name or a meaningful date. Add up to 24 characters; the pictured initials are an example.",
+    "story": "Keep your favourite moment close.",
     "audience": [
-      "Women",
       "Unisex"
     ],
-    "description": "A beautifully simple gold disc designed to carry your chosen initials, name or meaningful date.",
-    "story": "A small reminder of forever.",
-    "sku": "HV113",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Personal pieces",
+    "image": "forever-disc-necklace",
+    "imageExtension": "png",
     "options": [
       "40cm",
       "45cm",
@@ -3426,382 +4326,1346 @@
       "55cm",
       "60cm"
     ],
+    "optionLabel": "Chain length",
+    "newArrival": true,
+    "tag": "Make it yours",
     "keywords": [
-      "Personal pieces",
-      "Custom engraved disc pendant"
-    ],
-    "personalization": "engraving"
+      "Personalised",
+      "Single necklace"
+    ]
   },
   {
-    "id": "golden-layers-necklace",
-    "name": "The Golden Layers",
-    "style": "Layered necklaces",
+    "id": "initial-verse-bracelet",
+    "sku": "HV142",
+    "name": "The Initial Verse Bracelet",
+    "category": "Bracelets",
+    "price": 6900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Personalised letter charm",
+    "description": "A delicate gold chain carries your chosen initial. A small signature, made entirely yours.",
+    "story": "Your story, one letter at a time.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "initial-verse-bracelet",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "newArrival": true,
+    "tag": "New chapter",
+    "keywords": [
+      "New bracelet",
+      "Personal pieces"
+    ]
+  },
+  {
+    "id": "birthstone-story-bracelet",
+    "sku": "HV143",
+    "name": "The Birthstone Story Bracelet",
+    "category": "Bracelets",
+    "price": 7900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Birthstone",
+    "stone": "Round birthstone bezel",
+    "description": "A single round gemstone rests on a fine adjustable gold chain. Choose the birth month that tells your story.",
+    "story": "A colour for your chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Birthstone",
+    "image": "birthstone-story-bracelet",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "newArrival": true,
+    "tag": "New chapter",
+    "keywords": [
+      "New bracelet",
+      "Birthstone"
+    ]
+  },
+  {
+    "id": "written-promise-bracelet",
+    "sku": "HV144",
+    "name": "The Written Promise Bracelet",
+    "category": "Bracelets",
+    "price": 8500,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Engravable curved gold bar",
+    "description": "A slender curved gold bar holds a name, date or promise. Add up to 24 characters and watch your inscription appear.",
+    "story": "Words worth keeping close.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "written-promise-bracelet",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "newArrival": true,
+    "tag": "New chapter",
+    "keywords": [
+      "New bracelet",
+      "Personal pieces"
+    ]
+  },
+  {
+    "id": "bound-together-bangle",
+    "sku": "HV145",
+    "name": "The Bound Together Bangle",
+    "category": "Bracelets",
+    "price": 14500,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Sculptural gold knot",
+    "description": "Two slender gold bands meet in a soft central knot. A polished expression of the connections we carry.",
+    "story": "Some bonds need no words.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Sculptural bangle",
+    "image": "bound-together-bangle",
+    "imageExtension": "png",
+    "options": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "optionLabel": "Wrist circumference",
+    "newArrival": true,
+    "tag": "New chapter",
+    "keywords": [
+      "New bracelet",
+      "Sculptural bangle"
+    ]
+  },
+  {
+    "id": "chapter-charm-bracelet",
+    "sku": "HV146",
+    "name": "The Chapter Charm Bracelet",
+    "category": "Bracelets",
+    "price": 10900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Choice of keepsake charm",
+    "description": "An oval-link gold chain carries your chosen keepsake: an initial, heart, star, moon or birthstone. Choose one charm for this chapter.",
+    "story": "Every chapter deserves a keepsake.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Charm",
+    "image": "chapter-charm-bracelet",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Bracelet length",
+    "newArrival": true,
+    "tag": "New chapter",
+    "keywords": [
+      "New bracelet",
+      "Charm"
+    ]
+  },
+  {
+    "id": "liquid-ribbon-cuff",
+    "sku": "HV147",
+    "name": "The Liquid Ribbon Cuff",
+    "category": "Bracelets",
+    "price": 18900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished folded gold",
+    "description": "A flowing ribbon of polished gold curves around the wrist. Sculptural folds catch the light with every movement.",
+    "story": "Let your story take shape.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Statement cuff",
+    "image": "liquid-ribbon-cuff",
+    "imageExtension": "png",
+    "options": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "optionLabel": "Wrist circumference",
+    "newArrival": true,
+    "tag": "New chapter",
+    "keywords": [
+      "New bracelet",
+      "Statement cuff"
+    ]
+  },
+  {
+    "id": "golden-chapter-stack-piece-1",
+    "sku": "HV148",
+    "name": "Polished gold bangle",
+    "category": "Bracelets",
+    "price": 4500,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished gold bangle",
+    "description": "Polished gold bangle, included in The Golden Chapter Stack.",
+    "story": "Five textures. One golden chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "golden-chapter-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-stack-piece-2",
+    "sku": "HV149",
+    "name": "Rope-twisted gold bangle",
+    "category": "Bracelets",
+    "price": 4800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Rope-twisted gold bangle",
+    "description": "Rope-twisted gold bangle, included in The Golden Chapter Stack.",
+    "story": "Five textures. One golden chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "golden-chapter-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-stack-piece-3",
+    "sku": "HV150",
+    "name": "Hammered gold bangle",
+    "category": "Bracelets",
+    "price": 5200,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Hammered gold bangle",
+    "description": "Hammered gold bangle, included in The Golden Chapter Stack.",
+    "story": "Five textures. One golden chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "golden-chapter-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-stack-piece-4",
+    "sku": "HV151",
+    "name": "Ribbed gold bangle",
+    "category": "Bracelets",
+    "price": 4900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Ribbed gold bangle",
+    "description": "Ribbed gold bangle, included in The Golden Chapter Stack.",
+    "story": "Five textures. One golden chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "golden-chapter-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-stack-piece-5",
+    "sku": "HV152",
+    "name": "Satin gold bangle",
+    "category": "Bracelets",
+    "price": 5100,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Satin gold bangle",
+    "description": "Satin gold bangle, included in The Golden Chapter Stack.",
+    "story": "Five textures. One golden chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "golden-chapter-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-stack",
+    "sku": "HV153",
+    "name": "The Golden Chapter Stack",
+    "category": "Bracelets",
+    "price": 24500,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Five textures of gold",
+    "description": "Five slim gold bangles bring polished, rope-twisted, hammered, ribbed and satin finishes together. Wear all five on one wrist for a full, layered look.",
+    "story": "Five textures. One golden chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Bracelet stacks",
+    "image": "golden-chapter-stack",
+    "imageExtension": "png",
+    "options": [],
+    "optionLabel": "Individual wrist sizes",
+    "components": [
+      {
+        "productId": "golden-chapter-stack-piece-1",
+        "label": "Polished gold bangle"
+      },
+      {
+        "productId": "golden-chapter-stack-piece-2",
+        "label": "Rope-twisted gold bangle"
+      },
+      {
+        "productId": "golden-chapter-stack-piece-3",
+        "label": "Hammered gold bangle"
+      },
+      {
+        "productId": "golden-chapter-stack-piece-4",
+        "label": "Ribbed gold bangle"
+      },
+      {
+        "productId": "golden-chapter-stack-piece-5",
+        "label": "Satin gold bangle"
+      }
+    ],
+    "stack": true,
+    "newArrival": true,
+    "tag": "5-bracelet stack",
+    "keywords": [
+      "stack",
+      "stacking bracelets",
+      "layered",
+      "full wrist",
+      "bangle set",
+      "Polished gold bangle",
+      "Rope-twisted gold bangle",
+      "Hammered gold bangle",
+      "Ribbed gold bangle",
+      "Satin gold bangle"
+    ]
+  },
+  {
+    "id": "pearl-promise-stack-piece-1",
+    "sku": "HV154",
+    "name": "Freshwater pearl bracelet",
+    "category": "Bracelets",
+    "price": 11800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Freshwater pearl bracelet",
+    "description": "Freshwater pearl bracelet, included in The Pearl & Promise Stack.",
+    "story": "Soft light. A promise in every layer.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "pearl-promise-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "pearl-promise-stack-piece-2",
+    "sku": "HV155",
+    "name": "Fine gold chain bracelet",
+    "category": "Bracelets",
+    "price": 3900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Fine gold chain bracelet",
+    "description": "Fine gold chain bracelet, included in The Pearl & Promise Stack.",
+    "story": "Soft light. A promise in every layer.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "pearl-promise-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "pearl-promise-stack-piece-3",
+    "sku": "HV156",
+    "name": "Polished gold bangle",
+    "category": "Bracelets",
+    "price": 4900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Polished gold bangle",
+    "description": "Polished gold bangle, included in The Pearl & Promise Stack.",
+    "story": "Soft light. A promise in every layer.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "pearl-promise-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "pearl-promise-stack",
+    "sku": "HV157",
+    "name": "The Pearl & Promise Stack",
+    "category": "Bracelets",
+    "price": 20600,
+    "metal": "Freshwater pearls & 18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Pearls, chain & polished bangle",
+    "description": "A freshwater pearl strand, a delicate gold chain and a slim gold bangle layer softly around one wrist. All three pieces are included.",
+    "story": "Soft light. A promise in every layer.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Bracelet stacks",
+    "image": "pearl-promise-stack",
+    "imageExtension": "png",
+    "options": [],
+    "optionLabel": "Individual wrist sizes",
+    "components": [
+      {
+        "productId": "pearl-promise-stack-piece-1",
+        "label": "Freshwater pearl bracelet"
+      },
+      {
+        "productId": "pearl-promise-stack-piece-2",
+        "label": "Fine gold chain bracelet"
+      },
+      {
+        "productId": "pearl-promise-stack-piece-3",
+        "label": "Polished gold bangle"
+      }
+    ],
+    "stack": true,
+    "newArrival": true,
+    "tag": "3-bracelet stack",
+    "keywords": [
+      "stack",
+      "stacking bracelets",
+      "layered",
+      "full wrist",
+      "bangle set",
+      "Freshwater pearl bracelet",
+      "Fine gold chain bracelet",
+      "Polished gold bangle"
+    ]
+  },
+  {
+    "id": "midnight-stack-piece-1",
+    "sku": "HV158",
+    "name": "Black onyx bead bracelet",
+    "category": "Bracelets",
+    "price": 4600,
+    "metal": "Sterling silver",
+    "gemstone": "Onyx",
+    "stone": "Black onyx bead bracelet",
+    "description": "Black onyx bead bracelet, included in The Midnight Stack.",
+    "story": "A little depth. A lasting impression.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "midnight-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "midnight-stack-piece-2",
+    "sku": "HV159",
+    "name": "Black braided leather bracelet",
+    "category": "Bracelets",
+    "price": 3800,
+    "metal": "Leather & sterling silver",
+    "gemstone": "None",
+    "stone": "Black braided leather bracelet",
+    "description": "Black braided leather bracelet, included in The Midnight Stack.",
+    "story": "A little depth. A lasting impression.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "midnight-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "midnight-stack-piece-3",
+    "sku": "HV160",
+    "name": "Silver curb chain bracelet",
+    "category": "Bracelets",
+    "price": 6900,
+    "metal": "Sterling silver",
+    "gemstone": "None",
+    "stone": "Silver curb chain bracelet",
+    "description": "Silver curb chain bracelet, included in The Midnight Stack.",
+    "story": "A little depth. A lasting impression.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "midnight-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "midnight-stack",
+    "sku": "HV161",
+    "name": "The Midnight Stack",
+    "category": "Bracelets",
+    "price": 15300,
+    "metal": "Black onyx, leather & sterling silver",
+    "gemstone": "Onyx",
+    "stone": "Onyx beads, leather & silver chain",
+    "description": "Black onyx beads, braided black leather with a silver clasp and a sterling silver curb chain form a bold three-piece wrist stack.",
+    "story": "A little depth. A lasting impression.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Bracelet stacks",
+    "image": "midnight-stack",
+    "imageExtension": "png",
+    "options": [],
+    "optionLabel": "Individual wrist sizes",
+    "components": [
+      {
+        "productId": "midnight-stack-piece-1",
+        "label": "Black onyx bead bracelet"
+      },
+      {
+        "productId": "midnight-stack-piece-2",
+        "label": "Black braided leather bracelet"
+      },
+      {
+        "productId": "midnight-stack-piece-3",
+        "label": "Silver curb chain bracelet"
+      }
+    ],
+    "stack": true,
+    "newArrival": true,
+    "tag": "3-bracelet stack",
+    "keywords": [
+      "stack",
+      "stacking bracelets",
+      "layered",
+      "full wrist",
+      "bangle set",
+      "Black onyx bead bracelet",
+      "Black braided leather bracelet",
+      "Silver curb chain bracelet"
+    ]
+  },
+  {
+    "id": "radiance-stack-piece-1",
+    "sku": "HV162",
+    "name": "Diamond tennis bracelet",
+    "category": "Bracelets",
+    "price": 32000,
     "metal": "18ct yellow gold",
     "gemstone": "Lab-grown diamond",
-    "stone": "Two connected gold chains and solitaire",
-    "price": 18800,
-    "audience": [
-      "Women",
-      "Unisex"
-    ],
-    "description": "Two delicate chains share one clasp, with a tiny solitaire on the longer layer. The outer chain falls 5cm below the inner.",
-    "story": "Two moments, one beautiful story.",
-    "sku": "HV114",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Inner chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm"
-    ],
-    "keywords": [
-      "Layered necklaces",
-      "Two connected gold chains and solitaire"
-    ]
-  },
-  {
-    "id": "moonlit-layers-necklace",
-    "name": "The Moonlit Layers",
-    "style": "Layered necklaces",
-    "metal": "Sterling silver",
-    "gemstone": "None",
-    "stone": "Three connected chains with moon and star",
-    "price": 11900,
-    "audience": [
-      "Women",
-      "Unisex"
-    ],
-    "description": "Three silver layers combine a crescent, a star and a fine cable texture, connected at one clasp with 5cm intervals.",
-    "story": "Every night holds a little wonder.",
-    "sku": "HV115",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Inner chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm"
-    ],
-    "keywords": [
-      "Layered necklaces",
-      "Three connected chains with moon and star"
-    ]
-  },
-  {
-    "id": "geometry-pendant",
-    "name": "The Geometry Pendant",
-    "style": "Statement pieces",
-    "metal": "Sterling silver",
-    "gemstone": "None",
-    "stone": "Angular geometric pendant",
-    "price": 15100,
-    "audience": [
-      "Men",
-      "Unisex"
-    ],
-    "description": "Architectural silver lines meet in a striking open form, balancing sharp edges with modern restraint.",
-    "story": "A shape all your own.",
-    "sku": "HV116",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Statement pieces",
-      "Angular geometric pendant"
-    ]
-  },
-  {
-    "id": "obsidian-edge-necklace",
-    "name": "The Obsidian Edge",
-    "style": "Statement pieces",
-    "metal": "Sterling silver",
-    "gemstone": "Black onyx",
-    "stone": "Angular onyx statement pendant",
-    "price": 19800,
-    "audience": [
-      "Men",
-      "Unisex"
-    ],
-    "description": "A bold black onyx pendant framed by sculptural silver creates a confident geometric statement.",
-    "story": "For a presence that needs no introduction.",
-    "sku": "HV117",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Statement pieces",
-      "Angular onyx statement pendant"
-    ]
-  },
-  {
-    "id": "silver-fleur-stations",
-    "name": "The Silver Fleur Stations",
-    "style": "Nature-inspired",
-    "metal": "Sterling silver",
-    "gemstone": "None",
-    "stone": "Four white enamel flowers connected by silver chain",
-    "price": 9900,
-    "audience": [
-      "Women",
-      "Unisex"
-    ],
-    "description": "Four white enamel blooms sit apart along a fine silver chain, with delicate links visible between every flower.",
-    "story": "Four little moments of bloom.",
-    "sku": "HV118",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Nature-inspired",
-      "Four white enamel flowers connected by silver chain"
-    ]
-  },
-  {
-    "id": "noir-fleur-stations",
-    "name": "The Noir Fleur Stations",
-    "style": "Nature-inspired",
-    "metal": "Sterling silver",
-    "gemstone": "None",
-    "stone": "Four black enamel flowers connected by silver chain",
-    "price": 10200,
-    "audience": [
-      "Women",
-      "Unisex"
-    ],
-    "description": "Four miniature black enamel flowers are evenly spaced across a fine silver chain, echoing the Fleur bracelets.",
-    "story": "A bloom with a little mystery.",
-    "sku": "HV119",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Nature-inspired",
-      "Four black enamel flowers connected by silver chain"
-    ]
-  },
-  {
-    "id": "shared-heart-a",
-    "name": "The Shared Heart — First Half",
-    "style": "Matching necklaces",
-    "metal": "18ct rose gold",
-    "gemstone": "None",
-    "stone": "First half of a split-heart pendant",
-    "price": 8600,
+    "stone": "Diamond tennis bracelet",
+    "description": "Diamond tennis bracelet, included in The Radiance Stack.",
+    "story": "Let every layer catch the light.",
     "audience": [
       "Unisex"
     ],
-    "description": "One polished half of a rose-gold heart, designed to be treasured alone or completed by its matching piece.",
-    "story": "Two halves. One beautiful bond.",
-    "sku": "HV120",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Stack component",
+    "image": "radiance-stack",
+    "imageExtension": "png",
     "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
+      "16cm",
+      "18cm",
+      "20cm"
     ],
-    "keywords": [
-      "Matching necklaces",
-      "First half of a split-heart pendant"
-    ]
+    "optionLabel": "Wrist circumference",
+    "hidden": true
   },
   {
-    "id": "shared-heart-b",
-    "name": "The Shared Heart — Second Half",
-    "style": "Matching necklaces",
-    "metal": "18ct rose gold",
-    "gemstone": "None",
-    "stone": "Second half of a split-heart pendant",
-    "price": 8600,
-    "audience": [
-      "Unisex"
-    ],
-    "description": "A complementary rose-gold heart half, a keepsake for somebody who shares your story.",
-    "story": "A place in someone's heart.",
-    "sku": "HV121",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
-    "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
-    ],
-    "keywords": [
-      "Matching necklaces",
-      "Second half of a split-heart pendant"
-    ]
-  },
-  {
-    "id": "twin-star-a",
-    "name": "The Twin Star — Golden",
-    "style": "Matching necklaces",
+    "id": "radiance-stack-piece-2",
+    "sku": "HV163",
+    "name": "Polished gold bangle",
+    "category": "Bracelets",
+    "price": 4900,
     "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Five-point gold star pendant",
-    "price": 6900,
+    "stone": "Polished gold bangle",
+    "description": "Polished gold bangle, included in The Radiance Stack.",
+    "story": "Let every layer catch the light.",
     "audience": [
       "Unisex"
     ],
-    "description": "A polished golden star on a fine chain, celebrating the people who brighten ordinary days.",
-    "story": "For the light you bring.",
-    "sku": "HV122",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Stack component",
+    "image": "radiance-stack",
+    "imageExtension": "png",
     "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
+      "16cm",
+      "18cm",
+      "20cm"
     ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "radiance-stack-piece-3",
+    "sku": "HV164",
+    "name": "Fine gold chain bracelet",
+    "category": "Bracelets",
+    "price": 3900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Fine gold chain bracelet",
+    "description": "Fine gold chain bracelet, included in The Radiance Stack.",
+    "story": "Let every layer catch the light.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "radiance-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "radiance-stack",
+    "sku": "HV165",
+    "name": "The Radiance Stack",
+    "category": "Bracelets",
+    "price": 40800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Diamond tennis bracelet, bangle & chain",
+    "description": "A diamond tennis bracelet, a polished gold bangle and a delicate gold chain bring three layers of light to one wrist. The complete stack is included.",
+    "story": "Let every layer catch the light.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Bracelet stacks",
+    "image": "radiance-stack",
+    "imageExtension": "png",
+    "options": [],
+    "optionLabel": "Individual wrist sizes",
+    "components": [
+      {
+        "productId": "radiance-stack-piece-1",
+        "label": "Diamond tennis bracelet"
+      },
+      {
+        "productId": "radiance-stack-piece-2",
+        "label": "Polished gold bangle"
+      },
+      {
+        "productId": "radiance-stack-piece-3",
+        "label": "Fine gold chain bracelet"
+      }
+    ],
+    "stack": true,
+    "newArrival": true,
+    "tag": "3-bracelet stack",
     "keywords": [
-      "Matching necklaces",
-      "Five-point gold star pendant"
+      "stack",
+      "stacking bracelets",
+      "layered",
+      "full wrist",
+      "bangle set",
+      "Diamond tennis bracelet",
+      "Polished gold bangle",
+      "Fine gold chain bracelet"
     ]
   },
   {
-    "id": "twin-star-b",
-    "name": "The Twin Star — Silver",
-    "style": "Matching necklaces",
+    "id": "mixed-verse-stack-piece-1",
+    "sku": "HV166",
+    "name": "Yellow gold bangle",
+    "category": "Bracelets",
+    "price": 4900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Yellow gold bangle",
+    "description": "Yellow gold bangle, included in The Mixed Verse Stack.",
+    "story": "Different tones. Your own harmony.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Stack component",
+    "image": "mixed-verse-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "mixed-verse-stack-piece-2",
+    "sku": "HV167",
+    "name": "Sterling silver bangle",
+    "category": "Bracelets",
+    "price": 2800,
     "metal": "Sterling silver",
     "gemstone": "None",
-    "stone": "Five-point silver star pendant",
-    "price": 5900,
+    "stone": "Sterling silver bangle",
+    "description": "Sterling silver bangle, included in The Mixed Verse Stack.",
+    "story": "Different tones. Your own harmony.",
     "audience": [
       "Unisex"
     ],
-    "description": "A gleaming silver star on a fine chain, designed to shine beside its golden counterpart.",
-    "story": "Different stars. One constellation.",
-    "sku": "HV123",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Chain length",
+    "style": "Stack component",
+    "image": "mixed-verse-stack",
+    "imageExtension": "png",
     "options": [
-      "40cm",
-      "45cm",
-      "50cm",
-      "55cm",
-      "60cm"
+      "16cm",
+      "18cm",
+      "20cm"
     ],
-    "keywords": [
-      "Matching necklaces",
-      "Five-point silver star pendant"
-    ]
+    "optionLabel": "Wrist circumference",
+    "hidden": true
   },
   {
-    "id": "shared-heart-necklace-pair",
-    "name": "The Shared Heart Pair",
-    "style": "Matching necklaces",
+    "id": "mixed-verse-stack-piece-3",
+    "sku": "HV168",
+    "name": "Rose gold bangle",
+    "category": "Bracelets",
+    "price": 5100,
     "metal": "18ct rose gold",
     "gemstone": "None",
-    "stone": "Complementary split-heart pendants",
-    "price": 17200,
+    "stone": "Rose gold bangle",
+    "description": "Rose gold bangle, included in The Mixed Verse Stack.",
+    "story": "Different tones. Your own harmony.",
     "audience": [
       "Unisex"
     ],
-    "description": "Two rose-gold heart halves on separate chains. A complementary pair for the stories you share, with a length chosen for each person.",
-    "story": "Two halves. One story.",
-    "sku": "HV124",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Individual chain lengths",
+    "style": "Stack component",
+    "image": "mixed-verse-stack",
+    "imageExtension": "png",
+    "options": [
+      "16cm",
+      "18cm",
+      "20cm"
+    ],
+    "optionLabel": "Wrist circumference",
+    "hidden": true
+  },
+  {
+    "id": "mixed-verse-stack",
+    "sku": "HV169",
+    "name": "The Mixed Verse Stack",
+    "category": "Bracelets",
+    "price": 12800,
+    "metal": "18ct yellow gold, sterling silver & 18ct rose gold",
+    "gemstone": "None",
+    "stone": "Three polished mixed-metal bangles",
+    "description": "Yellow gold, cool sterling silver and warm rose gold sit side by side in three polished bangles. A complete mixed-metal stack for everyday layering.",
+    "story": "Different tones. Your own harmony.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Bracelet stacks",
+    "image": "mixed-verse-stack",
+    "imageExtension": "png",
     "options": [],
+    "optionLabel": "Individual wrist sizes",
     "components": [
       {
-        "productId": "shared-heart-a",
-        "label": "First heart half"
+        "productId": "mixed-verse-stack-piece-1",
+        "label": "Yellow gold bangle"
       },
       {
-        "productId": "shared-heart-b",
-        "label": "Second heart half"
+        "productId": "mixed-verse-stack-piece-2",
+        "label": "Sterling silver bangle"
+      },
+      {
+        "productId": "mixed-verse-stack-piece-3",
+        "label": "Rose gold bangle"
       }
     ],
-    "tag": "2-necklace set",
-    "relationships": [
-      "Couples",
-      "Friends",
-      "Siblings",
-      "Family"
-    ],
+    "stack": true,
+    "newArrival": true,
+    "tag": "3-bracelet stack",
     "keywords": [
-      "Matching necklaces",
-      "Shared Heart"
+      "stack",
+      "stacking bracelets",
+      "layered",
+      "full wrist",
+      "bangle set",
+      "Yellow gold bangle",
+      "Sterling silver bangle",
+      "Rose gold bangle"
     ]
   },
   {
-    "id": "twin-stars-necklace-pair",
-    "name": "The Twin Stars Pair",
-    "style": "Matching necklaces",
-    "metal": "18ct yellow gold & sterling silver",
+    "id": "golden-chapter-ear-stack-piece-1",
+    "sku": "HV170",
+    "name": "Petite gold hoop",
+    "category": "Earrings",
+    "price": 3900,
+    "metal": "18ct yellow gold",
     "gemstone": "None",
-    "stone": "Gold and silver star pendants",
-    "price": 12800,
+    "stone": "Petite gold hoop",
+    "description": "Petite gold hoop, included in The Golden Chapter Ear Stack.",
+    "story": "Three little details. Your own signature.",
     "audience": [
       "Unisex"
     ],
-    "description": "One golden star and one silver star, each on a separate chain. Choose an individual length for each meaningful connection.",
-    "story": "Under the same sky.",
-    "sku": "HV125",
-    "category": "Necklaces",
-    "image": null,
-    "optionLabel": "Individual chain lengths",
+    "style": "Ear stack component",
+    "image": "golden-chapter-ear-stack",
+    "imageExtension": "png",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 1,
+    "newArrival": false,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear stack component"
+    ],
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-ear-stack-piece-2",
+    "sku": "HV171",
+    "name": "Tiny diamond stud",
+    "category": "Earrings",
+    "price": 4900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Tiny diamond stud",
+    "description": "Tiny diamond stud, included in The Golden Chapter Ear Stack.",
+    "story": "Three little details. Your own signature.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear stack component",
+    "image": "golden-chapter-ear-stack",
+    "imageExtension": "png",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 1,
+    "newArrival": false,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear stack component"
+    ],
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-ear-stack-piece-3",
+    "sku": "HV172",
+    "name": "Twisted gold ear cuff",
+    "category": "Earrings",
+    "price": 2800,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Twisted gold ear cuff",
+    "description": "Twisted gold ear cuff, included in The Golden Chapter Ear Stack.",
+    "story": "Three little details. Your own signature.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear stack component",
+    "image": "golden-chapter-ear-stack",
+    "imageExtension": "png",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 1,
+    "newArrival": false,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear stack component"
+    ],
+    "hidden": true
+  },
+  {
+    "id": "golden-chapter-ear-stack",
+    "sku": "HV173",
+    "name": "The Golden Chapter Ear Stack",
+    "category": "Earrings",
+    "price": 11600,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Gold hoop, diamond stud & twisted cuff",
+    "description": "A petite gold hoop, a tiny diamond stud and a twisted ear cuff create a layered look for one ear. All three pieces are included.",
+    "story": "Three little details. Your own signature.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear stacks",
+    "image": "golden-chapter-ear-stand",
+    "imageExtension": "png",
     "options": [],
+    "optionLabel": "Complete one-ear set",
+    "pieceCount": 3,
+    "newArrival": true,
+    "tag": "3-piece stack · one ear",
+    "keywords": [
+      "New earrings",
+      "Ear stacks"
+    ],
     "components": [
       {
-        "productId": "twin-star-a",
-        "label": "Golden star"
+        "productId": "golden-chapter-ear-stack-piece-1",
+        "label": "Petite gold hoop"
       },
       {
-        "productId": "twin-star-b",
-        "label": "Silver star"
+        "productId": "golden-chapter-ear-stack-piece-2",
+        "label": "Tiny diamond stud"
+      },
+      {
+        "productId": "golden-chapter-ear-stack-piece-3",
+        "label": "Twisted gold ear cuff"
       }
     ],
-    "tag": "2-necklace set",
-    "relationships": [
-      "Couples",
-      "Friends",
-      "Siblings",
-      "Family"
+    "earStack": true,
+    "inclusionNote": "For one ear. Requires two piercings; the open cuff needs no piercing. Ear display stand shows placement and is not included."
+  },
+  {
+    "id": "celestial-verse-ear-set-piece-1",
+    "sku": "HV174",
+    "name": "Crescent moon stud",
+    "category": "Earrings",
+    "price": 2400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Crescent moon stud",
+    "description": "Crescent moon stud, included in The Celestial Verse Set.",
+    "story": "A little constellation, entirely yours.",
+    "audience": [
+      "Unisex"
     ],
+    "style": "Ear stack component",
+    "image": "celestial-verse-ear-set",
+    "imageExtension": "png",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 1,
+    "newArrival": false,
+    "tag": "Pair · 2 earrings",
     "keywords": [
-      "Matching necklaces",
-      "Stars"
-    ]
+      "New earrings",
+      "Ear stack component"
+    ],
+    "hidden": true
+  },
+  {
+    "id": "celestial-verse-ear-set-piece-2",
+    "sku": "HV175",
+    "name": "Five-point star stud",
+    "category": "Earrings",
+    "price": 2400,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Five-point star stud",
+    "description": "Five-point star stud, included in The Celestial Verse Set.",
+    "story": "A little constellation, entirely yours.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear stack component",
+    "image": "celestial-verse-ear-set",
+    "imageExtension": "png",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 1,
+    "newArrival": false,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear stack component"
+    ],
+    "hidden": true
+  },
+  {
+    "id": "celestial-verse-ear-set-piece-3",
+    "sku": "HV176",
+    "name": "Chain-linked cuff with ball stud",
+    "category": "Earrings",
+    "price": 4500,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Chain-linked cuff with ball stud",
+    "description": "Chain-linked cuff with ball stud, included in The Celestial Verse Set.",
+    "story": "A little constellation, entirely yours.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear stack component",
+    "image": "celestial-verse-ear-set",
+    "imageExtension": "png",
+    "options": [
+      "Single"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 1,
+    "newArrival": false,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear stack component"
+    ],
+    "hidden": true
+  },
+  {
+    "id": "celestial-verse-ear-set",
+    "sku": "HV177",
+    "name": "The Celestial Verse Set",
+    "category": "Earrings",
+    "price": 9300,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Moon, star & chain-linked cuff",
+    "description": "A gold moon stud, star stud and fine chain-linked cuff with an attached ball stud form a celestial stack for one ear. All three components are included.",
+    "story": "A little constellation, entirely yours.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear stacks",
+    "image": "celestial-verse-ear-stand",
+    "imageExtension": "png",
+    "options": [],
+    "optionLabel": "Complete one-ear set",
+    "pieceCount": 3,
+    "newArrival": true,
+    "tag": "3-piece stack · one ear",
+    "keywords": [
+      "New earrings",
+      "Ear stacks"
+    ],
+    "components": [
+      {
+        "productId": "celestial-verse-ear-set-piece-1",
+        "label": "Crescent moon stud"
+      },
+      {
+        "productId": "celestial-verse-ear-set-piece-2",
+        "label": "Five-point star stud"
+      },
+      {
+        "productId": "celestial-verse-ear-set-piece-3",
+        "label": "Chain-linked cuff with ball stud"
+      }
+    ],
+    "earStack": true,
+    "inclusionNote": "For one ear. Requires three piercings for the moon, star and attached ball stud; the open cuff needs no piercing. Ear display stand shows placement and is not included."
+  },
+  {
+    "id": "liquid-petal-drops",
+    "sku": "HV178",
+    "name": "The Liquid Petal Drops",
+    "category": "Earrings",
+    "price": 14900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Sculptural folded gold petals",
+    "description": "Flowing gold petals catch the light beneath smaller petal studs. A matching pair with soft sculptural movement.",
+    "story": "Let your story unfold.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Statement drops",
+    "image": "liquid-petal-drops",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Statement drops"
+    ],
+    "inclusionNote": "One matching pair: two complete pierced drop earrings."
+  },
+  {
+    "id": "ivy-light-climbers",
+    "sku": "HV179",
+    "name": "The Ivy Light Climbers",
+    "category": "Earrings",
+    "price": 12900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Lab-grown diamond",
+    "stone": "Gold leaves with diamond accents",
+    "description": "A mirrored pair of delicate leafy branches curves upwards along the ears, with tiny diamond accents between the gold leaves. Shown on ear stands so you can see how each climber sits.",
+    "story": "A little light, growing with you.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear climbers",
+    "image": "ivy-light-ear-stands",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear climbers"
+    ],
+    "inclusionNote": "One mirrored pair: two ear climbers. Requires one lobe piercing per ear. Ear display stands are not included."
+  },
+  {
+    "id": "birthstone-story-studs",
+    "sku": "HV180",
+    "name": "The Birthstone Story Studs",
+    "category": "Earrings",
+    "price": 7900,
+    "metal": "18ct yellow gold",
+    "gemstone": "Birthstone",
+    "stone": "Round birthstone bezel studs",
+    "description": "A matching pair of round gemstone studs in fine gold bezels. Choose a birth month to see its colour and gemstone in your preview.",
+    "story": "A colour for every chapter.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Birthstone studs",
+    "image": "birthstone-story-studs",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Birthstone studs"
+    ],
+    "inclusionNote": "One matching pair: two pierced studs in the same selected birthstone."
+  },
+  {
+    "id": "initial-verse-huggies",
+    "sku": "HV181",
+    "name": "The Initial Verse Huggies",
+    "category": "Earrings",
+    "price": 9900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "Petite 12mm huggies · 5mm letter charms",
+    "description": "Petite 12mm gold huggies carry delicate 5mm letter charms, kept small for an understated everyday look. Choose a different initial for each ear or make them match.",
+    "story": "Two letters. A story only you can tell.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Personal pieces",
+    "image": "initial-verse-huggies-petite",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Personal pieces",
+      "Petite",
+      "Small initials"
+    ],
+    "inclusionNote": "One pair: two hinged huggies, each with its own selected letter charm."
+  },
+  {
+    "id": "pearl-halo-jackets",
+    "sku": "HV182",
+    "name": "The Pearl Halo Jackets",
+    "category": "Earrings",
+    "price": 11800,
+    "metal": "18ct yellow gold",
+    "gemstone": "Cultured pearl",
+    "stone": "Gold studs with removable pearl arcs",
+    "description": "Tiny gold ball studs meet removable arcs of five freshwater pearls beneath each lobe. Choose your preview: complete pearl jackets or the gold studs alone. Both jackets and both studs are included.",
+    "story": "One keepsake. Two ways to wear it.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Ear jackets",
+    "image": "pearl-halo-jackets",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Pair · 2 earrings",
+    "keywords": [
+      "New earrings",
+      "Ear jackets"
+    ],
+    "inclusionNote": "One complete pair: two gold studs and two removable five-pearl jackets. Styling does not change the included pieces or price."
+  },
+  {
+    "id": "woven-circle-hoops",
+    "sku": "HV183",
+    "name": "The Woven Circle Hoops",
+    "category": "Earrings",
+    "price": 8900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "25mm outside diameter · 3mm twisted gold tube",
+    "description": "A matching pair of round gold hoops with a softly twisted rope texture. The balanced 25mm diameter brings a little presence without an oversized silhouette.",
+    "story": "A familiar circle, with a twist.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Hoops",
+    "image": "woven-circle-hoops",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Medium hoops · pair",
+    "keywords": [
+      "Round",
+      "Medium",
+      "25mm",
+      "Twisted",
+      "Circle hoops"
+    ],
+    "inclusionNote": "One matching pair: two pierced hoop earrings. Outside diameter 25mm."
+  },
+  {
+    "id": "everyday-circle-hoops",
+    "sku": "HV184",
+    "name": "The Everyday Circle Hoops",
+    "category": "Earrings",
+    "price": 7900,
+    "metal": "18ct yellow gold",
+    "gemstone": "None",
+    "stone": "25mm outside diameter · 2.5mm smooth gold tube",
+    "description": "Clean, perfectly round gold hoops with a smooth polished finish. The medium 25mm diameter is an easy everyday size, neither tiny nor oversized.",
+    "story": "Your everyday signature, beautifully rounded.",
+    "audience": [
+      "Unisex"
+    ],
+    "style": "Hoops",
+    "image": "everyday-circle-hoops",
+    "imageExtension": "png",
+    "options": [
+      "Pair"
+    ],
+    "optionLabel": "Included pieces",
+    "pieceCount": 2,
+    "newArrival": true,
+    "tag": "Medium hoops · pair",
+    "keywords": [
+      "Round",
+      "Medium",
+      "25mm",
+      "Smooth",
+      "Circle hoops"
+    ],
+    "inclusionNote": "One matching pair: two pierced hoop earrings. Outside diameter 25mm."
   }
 ]

@@ -27,7 +27,7 @@ service addresses using `PRODUCT_SERVICE_URL`, `INVENTORY_SERVICE_URL`,
 
 ## First release
 
-- Responsive homepage, four categories and 101 fictional designs.
+- Responsive homepage, four categories and 117 fictional designs.
 - Women, Men and Unisex collections, plus material, gemstone, style, size and price filters.
 - Search, category filters and price/name sorting.
 - Product details, size/length options and live stock checks.
@@ -40,7 +40,12 @@ service addresses using `PRODUCT_SERVICE_URL`, `INVENTORY_SERVICE_URL`,
 - Eight ring styles: solitaire, halo, three-stone, eternity bands, signet, sculptural, nature-inspired and gemstone.
 - Nineteen new individual ring designs, including six solitaire cuts across the collection.
 - [Ring imagery and prompts](image-prompts-rings.md).
+- A dedicated Single necklaces view, with six supplied butterfly, heart, sapphire, moon/star and infinity designs shown first.
+- [Supplied necklace image sources](user-necklace-images.md).
 - Ten necklace styles, with twenty new main designs and four individually available pieces from the two matching pairs.
+- Ten additional matching necklace pairs: split hearts, lock/key, mountain/wave, black/white flowers, twin stars, butterfly wings, two-tone circles, leaf/branch, contrasting gemstones and connected shapes.
+- The ten new designs are sold as complete pairs. Their twenty component records are inventory-only and never appear as product cards or standalone product pages. Each component has its own chain length and stock.
+- [Matching necklace imagery and prompts](image-prompts-matching-necklaces.md).
 - Gold sun-and-moon and silver black-and-white yin-yang pairs with independent chain lengths.
 - Two- and three-layer necklaces share one clasp; the selected length is the inner layer.
 - [Necklace imagery and prompts](image-prompts-necklaces.md).
@@ -55,7 +60,7 @@ service addresses using `PRODUCT_SERVICE_URL`, `INVENTORY_SERVICE_URL`,
 - One distinct image per design; [expanded image prompts](image-prompts-expanded.md).
 
 The same `dist/catalogue.json` seeds Product and Inventory via the common module.
-There are 475 physical jewellery variants, initially 8 units each. Original `P1001`–`P1003`
+There are 605 physical jewellery variants, initially 8 units each. Original `P1001`–`P1003`
 products remain for the existing demos. `HV01-N` and `HV01-J` are independently
 stocked ring sizes.
 
@@ -124,3 +129,25 @@ From the repository root, `mvn clean package` builds the Java services. Automate
 test suites and smoke-check scripts have been removed from the project.
 The local Docker deployment provides the integrated shopping experience; the
 private hosted preview is static and cannot connect to the local Java services.
+
+## Personal necklace additions
+
+Four personalised 18ct yellow gold concepts: The Initial Verse (R9,800, A-Z), The Birthstone Story (R14,900, birth month), The Written Promise Bar (R12,800, message) and The Forever Disc (R11,900, initials/name/date). Engravings accept up to 24 characters. Each has five chain lengths and an illustrative example image. Personalisation is preserved in bag and checkout snapshots; stock is shared per design and chain length. See [images and generation prompts](image-prompts-personal-necklaces.md).
+
+### Birthstone month previews
+
+The month selector displays both month and gemstone. Gallery, gemstone details, bag images, checkout summaries and order snapshots use the selected month. The collection offers one accepted stone per month: January garnet, February amethyst, March aquamarine, April diamond, May emerald, June alexandrite, July ruby, August peridot, September sapphire, October pink tourmaline, November citrine and December tanzanite. June, October and December have other accepted birthstones; these are this collection’s choices. All options retain the fictional R14,900 catalogue price and share inventory by chain length.
+
+Birthstone sources: [American Gem Society](https://www.americangemsociety.org/birthstones/) and [GIA](https://www.gia.edu/birthstones).
+
+## Bracelet stacks
+
+Five complete sets are available under Bracelets → Bracelet stacks: Golden Chapter (five bangles, R24,500), Pearl & Promise (three pieces, R20,600), Midnight (three pieces, R15,300), Radiance (three pieces, R40,800) and Mixed Verse (three bangles, R12,800). Photos show the full stack worn on one wrist. Every pictured bracelet is included; customers choose 16cm, 18cm or 20cm for each piece. Hidden component SKUs provide individual stock reservations and sum to the displayed set price. See [image prompts](image-prompts-bracelet-stacks.md).
+
+## Earring additions
+
+Seven designs include Golden Chapter Ear Stack (R11,600, three components for one ear), Celestial Verse Set (R9,300, three components for one ear), Liquid Petal Drops (R14,900 per pair), Ivy Light Climbers (R12,900 per pair), Birthstone Story Studs (R7,900 per pair), Initial Verse Huggies (R9,900 per pair) and Pearl Halo Jackets (R11,800 per complete pair). Each listing explains its included pieces and piercing requirements. Birth month, independent left/right letters and pearl-jacket styling selections have illustrative live previews and are retained in bag and checkout snapshots. Pair stock is shared across personalisation choices; ear stacks reserve every component. Jacket styling always includes both studs and both removable jackets. See [image prompts](image-prompts-earrings.md).
+
+### Ear placement and medium hoops
+
+Celestial Verse uses an anatomical ear-stand photo; Ivy Light Climbers use mirrored ear stands to show upward placement. Stands are display props and are not included. Initial Verse Huggies now have petite 12mm hoops with 5mm letter charms, including smaller letters in live previews. Woven Circle Hoops (R8,900) and Everyday Circle Hoops (R7,900) are matching pairs of round medium 25mm hoops, with twisted and smooth finishes respectively. See [refinement image prompts](image-prompts-earring-refinements.md).

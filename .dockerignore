@@ -7,8 +7,6 @@
 .codex
 .agents
 docs
-.demo-tools
-demo
 **/__pycache__
 storefront/data
 storefront/.sites-checkout

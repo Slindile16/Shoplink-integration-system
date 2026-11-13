@@ -8,7 +8,6 @@ Install Docker Desktop with Linux containers and Docker Compose v2. Allow about
 ```powershell
 docker compose up --build -d --wait --wait-timeout 240
 docker compose ps
-./scripts/demo.ps1
 docker compose logs --tail 100 order payment delivery notification
 ```
 
@@ -77,11 +76,11 @@ On a clean demo stack, configure Payment Service to decline:
 ```powershell
 $env:PAYMENT_SIMULATION_DECLINE = 'true'
 docker compose up -d --force-recreate payment
-./scripts/demo.ps1 -ExpectedStatus PAYMENT_FAILED
 Remove-Item Env:PAYMENT_SIMULATION_DECLINE
 docker compose up -d --force-recreate payment
 ```
 
+Place an order using the root README example while decline mode is enabled.
 Use a new order for each scenario. A decline should restore its reservation and
 produce one payment-failure notice, with no delivery.
 

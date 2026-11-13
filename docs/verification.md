@@ -35,15 +35,5 @@ connection/read timeouts remain bounded at two/three seconds.
 The GitHub Actions workflow now checks the Java build, storefront syntax and Compose configuration on pushes and pull requests. No remote workflow run or repository push was
 performed as part of this local verification.
 
-## Demonstration artifact
-
-The generated narrated walkthrough is 8 minutes 32 seconds, with 1280×720 H.264
-video and AAC audio. A decoded frame was inspected for legibility; audio signal
-checks confirmed narration is present without clipping. The video displays actual
-captured API evidence and the passing test summary. It is clearly labeled as a
-generated walkthrough rather than a desktop screen recording.
-
-Generated media, local Python rendering tools, Maven output, and verification
-logs are ignored by Git. Regenerate the video using the [demo guide](demo.md).
 The application remains an in-memory portfolio system; operational limitations
 and reset procedures are documented in the [runbook](operations.md).

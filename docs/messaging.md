@@ -34,7 +34,6 @@ hostnames internally. Start the complete system with:
 
 ```powershell
 docker compose up --build -d --wait --wait-timeout 240
-./scripts/demo.ps1
 ```
 
 Alternatively start only the broker with `docker compose up -d activemq`, install
@@ -51,5 +50,4 @@ prevent repeated business effects. This provides process-local recovery, not
 exactly-once execution or restart durability.
 
 See the [operations runbook](operations.md) for DLQ inspection, replay precautions,
-and the limitations of in-memory state. Use `mvn clean package` to build services
-and `./scripts/demo.ps1` for an optional walkthrough of the running system.
+and the limitations of in-memory state. Use `mvn clean package` to build services. See the root README for an order request example.

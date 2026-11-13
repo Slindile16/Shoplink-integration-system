@@ -9,9 +9,7 @@ target/
 # Visual Studio Code
 .vscode/
 
-# Local verification and generated demo media
+# Local verification output
 *.log
-.demo-tools/
-demo/generated/
 __pycache__/
 storefront/.sites-checkout/

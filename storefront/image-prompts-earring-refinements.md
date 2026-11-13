@@ -1,0 +1,29 @@
+# Earring refinement image prompts
+
+## golden-chapter-ear-stand.png
+
+Use case: precise-object-edit / luxury product-mockup. Place the EXACT three jewellery pieces from the reference on ONE matte ivory anatomical ear-shaped jewellery display stand with a small base. Exactly ONE petite polished gold hoop through the first lower lobe piercing, ONE tiny diamond stud in gold prongs through the second lobe piercing just above the hoop, and ONE twisted open yellow gold cuff gripping the outer upper ear cartilage. Show all three in realistic small wearable proportions, correct attachment and placement. Preserve the reference designs and yellow gold material; no duplicated studs, hoops or cuffs. Warm ivory studio backdrop and soft shadows, square photorealistic fine jewellery photograph, entire ear stand visible with generous margin. No human, no skin, no face, no text, labels or extra jewellery. Match the other ivory ear display photos in the collection.
+
+Final Celestial placement correction: Precise correction to this anatomical ivory ear-stand product photo: there are currently TWO gold five-point star studs. REMOVE ONLY the LOWER star immediately beside the crescent moon (the star nearest the moon). Keep exactly ONE crescent moon stud, ONE five-point star stud (the upper star), ONE ball stud and its fine gold chain connected to ONE upper-ear cuff. Thus exactly THREE piercing studs total: moon, star, ball. Fill the removed lower star location naturally with the same ivory ear-stand material. Keep the remaining jewellery, positions, stand shape, lighting, crop, background and all other pixels as unchanged as possible. No additional stars or jewellery.
+
+Created and edited using the built-in image_gen tool. Final PNG files are saved in `dist/assets/` with the names below. Original flat-lay images are retained. Ear stands are display props only.
+
+## celestial-verse-ear-stand.png
+
+Use case: precise-object-edit / product-mockup. Use the provided gold Celestial set as the exact jewellery reference. Arrange its components worn correctly on ONE elegant matte ivory anatomical ear-shaped jewellery display stand with a small unobtrusive base, on a warm ivory studio background. Show the moon stud in the first lobe piercing, the star stud in the second lobe piercing, the chain's gold ball stud in a third upper-lobe piercing, and the connected open gold cuff gripping the outer upper ear cartilage; the fine chain drapes naturally from ball stud to cuff outside the ear. Preserve all existing jewellery motifs, yellow gold material and the single-set count. Natural small wearable proportions: moon and star about 4mm, fine delicate chain. No additional jewellery, no human skin, no face, no text. Square photorealistic luxury product photo, crisp ear anatomy and attachment points visible. The purpose is to show precisely how the set sits on an ear.
+
+## ivy-light-ear-stands.png
+
+Use case: precise-object-edit / product-mockup. Preserve the provided matching mirrored PAIR of gold leaf and diamond ear climbers. Show them worn on TWO small matte ivory anatomical ear-shaped jewellery display stands, left and right ears side by side. Exactly one climber on each ear. Each earring begins at a pierced lower earlobe and follows the outer lower ear contour upwards, leaves and diamond accents sitting flush against the ear, not hanging down as a drop. Delicate wearable proportions about 22mm long per climber. Preserve the five gold leaves and diamond accents of each reference earring, both mirrored designs. Warm ivory seamless studio background, soft shadows, square luxury product photograph, entire ear stands visible, attachment and upward placement clear. No human skin, faces, extra jewellery, text or labels.
+
+## initial-verse-huggies-petite.png
+
+Use case: precise-object-edit. Preserve the provided matching PAIR of polished yellow gold hinged initial huggie earrings and the exact warm ivory studio photography style. Make these petite and delicate: each huggie about 12mm outside diameter, with a much SMALLER dangling serif A charm only 5mm high. The letter charm should be roughly one third of the hoop height, not the large pendant currently shown. Tiny connecting loop; letter charm close beneath the hoop. Keep both A letters accurate and both complete earrings clearly separated. Generous empty margin so the earrings do not dominate the square frame. No extra jewellery, no text, no ruler, no collage. Refined photorealistic gold details.
+
+## woven-circle-hoops.png
+
+Use case: product-mockup. One matching PAIR of medium-sized round yellow gold hoop earrings with a continuous softly twisted rope texture around each circular hoop. Each hoop has a 25mm outer diameter and a 3mm rounded twisted tube. True round circles, neither tiny huggies nor oversized hoops. Secure subtle hinged clasp. Display both complete circular earrings side by side mostly facing camera, with a slight angle on one for depth but keep the ROUND silhouette obvious. Warm ivory seamless background, soft studio shadows, photorealistic fine jewellery, square composition, generous margins, no human, stand, text, logo, gems or extra earrings.
+
+## everyday-circle-hoops.png
+
+Use case: product-mockup. One matching PAIR of classic medium-sized perfectly ROUND polished yellow gold hoop earrings, smooth plain tubular design without any twist, texture, ornament or gemstone. 25mm outside diameter, 2.5mm rounded tube, a balanced everyday size, not tiny and not oversized. Subtle secure hinged clasp. Both complete circular earrings side by side mostly facing camera; one can have a very slight angle for depth while remaining recognisably ROUND, not oval. Warm ivory seamless studio background, soft shadows, realistic luxury gold, square photograph with generous margin. No human, text, labels, logos, stands or extra jewellery.

@@ -6,3 +6,28 @@
 @media(max-width:520px){.relationship-sets-grid{grid-template-columns:1fr;gap:30px}.relationship-intro{font-size:12px}.relationship-sets-grid .product-card h3{font-size:27px}.finish-option{padding:11px 13px}.set-component a{font-size:20px}.set-size-select{width:88px}}
 .design-selector{margin:24px 0}.design-selector>p{font-size:11px;color:var(--muted);margin-bottom:12px}.design-selector>p span{color:var(--wine)}.design-selector>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:360px}.design-option{display:flex;flex-direction:column;min-width:0;border:1px solid #d4c6bc;background:#f5efe7;color:var(--wine);text-align:center}.design-option img{aspect-ratio:1;object-fit:cover;width:100%;height:auto}.design-option>span{font-size:10px;padding:9px 4px}.design-option.is-selected{border-color:var(--wine);outline:1px solid var(--wine)}.design-option:hover{border-color:var(--wine)}
 .style-browse{margin-bottom:30px;padding-bottom:24px;border-bottom:1px solid var(--line)}.style-browse>p{margin-bottom:14px}.style-browse>div{display:flex;flex-wrap:wrap;gap:8px}.style-browse a{display:inline-flex;align-items:center;min-height:44px;padding:10px 15px;border:1px solid #d4c6bc;font-size:11px;color:var(--wine)}.style-browse a:hover{background:#efe3e3}.style-browse a[aria-current]{background:var(--wine);border-color:var(--wine);color:var(--pearl)}.style-browse a:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+
+.component-piece-name{display:block;font:20px/1.2 var(--serif);color:var(--wine);overflow-wrap:anywhere}
+
+.necklace-pair-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:760px){.necklace-pair-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.necklace-pair-grid{grid-template-columns:1fr}}
+
+.necklace-gallery{aspect-ratio:auto;align-self:start;overflow:visible}.necklace-gallery img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}.necklace-gallery:hover img{transform:none}.necklace-gallery .gallery-label{position:static;display:block;padding:12px 15px;line-height:1.5;background:#f3ece4}
+
+.necklace-modes{display:flex;flex-wrap:wrap;gap:10px 24px;margin-bottom:25px;border-bottom:1px solid var(--line)}.necklace-modes a{display:inline-flex;align-items:center;min-height:44px;padding:10px 2px 12px;color:var(--muted);font-size:12px;border-bottom:2px solid transparent}.necklace-modes a[aria-current]{color:var(--wine);border-color:var(--wine);font-weight:500}.necklace-modes a:hover{color:var(--wine)}.necklace-modes a:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+
+.gemstone-guide{margin-top:18px;border-top:1px solid var(--line)}
+.gemstone-guide>summary{padding:14px 0;cursor:pointer;color:var(--wine);font-size:12px}
+.gemstone-guide p,.gemstone-guide-page>p{font-size:12px;color:var(--muted);line-height:1.7}
+.gemstone-guide-scroll{max-width:100%;overflow-x:auto}
+.gemstone-guide-table{width:100%;border-collapse:collapse;text-align:left;font-size:11px}
+.gemstone-guide-table caption{text-align:left;font:24px var(--serif);color:var(--wine);padding:12px 0}
+.gemstone-guide-table th,.gemstone-guide-table td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.gemstone-guide-table thead{background:var(--rose);color:var(--wine)}
+.gemstone-guide-table tbody th{font-weight:500;color:var(--wine)}
+.gemstone-guide-note{margin:14px 0}
+.gemstone-guide-page{max-width:850px;padding-bottom:65px}
+.gemstone-guide-page .button{margin-top:22px}
+.gemstone-guide-link{display:inline-block;margin:12px 0;font-size:11px}
+@media(max-width:520px){.gemstone-guide-table th,.gemstone-guide-table td{padding:9px 5px;font-size:10px}}
+
+.stack-inclusion-note{padding:14px 16px;border-left:2px solid var(--wine);background:#efe3e3;font-size:12px;line-height:1.7;margin:20px 0}
